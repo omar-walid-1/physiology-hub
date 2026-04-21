@@ -761,6 +761,7 @@ footer span{color:var(--teal)}
 <hr class="div">
 
 <!-- ══════ QUESTION BANK ══════ -->
+<!-- ══════ QUESTION BANK ══════ -->
 <section class="qbank-section" id="qbank">
   <div class="qbank-header">
     <h2>Interactive Question Bank</h2>
@@ -768,10 +769,9 @@ footer span{color:var(--teal)}
   </div>
 
   <div class="lec-tabs">
-    <button class="lec-tab active" onclick="showLec('blood',this)">🩸 Lecture 1 — Blood Groups</button>
-    <button class="lec-tab" onclick="showLec('nerve',this)">⚡ Lecture 2 — Nerve</button>
-    <button class="lec-tab" onclick="showLec('ans',this)">🧠 Lecture 3 — ANS</button>
-
+    <button class="lec-tab active" onclick="showLec('blood',this)">🩸 Lec 1 — Blood Groups</button>
+    <button class="lec-tab" onclick="showLec('nerve',this)">⚡ Lec 2 — Nerve</button>
+    <button class="lec-tab" onclick="showLec('ans',this)">🧠 Lec 3 — ANS</button>
     <button class="lec-tab" onclick="showLec('final',this)">🏆 Final Quiz — كويز النهائي</button>
   </div>
 
@@ -781,54 +781,54 @@ footer span{color:var(--teal)}
     <button class="reset-btn" onclick="resetAll()">↺ Reset</button>
   </div>
 
-  <!-- ══ BLOOD ══ -->
+  <!-- ══════════════ BLOOD ══════════════ -->
   <div class="lec-category active" id="lec-blood">
 
     <div class="q-item" data-correct="1" data-lecture="blood">
-      <div class="q-header"><div class="q-num">1</div><div class="q-stem">Which immunoglobulin type is responsible for naturally-occurring ABO antibodies (Anti-A, Anti-B)?<div class="q-tag">MCQ · Immunoglobulins</div></div></div>
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">Which immunoglobulin type forms the naturally-occurring ABO antibodies (Anti-A, Anti-B)?<div class="q-tag">MCQ · Immunoglobulins</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. IgG — small, crosses placenta</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. IgM — large pentameric structure, cannot cross placenta</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. IgA — found mainly in secretions</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. IgE — involved in allergic reactions</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. IgG — small molecule, readily crosses the placenta</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. IgM — large pentameric structure, cannot cross the placenta</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. IgA — found predominantly in mucosal secretions</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. IgE — primarily involved in allergic and parasitic reactions</button>
       </div>
       <div class="q-expl">الإجابة B. الأجسام المضادة لـABO (Anti-A وAnti-B) من نوع IgM. IgM هو جسم مضاد كبير (بنتامير = 5 وحدات) ولا يستطيع عبور المشيمة. لذلك لا تؤدي أجسام ABO المضادة إلى مرض انحلال دم الوليد. أما Anti-D فهو IgG — صغير ويعبر المشيمة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="blood">
-      <div class="q-header"><div class="q-num">2</div><div class="q-stem">What are the antibody mechanisms? (Choose the COMPLETE set from the PDF lecture)<div class="q-tag">MCQ · Antibody Mechanisms</div></div></div>
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Which set CORRECTLY lists all four antibody mechanisms mentioned in the lecture?<div class="q-tag">MCQ · Antibody Mechanisms</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Lysis, Opsonization, Agglutination</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Phagocytosis, Activation, Precipitation</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Lysis, Opsonization, Agglutination, Precipitation</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Phagocytosis, Activation, Precipitation, Complement</button>
         <button class="opt-btn" onclick="answer(this,false)">C. Neutralization, Lysis, Agglutination, Complement</button>
         <button class="opt-btn" onclick="answer(this,true)">D. Neutralization, Opsonization, Activation, Agglutination</button>
       </div>
-      <div class="q-expl">الإجابة D. الآليات الأربعة للأجسام المضادة من المحاضرة: (1) Neutralization = تعطيل المستضد، (2) Opsonization = تغليف المستضد لتسهيل البلعمة، (3) Activation = تفعيل نظام المتمم (Complement)، (4) Agglutination = تكتّل الكريات في سياق فصائل الدم.</div>
+      <div class="q-expl">الإجابة D. الآليات الأربعة للأجسام المضادة: (1) Neutralization = تعطيل المستضد، (2) Opsonization = تغليف المستضد لتسهيل البلعمة، (3) Activation = تفعيل نظام المتمم (Complement)، (4) Agglutination = تكتّل الكريات في سياق فصائل الدم.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="blood">
       <div class="q-header"><div class="q-num">3</div><div class="q-stem">A person with blood group O has which of the following?<div class="q-tag">MCQ · ABO System</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Antigen O on RBCs and no antibodies</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Antigen A and Antigen B with no plasma antibodies</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. No antigens on RBCs and both Anti-A and Anti-B in plasma</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. No antigens and no antibodies</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Antigen O on RBCs, with no antibodies in plasma</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Antigens A and B on RBCs, with no antibodies in plasma</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. No antigens on RBCs, with both Anti-A and Anti-B in plasma</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. No antigens and no antibodies — a completely neutral blood type</button>
       </div>
-      <div class="q-expl">الإجابة C. فصيلة O: لا تحمل أي مستضدات (لا A ولا B) على كرياتها الحمراء — لذلك تُسمى المانح الشامل. لكن بلازمتها تحتوي على كلٍّ من Anti-A وAnti-B — لذلك تستطيع الاستقبال فقط من فصيلة O. لا يوجد "مستضد O" في تسميات ABO الرسمية.</div>
+      <div class="q-expl">الإجابة C. فصيلة O: لا تحمل أي مستضدات (لا A ولا B) على كرياتها — لذلك المانح الشامل. لكن بلازمتها تحتوي على كلٍّ من Anti-A وAnti-B — لذلك تستقبل فقط من فصيلة O. لا يوجد "مستضد O" في تسميات ABO الرسمية.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="blood">
-      <div class="q-header"><div class="q-num">4</div><div class="q-stem">In the slide technique for blood typing, agglutination with Anti-A but NOT with Anti-B or Anti-D indicates:<div class="q-tag">MCQ · Blood Group Testing</div></div></div>
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">In the slide technique, agglutination with Anti-A but NOT with Anti-B or Anti-D indicates:<div class="q-tag">MCQ · Blood Group Testing</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,true)">A. Blood group A, Rh negative</button>
         <button class="opt-btn" onclick="answer(this,false)">B. Blood group AB, Rh negative</button>
         <button class="opt-btn" onclick="answer(this,false)">C. Blood group A, Rh positive</button>
         <button class="opt-btn" onclick="answer(this,false)">D. Blood group O, Rh negative</button>
       </div>
-      <div class="q-expl">الإجابة A. التكتّل مع Anti-A فقط → وجود مستضد A → فصيلة A. عدم التكتّل مع Anti-B → لا مستضد B. عدم التكتّل مع Anti-D → لا مستضد D → Rh سالب. إذن الشخص فصيلة A سالب (A−).</div>
+      <div class="q-expl">الإجابة A. تكتّل مع Anti-A فقط → وجود مستضد A → فصيلة A. عدم التكتّل مع Anti-B → لا مستضد B. عدم التكتّل مع Anti-D → لا مستضد D → Rh سالب. إذن الشخص فصيلة A سالب (A−).</div>
       </div>
     </div>
 
@@ -840,495 +840,586 @@ footer span{color:var(--teal)}
         <button class="opt-btn" onclick="answer(this,false)">C. O=85%, A=10%, B=3%, AB=2%</button>
         <button class="opt-btn" onclick="answer(this,false)">D. A=50%, O=30%, B=15%, AB=5%</button>
       </div>
-      <div class="q-expl">الإجابة B. التوزيع التقريبي: O=45%، A=40%، B=10%، AB=5%. فصيلة O هي الأكثر شيوعاً ثم A ثم B ثم AB (الأندر). أما Rh فهو 85% موجب و15% سالب. هذه النسب مهمة للحفظ في الامتحانات.</div>
+      <div class="q-expl">الإجابة B. التوزيع التقريبي: O=45%، A=40%، B=10%، AB=5%. فصيلة O هي الأكثر شيوعاً ثم A ثم B ثم AB (الأندر). أما Rh فهو 85% موجب و15% سالب. هذه النسب مهمة للحفظ.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="blood">
-      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Which blood group would a child have if both parents are genotype AO?<div class="q-tag">MCQ · Genetics</div></div></div>
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Both parents are genotype AO. What blood groups are possible in their children?<div class="q-tag">MCQ · Genetics</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Only blood group A</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Blood groups A and AB</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Blood groups A or O (3:1 ratio)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Blood groups A, B, AB, and O</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Blood group A only — O is completely recessive</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Blood groups A and AB only</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Blood groups A or O (3:1 ratio) — AB and B are impossible</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. All four blood groups — A, B, AB, and O are all possible</button>
       </div>
-      <div class="q-expl">الإجابة C. AO × AO: الجينوتايبات الممكنة للأبناء: AA (فصيلة A)، AO (فصيلة A)، AO (فصيلة A)، OO (فصيلة O). النسبة: 3 فصيلة A : 1 فصيلة O. لا تظهر فصيلة B أو AB لأن كلا الوالدين لا يحملان مورثة B.</div>
+      <div class="q-expl">الإجابة C. AO × AO: الجينوتايبات: AA (A)، AO (A)، AO (A)، OO (O). النسبة 3A : 1O. لا تظهر B أو AB لأن كلا الوالدين لا يحمل مورثة B.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="blood">
-      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Why is blood grouping considered a "good negative test" in disputed paternity rather than a positive one?<div class="q-tag">MCQ · Medicolegal</div></div></div>
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Why is blood grouping a "good NEGATIVE test" in disputed paternity rather than a positive one?<div class="q-tag">MCQ · Medicolegal</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Blood groups change over a person's lifetime</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Blood groups are not inherited from parents</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Multiple people can share the same genotype, making exclusion impossible</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Multiple people can have the same blood group, so matching doesn't prove unique parentage — but a mismatch can exclude it</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Blood groups are unstable and change throughout adult life</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Blood groups are not reliably inherited from biological parents</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. A matching blood group between child and man proves unique parentage</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Millions share the same blood group, so a match cannot prove paternity — only a mismatch can exclude it</button>
       </div>
-      <div class="q-expl">الإجابة D. مثلاً: إذا كان الطفل فصيلة AB ومن المفترض أن الأب فصيلة O (جينوتايب OO) — هذا مستحيل وراثياً → يمكن استبعاد الأبوة. لكن إذا كان الأب فصيلة A، يمكن لملايين الرجال أن يكونوا فصيلة A → لا يمكن إثبات الأبوة. لإثبات الأبوة يُستخدم تحليل DNA.</div>
+      <div class="q-expl">الإجابة D. مثلاً: إذا كان الطفل AB والمدّعى أبوه O → مستحيل وراثياً → يمكن نفي الأبوة. لكن إذا كانت الفصائل متطابقة، ملايين الرجال يمكن أن يكونوا نفس الفصيلة → لا يمكن إثبات الأبوة. DNA هو الوسيلة الأدق.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="blood">
-      <div class="q-header"><div class="q-num">8</div><div class="q-stem">What EXACTLY happens when an Rh–ve mother delivers her FIRST Rh+ve baby?<div class="q-tag">MCQ · Erythroblastosis</div></div></div>
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">What EXACTLY happens at the time of the FIRST Rh+ve delivery to an Rh–ve mother?<div class="q-tag">MCQ · Erythroblastosis — 1st Pregnancy</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Small amounts of fetal Rh+ve blood leak into maternal circulation → mother's immune system produces Anti-D IgG (sensitization) — but baby has already been delivered, so is unharmed</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Anti-D IgG immediately crosses the placenta and causes hemolysis of fetal RBCs</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. The mother produces Anti-D IgM which protects the baby</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Nothing happens — Rh incompatibility only affects mothers who are Rh+ve</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Fetal Rh+ve blood enters maternal circulation → mother forms Anti-D IgG after delivery; the first baby is already out and unharmed</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Anti-D IgG forms in the 3rd trimester and immediately hemolyzes fetal RBCs</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. The mother produces Anti-D IgM which crosses the placenta and destroys fetal cells</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. No immune response occurs in the first pregnancy regardless of Rh status</button>
       </div>
-      <div class="q-expl">الإجابة A. عند الولادة الأولى، تدخل كميات صغيرة من دم الجنين Rh+ إلى دورة دم الأم عند انفصال المشيمة. الجهاز المناعي للأم يتعرف على مستضد D كمادة غريبة → ينتج Anti-D IgG. لكن هذا يحدث في وقت الولادة أو بعدها — الجنين الأول خرج بسلامة. الخطر يبدأ في الحمل الثاني.</div>
+      <div class="q-expl">الإجابة A. عند الولادة الأولى، يتسرب دم الجنين Rh+ لدم الأم → جهازها المناعي يتحسس ويُنتج Anti-D IgG. لكن هذا يحدث بعد الولادة — الجنين الأول خرج بسلامة. الخطر يبدأ في الحمل الثاني لما Anti-D يعبر المشيمة ويهاجم الجنين الجديد.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="blood">
-      <div class="q-header"><div class="q-num">9</div><div class="q-stem">In Erythroblastosis Fetalis, Kernicterus refers to:<div class="q-tag">MCQ · Complications</div></div></div>
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">In Erythroblastosis Fetalis, "Kernicterus" specifically refers to:<div class="q-tag">MCQ · Complications</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Fetal heart failure from severe anemia</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Bilirubin deposition in the basal ganglia causing neurological damage</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Jaundice visible in the skin and sclera</td>
-        <button class="opt-btn" onclick="answer(this,false)">D. Anti-D antibodies destroying fetal bone marrow</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Severe fetal anemia progressing to hydrops fetalis and cardiac failure</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Bilirubin deposition in the basal ganglia causing permanent brain damage</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Yellow jaundice visible in the skin and sclera from elevated serum bilirubin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Anti-D antibodies invading fetal bone marrow and halting RBC production</button>
       </div>
-      <div class="q-expl">الإجابة B. Kernicterus (اليرقان النووي): انحلال كريات الجنين → تراكم البيليروبين في الدم. لأن الحاجز الدموي الدماغي (BBB) لم يكتمل بعد عند الجنين، يترسب البيليروبين في الجسور القاعدية (Basal Ganglia) → تلف عصبي دائم. مختلف عن اليرقان الجلدي (رغم أن كليهما من ارتفاع البيليروبين).</div>
+      <div class="q-expl">الإجابة B. Kernicterus: ترسّب البيليروبين في الجسور القاعدية (Basal Ganglia) → تلف عصبي دائم. يحدث لأن الحاجز الدموي الدماغي (BBB) غير مكتمل عند الجنين. مختلف عن اليرقان الجلدي رغم أن كليهما من ارتفاع البيليروبين.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="blood">
-      <div class="q-header"><div class="q-num">10</div><div class="q-stem">Rhogam (Anti-D immunoglobulin) is given to an Rh–ve mother after delivery. Its mechanism of action is:<div class="q-tag">MCQ · Prevention</div></div></div>
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">Rhogam (Anti-D immunoglobulin) is given after delivery to an Rh–ve mother. Its mechanism is:<div class="q-tag">MCQ · Prevention of Erythroblastosis</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. It destroys maternal B-lymphocytes to prevent antibody production</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. It converts Rh– blood to Rh+</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. It crosses the placenta and protects the next fetus directly</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. It neutralizes fetal Rh+ve cells that entered maternal circulation, preventing the mother's immune system from recognizing D antigen and forming Anti-D</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. It destroys maternal B-lymphocytes to halt any future antibody production</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. It converts the mother's Rh-negative blood type to Rh-positive temporarily</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. It crosses the placenta to coat and protect fetal Rh+ve RBCs directly</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. It neutralizes fetal Rh+ve cells in maternal circulation before the mother's immune system is activated</button>
       </div>
-      <div class="q-expl">الإجابة D. Rhogam يحتوي على Anti-D IgG جاهزة ومُعطاة للأم اصطناعياً. هذه الأجسام تُحيّد مستضد D على كريات الجنين التي دخلت دم الأم → قبل أن يكتشفها الجهاز المناعي → يمنع التحسّس → الأم لا تُنتج Anti-D الخاصة بها → تكون الجنين القادم آمنة. يُعطى خلال 72 ساعة من الولادة.</div>
+      <div class="q-expl">الإجابة D. Rhogam يحتوي على Anti-D IgG جاهزة. تُحيّد مستضد D على كريات الجنين التي دخلت دم الأم → قبل أن يكتشفها الجهاز المناعي → يمنع التحسّس → الأم لا تُنتج Anti-D الخاصة بها → الحمل القادم آمن. يُعطى خلال 72 ساعة من الولادة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="blood">
       <div class="q-header"><div class="q-num">11</div><div class="q-stem">ALL of the following are complications of Erythroblastosis Fetalis EXCEPT:<div class="q-tag">MCQ · "Except" Type</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Fetal hemolytic anemia</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Kernicterus</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Erythrocytosis (polycythemia)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Fetal death</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Hemolytic anemia of the fetus</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Kernicterus (bilirubin damage to basal ganglia)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Polycythemia (increased RBC count)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Intrauterine fetal death</button>
       </div>
-      <div class="q-expl">الإجابة C. Erythrocytosis/Polycythemia (زيادة كريات الدم الحمراء) ليست من المضاعفات — بل العكس هو الصحيح. الـAnti-D يُدمّر كريات الجنين → فقر الدم (Anemia). المضاعفات الحقيقية: انحلال الدم، فقر الدم، اليرقان، Kernicterus (ترسيب بيليروبين في الدماغ)، وفاة الجنين.</div>
+      <div class="q-expl">الإجابة C. Polycythemia/Erythrocytosis (زيادة كريات الدم الحمراء) ليست مضاعفة — بل العكس. Anti-D يُدمّر كريات الجنين → فقر الدم (Anemia). المضاعفات الحقيقية: انحلال الدم، فقر الدم، اليرقان، Kernicterus، وفاة الجنين.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="blood">
       <div class="q-header"><div class="q-num">12</div><div class="q-stem">Father genotype BO, Mother genotype AO — which blood group is IMPOSSIBLE in their children?<div class="q-tag">MCQ · Advanced Genetics</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. No blood group is impossible — all four (A, B, AB, O) are possible</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Blood group AB is impossible</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Blood group O is impossible</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Blood groups B and O are impossible</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. No group is impossible — A, B, AB, and O are all possible outcomes</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Blood group AB is the one impossible outcome in this cross</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Blood group O is the one impossible outcome in this cross</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Blood groups B and O are both impossible in this cross</button>
       </div>
-      <div class="q-expl">الإجابة A. BO × AO: (B+A=AB), (B+O=B), (O+A=A), (O+O=O). جميع الفصائل الأربع ممكنة. هذا مثال ممتاز يوضح قوة الوراثة المتنحية للـO. حين تجتمع O من الأب و O من الأم → فصيلة O.</div>
+      <div class="q-expl">الإجابة A. BO × AO: (B+A=AB)، (B+O=B)، (O+A=A)، (O+O=O). جميع الفصائل الأربع ممكنة. مثال ممتاز على قوة الوراثة المتنحية للـO.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="blood">
-      <div class="q-header"><div class="q-num">13</div><div class="q-stem">A patient develops fever, dark urine, and hypotension 30 min after receiving incompatible blood. The IMMEDIATE cause is:<div class="q-tag">Clinical Scenario</div></div></div>
+      <div class="q-header"><div class="q-num">13</div><div class="q-stem">A patient develops fever, dark urine, and hypotension 30 min after receiving incompatible blood. The IMMEDIATE cause is:<div class="q-tag">Clinical Scenario · Transfusion Reaction</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Donor's antibodies attacking recipient's RBCs</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Recipient's antibodies attacking donor's RBCs → agglutination → hemolysis</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Allergic reaction to blood preservatives causing anaphylaxis</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Recipient's T-cells attacking donor's WBCs (graft-vs-host reaction)</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Donor's plasma antibodies directly attacking the recipient's RBC antigens</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Recipient's plasma antibodies binding to donor RBC antigens, causing hemolysis</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Blood preservative chemicals triggering systemic anaphylactic shock</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Recipient's T-cells recognizing donor white cells as foreign tissue (graft vs host)</button>
       </div>
-      <div class="q-expl">الإجابة B. في تفاعل نقل الدم الانحلالي الحاد: أجسام مضادة المستقبِل في البلازما تهاجم مستضدات المتبرع على الكريات. سيرم المتبرع يُخفَّف في دم المستقبِل فلا يُشكّل خطراً كبيراً. أما الأجسام المضادة للمستقبِل في بلازمته فتركيزها مرتفع ومؤثر → تكتّل → انحلال دم → هيموجلوبين في البول (بول داكن) → فشل كلوي + صدمة.</div>
+      <div class="q-expl">الإجابة B. في تفاعل نقل الدم الانحلالي: أجسام مضادة المستقبِل في البلازما تهاجم مستضدات المتبرع على الكريات. سيرم المتبرع يُخفَّف في دم المستقبِل فلا يُشكّل خطراً كبيراً. الأجسام المضادة للمستقبِل → تكتّل → انحلال → هيموجلوبين في البول (بول داكن) → فشل كلوي + صدمة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="blood">
-      <div class="q-header"><div class="q-num">14</div><div class="q-stem">Which statement about crime scene blood evidence is CORRECT?<div class="q-tag">MCQ · Forensic Importance</div></div></div>
+      <div class="q-header"><div class="q-num">14</div><div class="q-stem">Which statement about blood group evidence in criminal investigations is CORRECT?<div class="q-tag">MCQ · Forensic Importance</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Blood group evidence can definitively identify a specific individual</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Only ABO typing is used — Rh is irrelevant forensically</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Blood group changes after death making forensic use unreliable</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Blood group can exclude suspects or identify unknown bodies, but cannot definitively identify a specific person</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Blood group evidence definitively identifies the specific individual who left the sample</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Only ABO typing is forensically relevant; Rh factor adds no useful information</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Blood group antigens denature immediately after death, limiting forensic utility</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Blood group can exclude suspects or identify victims, but cannot prove who specifically left the sample</button>
       </div>
-      <div class="q-expl">الإجابة D. الأهمية الجنائية لفصيلة الدم: (1) يمكنها استبعاد المشتبه به (exclusion) إذا تعارضت فصيلته مع دم المشهد. (2) يمكنها المساعدة في التعرف على مجهول الهوية. لكن لا يمكنها إثبات أن شخصاً بعينه هو المصدر — لأن الكثيرين يشاركونه نفس الفصيلة. DNA هو الوسيلة الأدق للتعريف القاطع.</div>
+      <div class="q-expl">الإجابة D. الأهمية الجنائية: يمكن استبعاد المشتبه به إذا تعارضت فصيلته مع الدليل، أو المساعدة في تعريف مجهول الهوية. لكن لا يمكنها إثبات أن شخصاً بعينه هو المصدر — الكثيرون يشاركون نفس الفصيلة. DNA هو الأدق.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="blood">
-      <div class="q-header"><div class="q-num">15</div><div class="q-stem">
-        <div class="scenario-card"><strong>Case:</strong> Rh–ve woman, 2nd pregnancy. Husband is Rh+ve. No Rhogam was given after the first delivery. The newborn now has severe jaundice and anemia.</div>
-        Which management step is MOST appropriate NOW?
+      <div class="q-header"><div class="q-num">15</div>
+      <div class="q-stem">
+        <div class="scenario-card"><strong>Case:</strong> Rh–ve woman, 2nd pregnancy. No Rhogam given after the 1st delivery. Newborn has severe jaundice and anemia.</div>
+        Which management is MOST appropriate NOW?
         <div class="q-tag">Clinical Scenario · Management</div>
       </div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Give Rhogam to the mother immediately</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Give the mother a blood transfusion</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Exchange blood transfusion to the newborn with Rh–ve group O blood</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Phototherapy alone is sufficient</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Give Rhogam to the mother immediately — it will reverse sensitization</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Give the mother a blood transfusion to dilute her Anti-D levels</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Exchange blood transfusion to the newborn using Rh–ve group O blood</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Phototherapy alone is sufficient for any severity of neonatal jaundice</button>
       </div>
-      <div class="q-expl">الإجابة C. المولود مصاب بـErythroblastosis Fetalis. العلاج: تبادل دم المولود بدم Rh سالب فصيلة O. هذا يُزيل الكريات المدمّرة والبيليروبين المتراكم والأجسام المضادة الأمومية. Rhogam مفيد للأم وقائياً فقط — في هذه الحالة فات وقته (كان يُعطى بعد الولادة الأولى). الفوتوثيرابي وحده غير كافٍ للحالات الشديدة.</div>
+      <div class="q-expl">الإجابة C. المولود مصاب بـErythroblastosis Fetalis. العلاج: تبادل دم المولود بدم Rh سالب فصيلة O. هذا يُزيل الكريات المدمّرة والبيليروبين والأجسام المضادة الأمومية. Rhogam وقائي فقط — فات وقته. الفوتوثيرابي غير كافٍ للحالات الشديدة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="blood">
-      <div class="q-header"><div class="q-num">16</div><div class="q-stem">According to the blood donation diagram (O→A,B,AB / A→AB / B→AB), which statement is CORRECT?<div class="q-tag">MCQ · Donation Rules</div></div></div>
+      <div class="q-header"><div class="q-num">16</div><div class="q-stem">Which statement about blood donation rules is CORRECT?<div class="q-tag">MCQ · Donation Rules</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Group A can donate to groups B and AB</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Group AB can donate to all groups</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Each group can donate to itself + AB (universal receiver), and receive from itself + O (universal donor)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Group O can only donate to group A</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Group A donates to B and AB; receives from B and O</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Group AB can donate to all blood groups as the universal donor</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Each group donates to itself and AB; receives from itself and O</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Group O receives from all groups but can only donate to group A</button>
       </div>
-      <div class="q-expl">الإجابة C. القاعدة العامة: كل فصيلة تتبرع لنفسها + AB (لأن AB لا تملك أجساماً مضادة في البلازما). وكل فصيلة تستقبل من نفسها + O (لأن O لا تحمل مستضدات على الكريات). لذلك O = المانح الشامل (يتبرع للكل) وAB = المستقبل الشامل (يستقبل من الكل).</div>
+      <div class="q-expl">الإجابة C. القاعدة العامة: كل فصيلة تتبرع لنفسها + AB (لأن AB لا تملك أجساماً مضادة). وكل فصيلة تستقبل من نفسها + O (لأن O لا تحمل مستضدات). لذلك O = المانح الشامل وAB = المستقبل الشامل.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="blood">
       <div class="q-header"><div class="q-num">17</div><div class="q-stem">Looking at a blood donation database, the MOST common blood group to find is:<div class="q-tag">MCQ · Blood Group Frequency</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. AB (~3-5%) — rarest blood group</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. B (~9-10%)</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. A (~40-41%)</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. O (~45-47%) — most common worldwide</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. AB (~3–5%) — the rarest type, least encountered in practice</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. B (~9–10%) — moderately common, second rarest after AB</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. A (~40–41%) — slightly less common than the most prevalent type</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. O (~45–47%) — the most frequently encountered type worldwide</button>
       </div>
-      <div class="q-expl">الإجابة D. فصيلة O هي الأكثر شيوعاً بنسبة تتراوح بين 45-47% حسب المصادر المختلفة. تليها A (40-41%)، ثم B (9-10%)، وأخيراً AB الأندر (3-5%). ولأن O هي الأكثر انتشاراً وهي المانح الشامل، فهي الأهم في بنوك الدم.</div>
+      <div class="q-expl">الإجابة D. فصيلة O هي الأكثر شيوعاً (45-47%)، ثم A (40-41%)، ثم B (9-10%)، وأخيراً AB الأندر (3-5%). ولأن O هي المانح الشامل والأكثر انتشاراً، فهي الأهم في بنوك الدم.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="blood">
-      <div class="q-header"><div class="q-num">18</div><div class="q-stem">A blood bank needs to give an emergency transfusion to an unconscious patient whose blood type is unknown. Which blood should be given?<div class="q-tag">Clinical Scenario · Emergency Transfusion</div></div></div>
+      <div class="q-header"><div class="q-num">18</div><div class="q-stem">Emergency transfusion — patient unconscious, blood type unknown. Which blood to give?<div class="q-tag">Clinical Scenario · Emergency Transfusion</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,true)">A. Group O Rh–negative blood</button>
         <button class="opt-btn" onclick="answer(this,false)">B. Group AB Rh–positive blood</button>
         <button class="opt-btn" onclick="answer(this,false)">C. Group A Rh–negative blood</button>
         <button class="opt-btn" onclick="answer(this,false)">D. Group O Rh–positive blood</button>
       </div>
-      <div class="q-expl">الإجابة A. في حالات الطوارئ حين لا يُعرف نوع الدم: يُعطى دم O سالب. O = لا مستضدات → لا تفاعل مع أجسام المريض المضادة. Rh سالب = لا مستضد D → آمن لكل أحد بما في ذلك النساء في سن الإنجاب (لتجنب حساسية Rh مستقبلاً). O+ يُستخدم أيضاً في الطوارئ ولكن للذكور أو بعد سن الإنجاب.</div>
+      <div class="q-expl">الإجابة A. في الطوارئ: O سالب. O = لا مستضدات → آمن لأي مستقبِل. Rh سالب = آمن للجميع بما في ذلك النساء في سن الإنجاب (لتجنب تحسّس Rh مستقبلاً). O موجب يُستخدم أيضاً في الطوارئ لكن للذكور أو بعد سن الإنجاب.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="blood">
-      <div class="q-header"><div class="q-num">19</div><div class="q-stem">A father is blood group A (genotype AO) and mother is blood group A (genotype AA). Can their child have blood group O?<div class="q-tag">MCQ · Genetics Application</div></div></div>
+      <div class="q-header"><div class="q-num">19</div><div class="q-stem">Father genotype AO, Mother genotype AA — can their child have blood group O?<div class="q-tag">MCQ · Genetics Application</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Yes — any child of a group A parent can be group O</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. No — mother is AA, so she cannot pass an O allele; all children will have at least one A allele</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Yes — if both parents carry the O allele</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. It depends on the Rh factor</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Yes — any parent with phenotype A may transmit an O allele to their child</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. No — the mother is AA and can only pass A alleles; all children receive at least one A</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Yes — if both parents carry even one O allele, a child can inherit group O</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. It depends on whether the Rh factor alters ABO allele expression</button>
       </div>
-      <div class="q-expl">الإجابة B. الأب AO + الأم AA. الأم AA لا تحمل مورثة O → لا يمكنها تمرير O لأطفالها. الأطفال الممكنون: AA أو AO — كلاهما فصيلة A. لكي يكون الطفل O (جينوتايب OO)، يجب أن يرث O من كلا الوالدين — وهذا مستحيل هنا لأن الأم AA لا تملك مورثة O.</div>
+      <div class="q-expl">الإجابة B. الأب AO + الأم AA. الأم AA لا تحمل مورثة O → لا تقدر تعطي O لأي طفل. الأطفال الممكنون: AA أو AO — كلاهما فصيلة A. لكي يكون الطفل O يجب أن يرث O من الوالدين — مستحيل هنا لأن الأم AA.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="blood">
-      <div class="q-header"><div class="q-num">20</div><div class="q-stem">Blood group AB has "A and B" antigens and "NO" antibodies. This pattern means:<div class="q-tag">MCQ · AB Group Logic</div></div></div>
+      <div class="q-header"><div class="q-num">20</div><div class="q-stem">Blood group AB has both A and B antigens but NO antibodies. This logically means:<div class="q-tag">MCQ · AB Group Logic</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. AB individuals are immune to all blood-borne diseases</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. AB individuals can donate to all blood groups safely</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. AB plasma will not agglutinate any donor RBCs, but AB's own RBCs carry antigens that can be attacked by other groups' plasma</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. AB individuals do not need cross-matching before transfusion</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. AB individuals are naturally immune to all blood-borne infectious diseases</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. AB individuals can safely donate to any blood group as the universal donor</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. AB plasma never attacks donor RBCs, but AB's own RBCs can be attacked by A, B, or O plasma</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. AB individuals require no cross-matching before receiving any blood transfusion</button>
       </div>
-      <div class="q-expl">الإجابة C. AB لا تملك أجساماً مضادة في البلازما → بلازمة AB لا تهاجم كريات أي متبرع → يستقبل من الجميع (مستقبل شامل). لكن كريات AB تحمل مستضدات A وB → شخص فصيلة A أو B أو O لديه أجسام مضادة ستهاجم كريات AB → AB تتبرع فقط لـAB. التصالب (Cross-matching) ضروري دائماً بغض النظر عن الفصيلة.</div>
+      <div class="q-expl">الإجابة C. AB لا تملك أجساماً مضادة → بلازمتها لا تهاجم كريات أي متبرع → المستقبل الشامل. لكن كرياتها تحمل A وB → شخص فصيلة A أو B أو O لديه أجسام مضادة ستهاجمها → AB تتبرع فقط لـAB. التصالب (Cross-matching) ضروري دائماً.</div>
       </div>
     </div>
 
+    <!-- NEW Q21 — Trap question -->
+    <div class="q-item" data-correct="1" data-lecture="blood">
+      <div class="q-header"><div class="q-num">21</div><div class="q-stem">Which statement CORRECTLY explains why Group O is called the "Universal Donor"?<div class="q-tag">MCQ · Trap Question · Universal Donor Reason</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Group O plasma has no antibodies, so it never reacts with the recipient's cells</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Group O RBCs carry no A or B antigens, so no recipient's plasma can agglutinate them</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Group O blood has neither antigens nor antibodies, making it fully neutral</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Group O RBCs carry both A and B antigens, giving them compatibility with all groups</button>
+      </div>
+      <div class="q-expl">الإجابة B. الفخّ الشهير: فصيلة O عندها Anti-A وAnti-B في البلازما — ليست بلا أجسام مضادة! لكنها مانح شامل لأن كرياتها لا تحمل أي مستضد → فلا أحد يهاجمها. وأجسام O المضادة تُخفَّف في دم المستقبِل وما تعملش مشكلة. إذن: السبب هو "لا مستضدات على الكريات" وليس "لا أجسام مضادة في البلازما".</div>
+      </div>
+    </div>
+
+    <!-- NEW Q22 — IgG vs IgM placenta crossing -->
+    <div class="q-item" data-correct="2" data-lecture="blood">
+      <div class="q-header"><div class="q-num">22</div><div class="q-stem">Which statement about placental antibody crossing is CORRECT?<div class="q-tag">MCQ · IgG vs IgM · Placenta</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. IgM crosses the placenta more freely than IgG due to its stronger antigen binding</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Both IgM and IgG cross the placenta equally; size plays no role in transfer</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Anti-D (IgG) crosses the placenta and attacks fetal RBCs; ABO antibodies (IgM) are too large to cross</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. All five immunoglobulin classes cross the placenta with the same efficiency</button>
+      </div>
+      <div class="q-expl">الإجابة C. IgM كبير (بنتامير) لا يعبر المشيمة → ABO antibodies لا تُسبب مرض الوليد. IgG صغير يعبر المشيمة → Anti-D يصل للجنين ويُسبب Erythroblastosis Fetalis. لهذا أجسام Rh أخطر من ABO أثناء الحمل.</div>
+      </div>
+    </div>
+
+    <!-- NEW Q23 — Group A gets Group B -->
+    <div class="q-item" data-correct="1" data-lecture="blood">
+      <div class="q-header"><div class="q-num">23</div><div class="q-stem">Patient blood group A accidentally receives blood group B. The FIRST event triggering the reaction is:<div class="q-tag">Clinical Scenario · Transfusion Incompatibility</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Donor's Anti-A plasma attacks the patient's A-antigen red blood cells</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Patient's Anti-B plasma antibodies bind to the B antigens on donor RBCs and clump them</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Donor's B antigens peacefully neutralize the patient's existing Anti-A antibodies</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Patient's T-cells begin producing new Anti-B antibodies over several days</button>
+      </div>
+      <div class="q-expl">الإجابة B. المريض فصيلة A → بلازمته تحتوي Anti-B. دم المتبرع B → يحمل مستضد B. Anti-B للمريض تهاجم فوراً مستضد B على كريات المتبرع → تكتّل → انحلال دم → هيموجلوبين في البول → فشل كلوي حاد + صدمة. هذه حالة طارئة تستدعي الإيقاف الفوري للتخزين.</div>
+      </div>
+    </div>
+
+    <!-- NEW Q24 — Blood group O paternity trap -->
+    <div class="q-item" data-correct="3" data-lecture="blood">
+      <div class="q-header"><div class="q-num">24</div><div class="q-stem">A man claims to be the father of a child with blood group AB. If his blood group is O (genotype OO), this paternity claim is:<div class="q-tag">MCQ · Paternity Exclusion</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Possible — a man with O can contribute either A or B alleles to his children</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Possible — AB in the child could come from a recessive interaction of O alleles</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Uncertain — requires additional testing to confirm or deny the claim</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Impossible — genotype OO can only pass O alleles; a child needs one A and one B allele to be group AB</button>
+      </div>
+      <div class="q-expl">الإجابة D. فصيلة AB تحتاج جينوتايب I^A I^B — مورثة A من أحد الوالدين ومورثة B من الآخر. الرجل OO لا يملك مورثة A أو B — يُعطي O فقط. إذن لا يمكنه أن يكون أب طفل AB → يُستبعد من الأبوة قطعياً. هذا هو المعنى الحقيقي لـ"الاختبار السلبي الجيد".</div>
+      </div>
+    </div>
 
   </div><!-- end lec-blood -->
 
-  <!-- ══ NERVE ══ -->
+  <!-- ══════════════ NERVE ══════════════ -->
   <div class="lec-category" id="lec-nerve">
 
     <div class="q-item" data-correct="2" data-lecture="nerve">
       <div class="q-header"><div class="q-num">1</div><div class="q-stem">Which part of the neuron RECEIVES incoming impulses from other neurons?<div class="q-tag">MCQ · Neuron Structure</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Axon</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Synaptic knobs</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Dendrites</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Soma (cell body)</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Axon — the long process that transmits impulses away from the cell body</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Synaptic knobs — the terminal endings that release neurotransmitters</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Dendrites — branching processes specialized to receive incoming signals</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Soma (cell body) — the metabolic center containing the nucleus</button>
       </div>
-      <div class="q-expl">الإجابة C. التشعبات (Dendrites) هي التي تستقبل الإشارات الواردة من الخلايا العصبية الأخرى أو المستقبلات الحسية. المحور (Axon) ينقل الإشارات بعيداً عن الجسم الخلوي. النهايات المشبكية (Synaptic Knobs) تُطلق الناقلات العصبية. الجسم الخلوي (Soma) يحتوي على النواة والعضيات.</div>
+      <div class="q-expl">الإجابة C. التشعبات (Dendrites) تستقبل الإشارات الواردة. المحور (Axon) ينقل الإشارات بعيداً عن الجسم الخلوي. النهايات المشبكية (Synaptic Knobs) تُطلق الناقلات. الجسم الخلوي (Soma) يحتوي النواة والعضيات.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Which statement about myelin is INCORRECT?<div class="q-tag">MCQ · "Incorrect" Type</div></div></div>
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Which statement about myelin is INCORRECT?<div class="q-tag">MCQ · "Incorrect" Type · Myelin</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,true)">A. Unmyelinated C fibers have no Schwann cells at all</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Myelin is a protein-lipid complex</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Schwann cells produce myelin in the PNS</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Myelin acts as an electrical insulator reducing ion flow</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Myelin is a protein-lipid complex made by Schwann cells</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Myelin acts as an electrical insulator, reducing ion leakage</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Ion flow in myelinated fibers only occurs at Nodes of Ranvier</button>
       </div>
-      <div class="q-expl">الإجابة A. الإجابة الخاطئة هي A. الألياف غير المغمّدة (C fibers) لديها خلايا شوان (Schwann cells) لكن هذه الخلايا لا تُشكّل غمد الميالين حولها. بمعنى: الميالين غائب لكن خلايا شوان موجودة. الباقي صحيح: الميالين بروتين-دهوني، تُصنعه خلايا شوان في الجهاز المحيطي (والأوليغودندروسيت في المركزي)، ويعمل كعازل كهربائي.</div>
+      <div class="q-expl">الإجابة A. الجملة الخاطئة هي A. الألياف غير المغمّدة (C fibers) لديها خلايا شوان لكنها لا تُشكّل غمد الميالين. يعني: الميالين غائب لكن خلايا شوان موجودة. الباقي صحيح: الميالين بروتين-دهوني، تُصنعه خلايا شوان، ويعمل كعازل كهربائي.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Saltatory conduction is FASTER than continuous conduction because:<div class="q-tag">MCQ · Nerve Conduction</div></div></div>
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Saltatory conduction in myelinated fibers is faster than continuous conduction because:<div class="q-tag">MCQ · Nerve Conduction</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. More Na⁺ ions are available in myelinated fibers</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. The action potential jumps between Nodes of Ranvier, skipping the insulated segments</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Myelinated fibers have more voltage-gated channels per unit length</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Saltatory conduction uses less ATP so energy is available for faster propagation</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Myelinated fibers have a higher Na⁺ concentration gradient than unmyelinated ones</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. The impulse jumps node-to-node, skipping the insulated internodal segments</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Myelinated fibers have denser voltage-gated channels throughout their whole length</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Less ATP consumption in saltatory mode frees energy for faster propagation</button>
       </div>
-      <div class="q-expl">الإجابة B. في التوصيل القفزي (Saltatory Conduction): الميالين يعزل المسافات الطويلة بين العُقد → الإشارة تقفز من عُقدة رانفييه لأخرى بدلاً من الانتشار خطوة خطوة → السرعة تزيد بشكل كبير. نعم يستهلك طاقة أقل (وهذا صحيح) لكنه ليس هو السبب المباشر للسرعة.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="3" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">4</div><div class="q-stem">The resting membrane potential (–70 to –90 mV) is maintained mainly by:<div class="q-tag">MCQ · RMP Causes</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Na⁺/K⁺ ATPase pump (contributes ~93%)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Calcium channels at rest</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Equal permeability to Na⁺ and K⁺</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Selective permeability of cell membrane — K⁺ efflux far exceeding Na⁺ influx (contributes ~93%)</button>
-      </div>
-      <div class="q-expl">الإجابة D. السبب الرئيسي لـRMP (93% = -66 mV) هو النفاذية الانتقائية: الغشاء يسمح لـK⁺ بالخروج أكثر من 100 مرة مقارنة بدخول Na⁺. مضخة Na⁺/K⁺ تساهم فقط بـ7% (-4 mV). الكالسيوم لا دور رئيسي له في RMP الخلية العصبية.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="0" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">5</div><div class="q-stem">The Na⁺/K⁺ pump contributes to maintaining RMP by:<div class="q-tag">MCQ · Na/K Pump</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Pumping 3 Na⁺ out for every 2 K⁺ in — net removal of one positive charge per cycle</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Pumping 2 Na⁺ out for every 3 K⁺ in — net gain of one positive charge per cycle</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Pumping equal numbers of Na⁺ and K⁺ to maintain electrical neutrality</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Allowing passive diffusion of Na⁺ and K⁺ down their concentration gradients</button>
-      </div>
-      <div class="q-expl">الإجابة A. المضخة لها 3 مواقع ربط Na⁺ داخل الخلية و2 مواقع ربط K⁺ خارجها. تضخ 3 Na⁺ للخارج مقابل 2 K⁺ للداخل. الناتج الصافي: خروج شحنة موجبة واحدة لكل دورة → تزيد سلبية الداخل. هذا يتطلب ATP (عمل ضد التدرج التركيزي) ويُساهم بنسبة 7% فقط من قيمة RMP.</div>
+      <div class="q-expl">الإجابة B. التوصيل القفزي (Saltatory): الإشارة بتقفز من عُقدة رانفييه للتالية زي الحجر على المياه — أسرع وأقل استهلاكاً للطاقة. في الألياف غير المغمّدة، التوصيل مستمر على كل طول الليف → أبطأ.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">6</div><div class="q-stem">At the firing level (–65 mV), ALL voltage-gated Na⁺ channels open. What happens immediately after the membrane reaches +35 mV?<div class="q-tag">MCQ · AP Ionic Basis</div></div></div>
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">Afferent nerve fibers differ from efferent fibers in that they:<div class="q-tag">MCQ · Fiber Classification by Function</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. All Na⁺ channels remain open for longer, extending the plateau</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. K⁺ channels close and Na⁺ continues to flow in</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. All Na⁺ channels become inactivated AND voltage-gated K⁺ channels open → K⁺ flows out</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. The Na⁺/K⁺ pump immediately restores the RMP</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Carry impulses FROM the CNS TO muscles and glands</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Are always myelinated and carry motor signals exclusively</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Carry impulses FROM receptors and sense organs TO the CNS</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Only exist in the autonomic nervous system's postganglionic pathways</button>
       </div>
-      <div class="q-expl">الإجابة C. عند ذروة +35 mV: بوابة الإنشاء (activation gate) لقنوات Na⁺ تُغلق (inactivation) → Na⁺ يتوقف عن الدخول. في نفس الوقت، قنوات K⁺ الكهربائية تنفتح → K⁺ يخرج → إعادة الاستقطاب. المضخة Na⁺/K⁺ تعمل لاحقاً لاستعادة التوازن الأيوني الأصلي، لكنها لا تسبب إعادة الاستقطاب مباشرة.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="1" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Local anesthetics like lidocaine work by:<div class="q-tag">MCQ · Clinical Application</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Blocking voltage-gated K⁺ channels → preventing repolarization</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Blocking voltage-gated Na⁺ channels → preventing depolarization and action potential generation</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Inhibiting the Na⁺/K⁺ pump → collapsing the RMP</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Blocking acetylcholine receptors at the neuromuscular junction</button>
-      </div>
-      <div class="q-expl">الإجابة B. التخدير الموضعي (مثل Lidocaine) يحجب قنوات Na⁺ الكهربائية (voltage-gated Na⁺ channels) → لا يمكن لـNa⁺ الدخول → لا تحدث إزالة استقطاب → لا ينتج جهد فعل → إشارات الألم لا تصل للمخ. هذا المبدأ يُفسّر أيضاً لماذا التخدير الموضعي يوقف الإحساس دون إيقاف الوعي.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="3" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">8</div><div class="q-stem">The "All-or-Nothing Law" means that action potential amplitude:<div class="q-tag">MCQ · AP Properties</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Increases proportionally with stimulus strength</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Is larger in A fibers than C fibers</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Varies depending on the duration of the stimulus</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Is constant regardless of stimulus strength — either full AP fires or none at all</button>
-      </div>
-      <div class="q-expl">الإجابة D. قانون الكل أو لا شيء: حجم جهد الفعل ثابت ولا يتغير بقوة المنبّه. إذا وصل المنبّه للعتبة (-65 mV) → جهد فعل كامل (+35 mV). إذا لم يصل → لا شيء. قوة المنبّه تؤثر على تكرار جهود الفعل (frequency coding) وليس على حجم كل جهد فعل واحد.</div>
+      <div class="q-expl">الإجابة C. الألياف الواردة (Afferent/Sensory): من المستقبلات → الجهاز العصبي المركزي. الألياف الصادرة (Efferent/Motor): من الجهاز المركزي → العضلات والغدد. السهل للحفظ: A = Away from periphery = يُقرّب للمركز، E = Exit from CNS.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Which ion has a concentration 35 times HIGHER inside the cell compared to outside?<div class="q-tag">MCQ · Ion Concentrations</div></div></div>
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">Type A nerve fibers are correctly described as:<div class="q-tag">MCQ · Fiber Types A, B, C</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. K⁺ (potassium)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Na⁺ (sodium) — 10× higher outside</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Cl⁻ (chloride)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Ca²⁺ (calcium)</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Myelinated, large diameter, highest conduction velocity</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Unmyelinated, small diameter, lowest conduction velocity</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Myelinated, small diameter, carry preganglionic ANS signals</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Unmyelinated, intermediate diameter, carry proprioceptive signals</button>
       </div>
-      <div class="q-expl">الإجابة A. K⁺ تركيزه داخل الخلية أعلى بـ35 مرة من خارجها → يميل للخروج (تدرج تركيزي للخروج). Na⁺ تركيزه خارج الخلية أعلى بـ10 مرات من داخلها → يميل للدخول. هذا التوازن غير المتماثل هو أساس RMP وجهد الفعل.</div>
+      <div class="q-expl">الإجابة A. ألياف A: مغمّدة + أكبر قطر + أعلى سرعة توصيل. ألياف B: مغمّدة لكن أصغر قطر + سرعة أقل (ما قبل العقدة في الجهاز اللاإرادي). ألياف C: غير مغمّدة + أصغر + أبطأ (ألم مزمن وحرارة).</div>
       </div>
     </div>
 
-    <div class="q-item" data-correct="2" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">10</div><div class="q-stem">Why is an electrical stimulus preferred over a thermal or chemical stimulus in physiology experiments?<div class="q-tag">MCQ · Stimulus Types</div></div></div>
+    <div class="q-item" data-correct="3" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">The resting membrane potential (RMP) is –70 to –90 mV. "Inside negative" means:<div class="q-tag">MCQ · Membrane Potential Basics</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Electrical stimuli produce stronger action potentials</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Electrical stimuli activate only myelinated fibers</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Controllable intensity and duration, no tissue damage, accurately measured, similar to natural nerve stimuli</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Electrical stimuli bypass the All-or-Nothing law</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. There are more negative ions outside the cell than inside</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. The membrane has a net negative charge on its outer surface</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Sodium ions are more concentrated inside the cell than outside</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. The cytoplasm is electrically negative compared to the extracellular fluid</button>
       </div>
-      <div class="q-expl">الإجابة C. الأسباب الأربعة لتفضيل المنبّه الكهربائي في المختبر: (1) مشابه للمنبّهات الطبيعية. (2) يمكن التحكم فيه بدقة (الشدة والمدة والتكرار). (3) لا يُحدث تلفًا في الأنسجة. (4) يمكن قياسه بدقة بالأجهزة الكهربائية. المنبّهات الكيميائية والحرارية يصعب التحكم بها بدقة وقد تُلحق ضرراً بالأنسجة.</div>
+      <div class="q-expl">الإجابة D. "Inside negative": الداخل الخلوي سالب كهربائياً بالنسبة للخارج. يُعبَّر عنه بـ -70 إلى -90 mV. K⁺ الذي يخرج و الأيونات العضوية السالبة المحبوسة داخل الخلية هما السببان الرئيسيان لهذه السلبية.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">11</div><div class="q-stem">In Type B nerve fibers compared to Type A:<div class="q-tag">MCQ · Fiber Types</div></div></div>
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">The Na⁺/K⁺ ATPase pump contributes approximately what percentage to the Resting Membrane Potential?<div class="q-tag">MCQ · RMP Causes</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Type B fibers are unmyelinated and carry pain signals</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Type B fibers are myelinated but have smaller diameter and lower conduction velocity</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Type B fibers carry skeletal muscle motor signals</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Type B fibers have higher conduction velocity due to thicker myelin</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. 93% — the dominant contributor to RMP</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 7% — smaller contributor compared to selective permeability</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 50% — equal contribution with selective permeability</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 0% — the pump plays no role in maintaining RMP</button>
       </div>
-      <div class="q-expl">الإجابة B. ألياف B: مغمّدة (Myelinated) لكن قطرها أصغر من A → سرعة توصيل أقل من A. تنقل إشارات ما قبل العقدة في الجهاز اللاإرادي. ألياف A: مغمّدة، أكبر قطراً، أسرع (تنقل إشارات حركية سريعة وحسية). ألياف C: غير مغمّدة، أبطأ (ألم مزمن، حرارة).</div>
+      <div class="q-expl">الإجابة B. مضخة Na⁺/K⁺ تساهم بـ7% (-4 mV من أصل -70). الجزء الأكبر 93% من النفاذية الانتقائية للغشاء. لكن المضخة أساسية للحفاظ على تدرجات التركيز على المدى البعيد.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Which ion has an intracellular concentration 35× HIGHER than its extracellular concentration?<div class="q-tag">MCQ · Ion Concentrations</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Na⁺ (sodium) — 10× higher inside the cell</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Ca²⁺ (calcium) — stored in higher amounts intracellularly</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. K⁺ (potassium) — 35× higher inside, so it tends to diffuse out</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Cl⁻ (chloride) — highest intracellular concentration of all ions</button>
+      </div>
+      <div class="q-expl">الإجابة C. K⁺ تركيزه داخل الخلية أعلى بـ35 مرة من خارجها → يميل للخروج (تدرج تركيزي للخروج). Na⁺ تركيزه خارج الخلية أعلى بـ10 مرات من داخلها → يميل للدخول.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">The "All-or-Nothing Law" of action potentials states that:<div class="q-tag">MCQ · Action Potential Law</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. A suprathreshold stimulus always produces a full-sized AP; subthreshold produces none</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. A stronger stimulus produces a larger action potential amplitude</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Multiple weak stimuli can summate to produce a partial action potential</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Only myelinated fibers obey this law; unmyelinated C fibers do not</button>
+      </div>
+      <div class="q-expl">الإجابة A. قانون الكل أو لا شيء: المنبّه العتبي أو فوق العتبي → جهد فعل كامل بنفس الحجم دائماً. المنبّه دون العتبي → لا شيء. الجهد لا يتغير حجمه بتغير قوة المنبّه — فقط التكرار يتغير (Frequency modulation).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">Why is an electrical stimulus preferred over thermal or chemical stimuli in physiology labs?<div class="q-tag">MCQ · Stimulus Types</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Electrical stimuli generate stronger action potentials than natural ones</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Electrical stimuli can selectively activate only myelinated A-type fibers</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Electrical stimuli are controllable, cause no tissue damage, and are accurately measured</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Electrical stimuli can bypass the All-or-Nothing law for fine-tuned experiments</button>
+      </div>
+      <div class="q-expl">الإجابة C. الأسباب الأربعة لتفضيل المنبّه الكهربائي: (1) مشابه للمنبّهات الطبيعية. (2) سهل التحكم فيه (شدة ومدة وتكرار). (3) لا يُحدث تلفاً في الأنسجة. (4) يمكن قياسه بدقة بالأجهزة. المنبّهات الكيميائية والحرارية يصعب ضبطها بدقة.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Type B nerve fibers compared to Type A fibers are:<div class="q-tag">MCQ · Fiber Types Comparison</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Unmyelinated and carry slow chronic pain signals</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Myelinated but with smaller diameter and lower conduction velocity</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Responsible for fast voluntary motor commands to skeletal muscle</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Higher conduction velocity than A fibers due to thicker myelin</button>
+      </div>
+      <div class="q-expl">الإجابة B. ألياف B: مغمّدة لكن أصغر قطراً من A → سرعة توصيل أقل. تنقل إشارات ما قبل العقدة في الجهاز اللاإرادي. ألياف C (لا B) هي غير المغمّدة التي تنقل الألم المزمن والحرارة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="nerve">
       <div class="q-header"><div class="q-num">12</div><div class="q-stem">Hyperpolarization (after-potential) occurs because voltage-gated K⁺ channels:<div class="q-tag">MCQ · AP Phases</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Close abruptly at exactly –70 mV</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Open in response to Na⁺ influx</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Are blocked by the Na⁺/K⁺ pump</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Close slowly, allowing extra K⁺ to leave even after RMP is reached</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Close abruptly at exactly –70 mV returning the membrane to rest</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Open in response to Na⁺ influx and allow K⁺ to enter</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Are actively blocked by the Na⁺/K⁺ pump during recovery</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Close slowly, allowing extra K⁺ to leave even after the RMP is reached</button>
       </div>
-      <div class="q-expl">الإجابة D. فرط الاستقطاب (Hyperpolarization): قنوات K⁺ الكهربائية تغلق ببطء بعد وصول الجهد لـRMP → K⁺ يستمر في الخروج قليلاً → الجهد ينخفض أدنى من -70 mV (مثلاً -80 أو -90 mV). هذا المرحلة تُمثّل الفترة العصية النسبية (Relative Refractory Period).</div>
+      <div class="q-expl">الإجابة D. قنوات K⁺ الكهربائية تغلق ببطء → K⁺ يستمر في الخروج قليلاً بعد وصول الجهد لـRMP → ينخفض أدنى من -70 mV (مثلاً -80) = Hyperpolarization = الفترة العصية النسبية.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">13</div><div class="q-stem">
-        <div class="scenario-card"><strong>Case:</strong> A patient with multiple sclerosis (MS) complains of muscle weakness, blurred vision, and loss of coordination. MS involves immune destruction of myelin in the CNS.</div>
-        Which feature of myelinated fibers best explains the widespread neurological symptoms?
+      <div class="q-header"><div class="q-num">13</div>
+      <div class="q-stem">
+        <div class="scenario-card"><strong>Case:</strong> A patient with multiple sclerosis (MS) has muscle weakness, blurred vision, and loss of coordination. MS involves immune destruction of myelin in the CNS.</div>
+        Which feature of myelinated fibers best explains these widespread symptoms?
         <div class="q-tag">Clinical Scenario · Myelin Disease</div>
       </div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Myelin destruction disrupts saltatory conduction, causing slow or blocked transmission of fast nerve signals to muscles, eyes, and coordination centers</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Myelin destruction eliminates all neurotransmitters from synaptic knobs</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Without myelin, neurons cannot produce action potentials of any kind</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Myelin destruction converts all A fibers to C fibers, which only carry pain</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Myelin loss disrupts saltatory conduction in fibers controlling movement, vision, and coordination</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Myelin loss eliminates all neurotransmitters from the affected synaptic terminals</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Without myelin, neurons permanently lose the ability to generate any action potential</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Myelin loss converts all myelinated A fibers into slow pain-carrying C fibers</button>
       </div>
-      <div class="q-expl">الإجابة A. في التصلب المتعدد (MS): تدمير الميالين → انقطاع التوصيل القفزي → تباطؤ أو انقطاع إشارات الأعصاب السريعة. الألياف A المغمّدة هي التي تخدم الحركة الإرادية، الرؤية، والتنسيق الحركي — لذلك هذه الأنظمة هي الأكثر تأثراً. الخلايا لا تموت في البداية لكن التواصل بينها يتعطل.</div>
+      <div class="q-expl">الإجابة A. في التصلب المتعدد: تدمير الميالين → انقطاع التوصيل القفزي → تباطؤ أو انقطاع إشارات الألياف السريعة. ألياف A تخدم الحركة الإرادية، الرؤية، والتنسيق → هذه الأنظمة الأكثر تأثراً.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">14</div><div class="q-stem">You accidentally place your hand in a cup of hot tea. Which TYPE of neurons first detect this stimulus?<div class="q-tag">MCQ · Nerve Types · Hot Tea Scenario</div></div></div>
+      <div class="q-header"><div class="q-num">14</div><div class="q-stem">You accidentally place your hand in hot tea. Which neurons FIRST detect this stimulus?<div class="q-tag">MCQ · Hot Tea Scenario · Fiber Types</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Afferent (sensory) neurons — carrying pain and heat signals FROM hand TO CNS</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Efferent (motor) neurons — carrying signals FROM CNS TO hand muscles</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic postganglionic neurons — controlling blood vessel response</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Association neurons in the spinal cord only</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Afferent sensory neurons carrying pain and heat signals from the hand to the CNS</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Efferent motor neurons sending commands from the CNS to the hand muscles</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic postganglionic neurons controlling local blood vessel responses</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Interneurons in the spinal cord coordinating the reflex arc independently</button>
       </div>
-      <div class="q-expl">الإجابة A. عند وضع يدك في الشاي الساخن: أولاً تُنشَّط الخلايا العصبية الواردة (Afferent/Sensory) التي تنقل إشارات الألم والحرارة من مستقبلات اليد إلى الجهاز العصبي المركزي. ثم يأتي رد فعل الانسحاب عبر الخلايا الحركية (Efferent/Motor). الخلايا الواردة = الكاشف؛ الخلايا الصادرة = المستجيب.</div>
+      <div class="q-expl">الإجابة A. أولاً: الألياف الواردة الحسية (Afferent) تنقل إشارات الحرارة والألم من اليد للجهاز المركزي. ثم ردّ الفعل يأتي عبر الخلايا الحركية. الواردة = الكاشف؛ الصادرة = المستجيب.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">15</div><div class="q-stem">After your hand detects the hot tea, the WITHDRAWAL of your hand involves which system and which type of neuron?<div class="q-tag">MCQ · Hot Tea Scenario (Part 2)</div></div></div>
+      <div class="q-header"><div class="q-num">15</div><div class="q-stem">After detecting the hot tea, the WITHDRAWAL of your hand involves which system?<div class="q-tag">MCQ · Hot Tea Scenario Part 2</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Sympathetic NS → postganglionic efferent neurons</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS → preganglionic neurons</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Somatic NS → efferent (motor) neurons controlling skeletal muscles</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Enteric NS → smooth muscle activation</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Sympathetic NS via postganglionic efferent neurons to blood vessels</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS via preganglionic neurons from the sacral cord</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Somatic NS via efferent motor neurons controlling skeletal muscle contraction</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Enteric NS via smooth muscle activation in the gastrointestinal tract</button>
       </div>
-      <div class="q-expl">الإجابة C. سحب اليد من الشاي الساخن = انقباض عضلات الهيكل العظمي (Skeletal Muscles) → يتحكم فيه الجهاز العصبي الجسدي (Somatic NS) عبر الخلايا الحركية الصادرة (Efferent/Motor neurons). هذا ردّ فعل (Reflex Arc): حرارة → ألم → عصبون حسي → الحبل الشوكي → عصبون حركي → عضلة → سحب اليد. الجهاز الجسدي = إرادي ويتحكم في العضلات الهيكلية.</div>
+      <div class="q-expl">الإجابة C. سحب اليد = انقباض عضلات هيكلية = الجهاز الجسدي (Somatic NS) عبر الخلايا الحركية الصادرة. ردّ الفعل: حرارة → ألم → عصبون حسي → الحبل الشوكي → عصبون حركي → عضلة → سحب اليد.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">16</div><div class="q-stem">Which nerve fiber type specifically carries pain and temperature (like the hot tea sensation)?<div class="q-tag">MCQ · Fiber Types · Pain</div></div></div>
+      <div class="q-header"><div class="q-num">16</div><div class="q-stem">Which nerve fiber type carries CHRONIC PAIN and TEMPERATURE sensations?<div class="q-tag">MCQ · Fiber Types · Pain</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Type A fibers — myelinated, fastest velocity, proprioception</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Type C fibers — unmyelinated, slowest, carry dull/chronic pain and temperature</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Type B fibers — myelinated, preganglionic ANS signals</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Type A-alpha fibers — motor fibers to skeletal muscle</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Type A-alpha — fastest myelinated fibers, carry motor and proprioceptive signals</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Type C — unmyelinated, slowest velocity, carry dull and chronic pain plus temperature</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Type B — myelinated, carry preganglionic autonomic signals at intermediate speed</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Type A-delta — thin myelinated fibers, carry fast sharp pain only</button>
       </div>
-      <div class="q-expl">الإجابة B. ألياف C: غير مغمّدة، أبطأ، تنقل الألم المتأخر والمزمن والحرارة. الألم الأولي الحاد (الطعن السريع) ينقله Aδ fibers. الألم المتأخر المزمن (الحرقان المستمر من الشاي الساخن) ينقله C fibers. ألياف A: للحركة والإحساس السريع. ألياف B: للجهاز اللاإرادي.</div>
+      <div class="q-expl">الإجابة B. ألياف C: غير مغمّدة، أبطأ، تنقل الألم المتأخر المزمن والحرارة. الألم الأولي الحاد (الطعن السريع) تنقله Aδ fibers. الحرقان المستمر من الشاي الساخن ينقله C fibers.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">17</div><div class="q-stem">The axon divides at its end into terminal branches, each ending in synaptic knobs. The main function of synaptic knobs is:<div class="q-tag">MCQ · Neuron Anatomy</div></div></div>
+      <div class="q-header"><div class="q-num">17</div><div class="q-stem">The axon terminates in synaptic knobs. The PRIMARY function of synaptic knobs is:<div class="q-tag">MCQ · Neuron Anatomy</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Receive incoming electrical signals from dendrites</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Produce the myelin sheath around the axon</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Generate the resting membrane potential</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Store and release chemical neurotransmitters into the synaptic cleft</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Receive incoming electrical signals from adjacent dendrites and integrate them</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Generate and maintain the resting membrane potential of the axon terminal</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Produce and extend the myelin sheath along the axon internodal segments</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Store neurotransmitter vesicles and release them into the synaptic cleft</button>
       </div>
-      <div class="q-expl">الإجابة D. النهايات المشبكية (Synaptic Knobs / Boutons): تحتوي على حويصلات (Vesicles) مليئة بالناقلات العصبية الكيميائية (مثل ACh أو NE). عند وصول جهد الفعل، تُطلق هذه الحويصلات محتواها في الشق المشبكي (Synaptic Cleft) → يصل للعصبون التالي أو للعضو المستهدف. هذه هي آلية التواصل بين الخلايا العصبية.</div>
+      <div class="q-expl">الإجابة D. النهايات المشبكية (Synaptic Knobs): تحتوي حويصلات (Vesicles) مليئة بالناقلات العصبية (مثل ACh أو NE). عند وصول جهد الفعل، تُطلق محتواها في الشق المشبكي → يصل للخلية التالية.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">18</div><div class="q-stem">During EXERCISE, which system primarily takes command to meet the body's increased demands?<div class="q-tag">MCQ · Exercise Physiology · Key Question</div></div></div>
+      <div class="q-header"><div class="q-num">18</div><div class="q-stem">During EXERCISE, which system primarily prepares the body's internal environment?<div class="q-tag">MCQ · Exercise Physiology</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic NS — increasing heart rate, dilating bronchi, mobilizing energy, and boosting blood flow to muscles</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS — promoting rest and digestion to support recovery during exercise</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Somatic NS only — voluntary motor control is sufficient for exercise</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Enteric NS — gut responses dominate during physical activity</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic NS — accelerates heart rate, dilates bronchi, and mobilizes muscle blood flow</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS — promotes digestion and energy storage during physical effort</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Somatic NS alone — voluntary motor control is sufficient for all exercise demands</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Enteric NS — gut metabolic responses dominate all phases of physical activity</button>
       </div>
-      <div class="q-expl">الإجابة A. أثناء التمرين، الجهاز الودي (Sympathetic) هو المسيطر: يُسرّع القلب (↑ HR)، يُوسّع القصبات (Bronchodilation → ↑ O₂)، يُكسّر الجليكوجين لطاقة (Catabolism)، يُوسّع أوعية العضلات، يُضيّق أوعية الجهاز الهضمي (غير مهم أثناء التمرين). الجهاز الجسدي ضروري للتحكم في العضلات، لكن الجهاز الودي هو الذي "يُجهّز البيئة الداخلية" للتمرين.</div>
+      <div class="q-expl">الإجابة A. أثناء التمرين، الجهاز الودي (Sympathetic) يُعدّ البيئة الداخلية: تسريع القلب، توسيع القصبات، تكسير الجليكوجين، توجيه الدم للعضلات. الجهاز الجسدي يتحكم في الحركة الإرادية. الاثنان ضروريان لكن بأدوار مختلفة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">19</div><div class="q-stem">Motor (efferent) neurons transmit impulses from CNS to effectors. "Effectors" include:<div class="q-tag">MCQ · Motor Neuron</div></div></div>
+      <div class="q-header"><div class="q-num">19</div><div class="q-stem">Motor (efferent) neurons transmit impulses from the CNS to "effectors." Effectors include:<div class="q-tag">MCQ · Motor Neuron Targets</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Receptors in the skin and sensory organs only</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Muscles (skeletal, smooth, cardiac) and glands</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. The spinal cord and brain only</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Dendrites of the next neuron in the chain</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Receptors in the skin and sensory organs that detect environmental stimuli</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Muscles (skeletal, smooth, cardiac) and secretory glands</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. The spinal cord and brainstem relay centers only</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Dendrites of downstream neurons in reflex arc chains</button>
       </div>
-      <div class="q-expl">الإجابة B. الخلايا العصبية الحركية (Motor/Efferent) تنقل الإشارات من الجهاز العصبي المركزي إلى الأعضاء المنفّذة (Effectors). الأعضاء المنفّذة تشمل: العضلات (هيكلية + ملساء + قلبية) والغدد. المستقبلات (Receptors) هي مصدر الإشارات الحسية وليست وجهة الإشارات الحركية.</div>
+      <div class="q-expl">الإجابة B. الأعضاء المنفّذة (Effectors) = العضلات (هيكلية + ملساء + قلبية) + الغدد. المستقبلات (Receptors) مصدر الإشارات الحسية ولا تنتمي لوجهة الإشارات الحركية.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="nerve">
-      <div class="q-header"><div class="q-num">20</div><div class="q-stem">A toxin blocks all Na⁺/K⁺ ATPase pumps in a nerve cell. What is the LONG-TERM effect on membrane potential?<div class="q-tag">MCQ · Na/K Pump Inhibition</div></div></div>
+      <div class="q-header"><div class="q-num">20</div><div class="q-stem">A toxin blocks ALL Na⁺/K⁺ ATPase pumps. What is the LONG-TERM effect on membrane potential?<div class="q-tag">MCQ · Na/K Pump Inhibition</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Immediate loss of action potential — nerve stops firing instantly</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. RMP becomes +35 mV permanently</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. No effect — the pump only contributes 7% to RMP</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Gradual dissipation of ion gradients: Na⁺ accumulates inside, K⁺ leaks out → RMP slowly collapses toward 0 mV → nerve becomes inexcitable</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Immediate and total loss of action potential — the nerve stops firing within seconds</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. RMP becomes permanently fixed at +35 mV due to unchecked sodium entry</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. No lasting effect — the pump only contributes 7% to RMP so its loss is negligible</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Ion gradients gradually collapse as Na⁺ accumulates inside — RMP slowly drifts toward zero</button>
       </div>
-      <div class="q-expl">الإجابة D. تثبيط المضخة يؤثر على المدى البعيد: رغم أن المضخة تساهم بـ7% فقط من RMP مباشرةً، إلا أن وظيفتها الأساسية هي الحفاظ على تدرجات التركيز لـNa⁺ وK⁺. بدون المضخة، Na⁺ يتراكم داخل الخلية تدريجياً وK⁺ يُفقد → ينهار التدرج التركيزي → يتلاشى RMP → الخلية تفقد قدرتها على توليد جهود الفعل. هذا تأثير مميت على المدى البعيد (مثل تأثير digoxin جرعات سامة).</div>
+      <div class="q-expl">الإجابة D. تثبيط المضخة يؤثر على المدى البعيد: رغم أن المضخة تساهم بـ7% فقط مباشرةً، وظيفتها الأساسية الحفاظ على تدرجات التركيز. بدونها Na⁺ يتراكم داخلياً وK⁺ يُفقد → ينهار التدرج التركيزي → يتلاشى RMP → الخلية تفقد قدرتها على جهود الفعل (تأثير مشابه لسُمّيّة ديجوكسين).</div>
       </div>
     </div>
 
+    <!-- NEW Nerve Q21 — RMP value trap -->
+    <div class="q-item" data-correct="3" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">21</div><div class="q-stem">Which VALUE correctly describes the Resting Membrane Potential of a typical nerve cell?<div class="q-tag">MCQ · RMP Values · Trap Question</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. +35 mV (inside positive) — the normal steady state between action potentials</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. 0 mV (isopotential) — equal charge distribution across the membrane at rest</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. –65 mV (inside negative) — the threshold voltage where depolarization begins</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. –70 to –90 mV (inside negative) — the stable potential of an unstimulated nerve cell</button>
+      </div>
+      <div class="q-expl">الإجابة D. قيم مهمة للحفظ: RMP = -70 إلى -90 mV (الراحة). Firing Level = -65 mV (عتبة الإطلاق). Isopotential = 0 mV. Peak AP = +35 mV. فخّ السؤال: بعض الطلاب يخلطون بين +35 (ذروة AP) والـRMP أو بين -65 mV والـRMP.</div>
+      </div>
+    </div>
+
+    <!-- NEW Nerve Q22 — depolarization ion -->
+    <div class="q-item" data-correct="2" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">22</div><div class="q-stem">During the DEPOLARIZATION phase of an action potential, which ion and direction is correct?<div class="q-tag">MCQ · AP Ionic Basis</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. K⁺ rushes INTO the cell through voltage-gated K⁺ channels</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Na⁺ is actively pumped OUT by the Na⁺/K⁺ ATPase at high speed</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Na⁺ rushes INTO the cell through opened voltage-gated Na⁺ channels</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Ca²⁺ enters first and triggers secondary opening of Na⁺ channels</button>
+      </div>
+      <div class="q-expl">الإجابة C. في إزالة الاستقطاب: قنوات Na⁺ الكهربائية تُفتح → Na⁺ يندفع للداخل (تركيزه خارج الخلية أعلى × 10). الجهد يرتفع من -65 لـ +35 mV. K⁺ يخرج في إعادة الاستقطاب وليس الإزالة. المضخة بتشتغل بعدين للاستعادة.</div>
+      </div>
+    </div>
+
+    <!-- NEW Nerve Q23 — K+ channels blocked -->
+    <div class="q-item" data-correct="2" data-lecture="nerve">
+      <div class="q-header"><div class="q-num">23</div><div class="q-stem">A toxin blocks all voltage-gated K⁺ channels in a nerve. What happens after depolarization?<div class="q-tag">MCQ · Pharmacology Scenario · K⁺ Channels</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. No depolarization occurs — K⁺ channels are needed for the initial Na⁺ influx</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Normal action potential proceeds — K⁺ channels play no role in repolarization</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Depolarization occurs normally, but repolarization fails — membrane stays near +35 mV</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. K⁺ rushes in through blocked channels and instantly cancels the depolarization</button>
+      </div>
+      <div class="q-expl">الإجابة C. K⁺ channels مسدودة: إزالة الاستقطاب تحصل طبيعياً (Na⁺ يدخل عادي). لكن لما يجي وقت إعادة الاستقطاب، K⁺ ما يقدرش يخرج → الغشاء يفضل موجب طويلاً (plateau). هذا يشبه تأثير سموم TEA في التجارب المعملية.</div>
+      </div>
+    </div>
 
   </div><!-- end lec-nerve -->
 
-  <!-- ══ ANS ══ -->
+  <!-- ══════════════ ANS ══════════════ -->
   <div class="lec-category" id="lec-ans">
 
     <div class="q-item" data-correct="1" data-lecture="ans">
-      <div class="q-header"><div class="q-num">1</div><div class="q-stem">What is the key structural difference between Somatic and Autonomic nervous systems?<div class="q-tag">MCQ · Somatic vs Autonomic</div></div></div>
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">What is the key STRUCTURAL difference between Somatic and Autonomic nervous systems?<div class="q-tag">MCQ · Somatic vs Autonomic</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Somatic NS uses two neurons; Autonomic uses one</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Somatic NS uses one neuron directly to skeletal muscle; Autonomic uses two neurons separated by a ganglion</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic NS is fully myelinated; Somatic only preganglionic is myelinated</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Both systems are identical structurally — only differ in effector organs</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Somatic NS uses two neurons with a ganglion; Autonomic uses one neuron directly</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Somatic NS uses one neuron to reach skeletal muscle; Autonomic uses two neurons separated by a ganglion</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic NS is fully myelinated throughout; Somatic has no myelin at all</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Both systems are structurally identical — they differ only in their effector organs</button>
       </div>
-      <div class="q-expl">الإجابة B. الفرق البنيوي الأساسي: الجهاز الجسدي يستخدم عصبوناً واحداً يصل مباشرةً للعضلة الهيكلية (بدون عقدة). الجهاز اللاإرادي يستخدم سلسلة من عصبونين: الأول (ما قبل العقدة/Preganglionic) يتشابك في عقدة لاإرادية، والثاني (ما بعد العقدة/Postganglionic) يصل للعضو المستهدف. العكس (C) هو الصحيح: الجسدي مغمّد كلياً، واللاإرادي فقط ما قبل العقدة مغمّد.</div>
+      <div class="q-expl">الإجابة B. الجهاز الجسدي: عصبون واحد → عضلة هيكلية (بلا عقدة). الجهاز اللاإرادي: عصبونان — الأول (ما قبل العقدة) يتشابك في عقدة، والثاني (ما بعد العقدة) يصل للعضو. C غلطة: الجسدي مغمّد كليًا، واللاإرادي فقط ما قبل العقدة مغمّد.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="ans">
-      <div class="q-header"><div class="q-num">2</div><div class="q-stem">What neurotransmitter is released by ALL preganglionic fibers — whether sympathetic or parasympathetic?<div class="q-tag">MCQ · Neurotransmitters</div></div></div>
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">What neurotransmitter is released by ALL preganglionic fibers, whether sympathetic or parasympathetic?<div class="q-tag">MCQ · Neurotransmitters</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Norepinephrine (NE)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Dopamine</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Serotonin</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Acetylcholine (ACh)</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Norepinephrine (NE) — the main sympathetic postganglionic transmitter</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Dopamine — the catecholamine released in the adrenal medulla</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Serotonin — the enteric nervous system's primary neurotransmitter</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Acetylcholine (ACh) — released by ALL preganglionic fibers in both divisions</button>
       </div>
-      <div class="q-expl">الإجابة D. قاعدة الناقلات العصبية في الجهاز اللاإرادي: جميع الألياف ما قبل العقدة (سواء ودية أو شبه ودية) تُطلق Acetylcholine (ACh). ما بعد العقدة الشبه ودي → ACh. ما بعد العقدة الودي → Norepinephrine (NE) باستثناء الغدد العرقية التي تستقبل ACh أيضاً. أما الجهاز الجسدي → ACh فقط في كل مكان.</div>
+      <div class="q-expl">الإجابة D. قاعدة الناقلات: جميع الألياف ما قبل العقدة (ودي + شبه ودي) = ACh. ما بعد العقدة الشبه ودي = ACh. ما بعد العقدة الودي = NE (إلا الغدد العرقية = ACh). الجسدي = ACh فقط في كل مكان.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="ans">
-      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Which myelination pattern is correct for the Autonomic Nervous System?<div class="q-tag">MCQ · Myelination</div></div></div>
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Which myelination pattern is correct for the Autonomic Nervous System?<div class="q-tag">MCQ · Myelination in ANS</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,true)">A. Preganglionic fibers are myelinated; postganglionic fibers are unmyelinated</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Both preganglionic and postganglionic fibers are fully myelinated</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Both preganglionic and postganglionic fibers are unmyelinated</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Postganglionic fibers are myelinated; preganglionic are unmyelinated</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Both preganglionic and postganglionic fibers are fully myelinated throughout</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Both preganglionic and postganglionic fibers are completely unmyelinated</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Postganglionic fibers are myelinated; preganglionic fibers are unmyelinated</button>
       </div>
-      <div class="q-expl">الإجابة A. في الجهاز اللاإرادي: الألياف ما قبل العقدة (Preganglionic) مغمّدة بالميالين. الألياف ما بعد العقدة (Postganglionic) غير مغمّدة. مقارنةً بالجهاز الجسدي الذي تكون ألياف حركيته مغمّدة كلياً. هذا الفرق في التغميد يُفسّر الفرق في سرعة التوصيل بين الجهازين.</div>
+      <div class="q-expl">الإجابة A. في الجهاز اللاإرادي: ما قبل العقدة مغمّد. ما بعد العقدة غير مغمّد. مقارنةً بالجهاز الجسدي الذي ألياف حركيته مغمّدة كلياً. هذا يُفسّر الفرق في سرعة التوصيل.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="ans">
-      <div class="q-header"><div class="q-num">4</div><div class="q-stem">The sympathetic nervous system is described as "catabolic." This means it:<div class="q-tag">MCQ · ANS Functions</div></div></div>
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">The sympathetic NS is described as "catabolic." This means it promotes:<div class="q-tag">MCQ · ANS Catabolic vs Anabolic</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Breaks down neurotransmitters after synaptic transmission</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Promotes digestion and energy storage</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Promotes energy breakdown and mobilization for emergency/exercise situations</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Breaks down myelin during disease states</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Breakdown of neurotransmitters after each synaptic transmission event</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Digestion, energy storage, and tissue repair during periods of rest</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Energy breakdown and mobilization to meet emergency or exercise demands</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Myelin degradation and axon regeneration in stressed nervous tissue</button>
       </div>
-      <div class="q-expl">الإجابة C. الجهاز الودي = تهديمي (Catabolic): يُحفّز تكسير الطاقة المخزّنة (الجليكوجين والدهون) لتوفير الطاقة اللازمة للطوارئ والتمرين. أما الجهاز شبه الودي = بنائي (Anabolic): يُشجّع على الهضم وتخزين الطاقة في وقت الراحة. هذا التصنيف مفيد لتذكر كل الوظائف: الودي يُجهّز الجسم للعمل، والشبه ودي يُجهّزه للراحة.</div>
+      <div class="q-expl">الإجابة C. الجهاز الودي = تهديمي (Catabolic): يُحفّز تكسير الجليكوجين والدهون لتوفير الطاقة. الشبه ودي = بنائي (Anabolic): يُشجّع على الهضم وتخزين الطاقة وقت الراحة.</div>
       </div>
     </div>
 
@@ -1337,110 +1428,111 @@ footer span{color:var(--teal)}
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,false)">A. Bronchoconstriction and decreased cardiac output</button>
         <button class="opt-btn" onclick="answer(this,true)">B. Increased heart rate, bronchodilation, and increased cerebral blood flow</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Decreased sweating and pupil constriction</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Retention of urine and miosis</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Decreased sweating and pupil constriction (miosis)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Retention of urine and decreased heart rate (bradycardia)</button>
       </div>
-      <div class="q-expl">الإجابة B. أثناء التمرين، الجهاز الودي يُفعَّل للاستجابة لاحتياجات الجسم المتزايدة: تسريع القلب (↑ cardiac output) لضخ دم أكثر، توسيع القصبات (Bronchodilation) لإدخال أكسجين أكثر، وزيادة تدفق الدم للدماغ (↑ cerebral blood flow) لزيادة اليقظة والتنسيق. هذه نفس التأثيرات في حالات الطوارئ.</div>
+      <div class="q-expl">الإجابة B. أثناء التمرين، الجهاز الودي يُفعَّل: تسريع القلب (↑ HR)، توسيع القصبات (Bronchodilation → ↑ O₂)، وزيادة تدفق الدم للدماغ (↑ cerebral blood flow) لزيادة اليقظة.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="ans">
       <div class="q-header"><div class="q-num">6</div><div class="q-stem">The Enteric Nervous System (ENS) is best described as:<div class="q-tag">MCQ · ENS</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. The somatic innervation of the external abdominal wall muscles</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Preganglionic fibers from the spinal cord that directly innervate the gut</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. The parasympathetic supply to the GI tract from the vagus nerve only</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. A local autonomous nervous system in the wall of the alimentary tract, functioning independently of the CNS</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Somatic innervation of the external abdominal and pelvic floor muscles</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Preganglionic fibers from the spinal cord that directly innervate the intestinal wall</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. The parasympathetic supply to the GI tract exclusively from the vagus nerve</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. A local autonomous nervous system in the alimentary tract wall, functioning independently of the CNS</button>
       </div>
-      <div class="q-expl">الإجابة D. الجهاز العصبي المعوي (Enteric NS): نظام عصبي محلي مستقل موجود في جدار الجهاز الهضمي. يُسمى أحياناً "الدماغ الثاني" لأنه يعمل باستقلالية كبيرة عن الجهاز العصبي المركزي. يتحكم في حركة الأمعاء (Peristalsis)، الإفراز، وتدفق الدم في الجهاز الهضمي. يُعدّ التقسيم الثالث للجهاز اللاإرادي بعد الودي وشبه الودي.</div>
+      <div class="q-expl">الإجابة D. الجهاز العصبي المعوي: نظام عصبي محلي مستقل في جدار الجهاز الهضمي. يُسمى "الدماغ الثاني". يتحكم في التمعّج (Peristalsis)، الإفراز، وتدفق الدم في الجهاز الهضمي. التقسيم الثالث للجهاز اللاإرادي بعد الودي والشبه ودي.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="ans">
-      <div class="q-header"><div class="q-num">7</div><div class="q-stem">An autonomic ganglion is defined as a collection of neurons OUTSIDE the CNS. One preganglionic neuron synapses with how many postganglionic neurons?<div class="q-tag">MCQ · Autonomic Ganglia</div></div></div>
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">One preganglionic neuron in an autonomic ganglion synapses with how many postganglionic neurons?<div class="q-tag">MCQ · Autonomic Ganglia · Divergence</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. 8–9 postganglionic neurons (divergence/amplification)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Only 1 (one-to-one synapse)</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. 2–3 postganglionic neurons</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. 20–30 postganglionic neurons</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. 8–9 postganglionic neurons (divergence — amplification of the signal)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Only 1 postganglionic neuron (one-to-one relay with no divergence)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 2–3 postganglionic neurons (minimal branching)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 20–30 postganglionic neurons (massive amplification)</button>
       </div>
-      <div class="q-expl">الإجابة A. كل عصبون ما قبل العقدة (Preganglionic) يتشابك مع 8-9 عصبونات ما بعد العقدة (Postganglionic). هذا ما يُسمى Divergence (تشعّب/تضخيم) — إشارة واحدة تُوزَّع على عدة عصبونات → تأثير واسع الانتشار. العقد وظيفتها مراكز توزيع (Distribution Centers). أنواعها: شبه فقارية (Paravertebral)، وسيطة (Collateral)، طرفية (Terminal).</div>
+      <div class="q-expl">الإجابة A. كل عصبون ما قبل العقدة يتشابك مع 8-9 عصبونات ما بعد العقدة = Divergence (تشعّب/تضخيم). إشارة واحدة تُوزَّع على عدة عصبونات → تأثير واسع الانتشار. العقد = مراكز توزيع.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="ans">
       <div class="q-header"><div class="q-num">8</div><div class="q-stem">Which cranial nerve provides parasympathetic innervation to the PAROTID salivary gland?<div class="q-tag">MCQ · ANS Cranial Nerves</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. CN III (Oculomotor)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. CN VII (Facial)</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. CN IX (Glossopharyngeal)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. CN X (Vagus)</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. CN III (Oculomotor) — innervates the eye muscles and pupillary constrictor</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. CN VII (Facial) — innervates the submandibular and sublingual glands</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. CN IX (Glossopharyngeal) — provides parasympathetic supply to the parotid gland</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. CN X (Vagus) — innervates thoracic and abdominal viscera</button>
       </div>
-      <div class="q-expl">الإجابة C. العصب اللساني البلعومي (CN IX / Glossopharyngeal) يُعصّب الغدة النكفية (Parotid gland). العصب الوجهي (CN VII / Facial) يُعصّب الغدتين تحت الفك (Submandibular) وتحت اللسان (Sublingual). العصب الحركي للعين (CN III) يُعصّب العين. العصب المبهم (CN X) يُعصّب الصدر والبطن.</div>
+      <div class="q-expl">الإجابة C. CN IX (اللساني البلعومي) → الغدة النكفية (Parotid). CN VII (الوجهي) → تحت الفك (Submandibular) + تحت اللسان (Sublingual). CN III → العين. CN X → الصدر والبطن.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="ans">
       <div class="q-header"><div class="q-num">9</div><div class="q-stem">ALL of the following are sympathetic effects on the eye EXCEPT:<div class="q-tag">MCQ · Eye "Except" Type</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Mydriasis (pupil dilation)</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Contraction of the ciliary muscle → increased lens power for near vision</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Elevation of the upper eyelid</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Relaxation of the ciliary muscle → decreased lens power for far vision</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Mydriasis (dilation of the pupil)</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Contraction of the ciliary muscle increasing lens power for near vision</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Elevation of the upper eyelid (widening the palpebral fissure)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Relaxation of the ciliary muscle decreasing lens power for far vision</button>
       </div>
-      <div class="q-expl">الإجابة B. انقباض العضلة الهدبية (Ciliary muscle) → زيادة قوة العدسة → رؤية قريبة — هذا تأثير شبه ودي (CN III). الجهاز الودي يُرخي العضلة الهدبية → تقل قوة العدسة → رؤية بعيدة. الباقي تأثيرات ودية: توسيع الحدقة (Mydriasis)، رفع الجفن (لتوسيع فتحة العين)، وإرخاء العضلة الهدبية.</div>
+      <div class="q-expl">الإجابة B. انقباض العضلة الهدبية → رؤية قريبة — هذا تأثير شبه ودي (CN III). الجهاز الودي يُرخي العضلة الهدبية → رؤية بعيدة. الباقي: توسيع الحدقة، رفع الجفن، إرخاء العضلة الهدبية = ودي.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="ans">
-      <div class="q-header"><div class="q-num">10</div><div class="q-stem">In Horner's Syndrome, miosis (constricted pupil) is seen because:<div class="q-tag">MCQ · Horner's Mechanism</div></div></div>
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">In Horner's Syndrome, miosis occurs because:<div class="q-tag">MCQ · Horner's Mechanism</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. The parasympathetic CN III is directly damaged</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. The dilator pupillae muscle becomes hypertrophied</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Excess norepinephrine constricts the pupil</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Loss of sympathetic innervation paralyzes the dilator pupillae → sphincter pupillae (parasympathetic) acts unopposed</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. The parasympathetic CN III is directly damaged and stops functioning</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. The dilator pupillae muscle hypertrophies and overcontracts the iris</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Excess norepinephrine accumulates and constricts the iris directly</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Loss of sympathetic supply paralyzes the dilator pupillae; the sphincter (parasympathetic) acts unopposed</button>
       </div>
-      <div class="q-expl">الإجابة D. في هورنر، الجهاز الودي للعين مشلول → لا يصل NE لعضلة الموسّعة (Dilator pupillae) → تُشلّ. عضلة العاصرة (Sphincter pupillae) التي يُسيطر عليها الشبه ودي تعمل بحرية وبدون معارضة → الحدقة تنقبض (Miosis). هذا مثال على "مبدأ التضاد" في ANS: كل عضو يُسيطر عليه الاثنان بشكل متعاكس.</div>
+      <div class="q-expl">الإجابة D. في هورنر: الجهاز الودي مشلول → لا NE → شلل عضلة الموسّعة (Dilator pupillae). عضلة العاصرة (Sphincter pupillae) تعمل بحرية بدون معارضة → الحدقة تنقبض (Miosis). مبدأ التضاد في ANS.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="ans">
-      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Which of the following correctly pairs a function with the RIGHT division of the ANS?<div class="q-tag">MCQ · ANS Functions Matching</div></div></div>
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Which correctly pairs a function with the RIGHT ANS division?<div class="q-tag">MCQ · ANS Functions Matching</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic → bronchodilation; Parasympathetic (S2,3,4) → micturition</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Sympathetic → bronchoconstriction; Parasympathetic (CN X) → tachycardia</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic (CN III) → mydriasis; Parasympathetic → ejaculation</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Parasympathetic → sweating; Sympathetic → increased salivation</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic → bronchodilation; Parasympathetic S2,3,4 → micturition</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Sympathetic → bronchoconstriction; Parasympathetic CN X → tachycardia</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic CN III → mydriasis; Parasympathetic sacral → ejaculation</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Parasympathetic → sweating and piloerection; Sympathetic → increased salivation</button>
       </div>
-      <div class="q-expl">الإجابة A. الودي → توسيع القصبات (Bronchodilation)؛ والشبه الودي العجزي (S2,3,4) → التبوّل (Micturition). B غلطة: الودي يُوسّع القصبات وليس يُضيّقها، والمبهم يُبطّئ القلب وليس يسرّعه. C غلطة: الودي لا ينشأ من CN III. D غلطة: التعرق والتحكم في الغدد العرقية هو تأثير ودي، وتقليل اللعاب هو التأثير الودي وليس زيادته.</div>
+      <div class="q-expl">الإجابة A. الودي → توسيع القصبات. الشبه ودي العجزي (S2,3,4) → التبوّل. B غلطة: الودي يُوسّع (لا يُضيّق) القصبات. C غلطة: الودي لا ينشأ من CN III. D غلطة: التعرق والشعر والريشة = ودي.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="ans">
-      <div class="q-header"><div class="q-num">12</div><div class="q-stem">
-        <div class="scenario-card"><strong>Case:</strong> A 58-year-old heavy smoker. He has drooping of the right eyelid, a smaller right pupil than the left, and says the right side of his face feels dry. Chest X-ray: mass at the apex of the right lung.</div>
-        What is the diagnosis?
-        <div class="q-tag">Clinical Scenario · Horner's</div>
+      <div class="q-header"><div class="q-num">12</div>
+      <div class="q-stem">
+        <div class="scenario-card"><strong>Case:</strong> A 58-year-old heavy smoker. Drooping right eyelid, right pupil smaller than left, dry right face. Chest X-ray: mass at the apex of the right lung.</div>
+        What is the MOST LIKELY diagnosis?
+        <div class="q-tag">Clinical Scenario · Horner's Syndrome</div>
       </div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. CN III (oculomotor) palsy from brain metastasis</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Myasthenia gravis — autoimmune neuromuscular junction disease</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. CN III palsy from a brain metastasis causing ptosis and mydriasis</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Myasthenia gravis — autoimmune destruction of the neuromuscular junction</button>
         <button class="opt-btn" onclick="answer(this,true)">C. Horner's Syndrome from Pancoast tumor compressing cervical sympathetic fibers</button>
         <button class="opt-btn" onclick="answer(this,false)">D. Bilateral carotid artery disease causing parasympathetic overactivation</button>
       </div>
-      <div class="q-expl">الإجابة C. الثالوث الكلاسيكي لهورنر: Ptosis + Miosis + Anhydrosis. السبب: ورم بانكوست (Pancoast Tumor) في قمة الرئة اليمنى يضغط على الألياف الودية العنقية. المدخن الثقيل + كتلة في قمة الرئة + ثالوث هورنر = Pancoast = هورنر. ملاحظة: شلل CN III يُعطي Ptosis مع Mydriasis (توسع الحدقة) لأنه يشلّ الشبه ودي — هورنر يعطي Ptosis مع Miosis (انقباض الحدقة).</div>
+      <div class="q-expl">الإجابة C. ثالوث كلاسيكي: Ptosis + Miosis + Anhydrosis. مدخن ثقيل + كتلة في قمة الرئة = Pancoast Tumor يضغط على الألياف الودية العنقية. ملاحظة: شلل CN III يُعطي Ptosis مع Mydriasis (لأنه يشلّ الشبه ودي). هورنر يُعطي Ptosis مع Miosis (يشلّ الودي).</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="ans">
-      <div class="q-header"><div class="q-num">13</div><div class="q-stem">During an exam (high stress), a student notices dry mouth and rapid heartbeat. Which additional effect would the SAME division of the ANS produce?<div class="q-tag">MCQ · Sympathetic Clinical</div></div></div>
+      <div class="q-header"><div class="q-num">13</div><div class="q-stem">During an exam (high stress), a student notices dry mouth and rapid heartbeat. Which ADDITIONAL effect occurs from the SAME ANS division?<div class="q-tag">MCQ · Sympathetic Clinical</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,false)">A. Miosis and bronchoconstriction</button>
         <button class="opt-btn" onclick="answer(this,true)">B. Mydriasis and increased sweating</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Increased salivation and micturition</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Defecation and bradycardia</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Increased salivation and urination</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Defecation urge and bradycardia</button>
       </div>
-      <div class="q-expl">الإجابة B. جفاف الفم (↓ salivation) وتسارع القلب = تأثيرات ودية. نفس الجهاز الودي يُنتج أيضاً: توسيع الحدقة (Mydriasis) وزيادة التعرق (↑ sweating). B هي الإجابة الصحيحة. Miosis وبرودة القلب وزيادة اللعاب والتبوّل = تأثيرات شبه ودية (الضد).</div>
+      <div class="q-expl">الإجابة B. جفاف الفم (↓ لعاب) + تسارع القلب = تأثيرات ودية. نفس الجهاز الودي أيضاً: توسيع الحدقة (Mydriasis) وزيادة التعرق. Miosis + بطء القلب + زيادة اللعاب والتبوّل = تأثيرات شبه ودية (الضد).</div>
       </div>
     </div>
 
@@ -1448,228 +1540,253 @@ footer span{color:var(--teal)}
       <div class="q-header"><div class="q-num">14</div><div class="q-stem">ALL of the following are causes of Horner's Syndrome EXCEPT:<div class="q-tag">MCQ · Horner's Causes "Except"</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,false)">A. Stroke in the brainstem</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Injury to the carotid artery</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Pancoast tumor (upper lobe lung cancer)</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Vagus nerve (CN X) compression</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Injury to the carotid artery in the neck</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Pancoast tumor in the upper lobe of the lung</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Compression of the vagus nerve (CN X)</button>
       </div>
-      <div class="q-expl">الإجابة D. ضغط على العصب المبهم (CN X) لا يُسبب هورنر — CN X شبه ودي يخدم الصدر والبطن وليس له علاقة بالألياف الودية العنقية. هورنر يحدث فقط من إصابة الألياف الودية العنقية التي تنشأ من T1-L2 وتسير في الرقبة. أسبابه الثلاثة الكلاسيكية: سكتة في جذع الدماغ، إصابة الشريان السباتي، ورم قمة الرئة.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="0" data-lecture="ans">
-      <div class="q-header"><div class="q-num">15</div><div class="q-stem">Regarding the origin of the ANS divisions, which is CORRECT?<div class="q-tag">MCQ · ANS Origin</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic: T1–L2 (thoraco-lumbar); Parasympathetic: CN III, VII, IX, X + sacral S2,3,4</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Sympathetic: cranial nerves only; Parasympathetic: thoraco-lumbar</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Both divisions originate from T1–T12 only</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Sympathetic: S2,3,4; Parasympathetic: T1–L2</button>
-      </div>
-      <div class="q-expl">الإجابة A. الأصول: الجهاز الودي (Sympathetic) من T1 إلى L2 (الصدري-القطني / Thoraco-lumbar). الجهاز شبه الودي (Parasympathetic) من الأعصاب القحفية III,VII,IX,X + الأعصاب العجزية S2,3,4 (القحفي-العجزي / Cranio-sacral). طريقة الحفظ: Sym = Spine thoraco-lumbar / Para = Cranio-sacral.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="1" data-lecture="ans">
-      <div class="q-header"><div class="q-num">16</div><div class="q-stem">Mydriasis (dilation of pupils) is a result of:<div class="q-tag">MCQ · Exam-Style Q25</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Parasympathetic activity via CN III</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Sympathetic activity activating dilator pupillae muscle</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Somatic nervous system contracting the ciliary muscle</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Sleep and rest state</button>
-      </div>
-      <div class="q-expl">الإجابة B. التوسيع (Mydriasis) = تأثير ودي (Sympathetic). الجهاز الودي يُنشّط عضلة الموسّع (Dilator Pupillae) → تتوسع الحدقة. النوم والراحة يُفعّلان الشبه ودي → تضيّق الحدقة (Miosis). الشبه الودي (CN III) ينقبض عضلة العاصرة (Sphincter Pupillae) → تضيّق. هذا سؤال مثل سؤال 25 في ورقة الامتحان.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="3" data-lecture="ans">
-      <div class="q-header"><div class="q-num">17</div><div class="q-stem">Horner's Syndrome includes all of the following EXCEPT:<div class="q-tag">MCQ · Exam-Style Q26 · Horner's EXCEPT</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Ptosis (drooping eyelid)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Miosis (constricted pupil)</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Anhydrosis (decreased sweating on affected face)</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Mydriasis (dilated pupil)</button>
-      </div>
-      <div class="q-expl">الإجابة D. Mydriasis (توسع الحدقة) هو العكس تماماً لما يحدث في هورنر! في هورنر يحدث Miosis (انقباض الحدقة) لأن الجهاز الودي مشلول → عضلة الموسّع مشلولة → عضلة العاصرة (شبه الودية) تعمل دون معارضة → انقباض. أعراض هورنر = Ptosis + Miosis + Anhydrosis + Enophthalmos + Vasodilatation. Mydriasis هو تأثير ودي وليس من أعراض هورنر.</div>
+      <div class="q-expl">الإجابة D. ضغط على CN X (الشبه ودي) لا يُسبب هورنر — هورنر يحدث فقط من إصابة الألياف الودية العنقية. أسبابه الثلاثة الكلاسيكية: سكتة في جذع الدماغ، إصابة الشريان السباتي، ورم قمة الرئة (Pancoast).</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="ans">
-      <div class="q-header"><div class="q-num">18</div><div class="q-stem">The sympathetic effect on the lacrimal (tear) glands is:<div class="q-tag">MCQ · Head &amp; Neck ANS</div></div></div>
+      <div class="q-header"><div class="q-num">15</div><div class="q-stem">Sympathetic stimulation of the lacrimal glands produces:<div class="q-tag">MCQ · Head ANS · Lacrimal</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Decreased tear secretion and vasoconstriction of lacrimal gland vessels</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Increased tear secretion</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. No effect — only parasympathetic innervates lacrimal glands</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Vasodilation and increased secretion</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Decreased tear secretion and vasoconstriction of lacrimal vessels</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Increased tear secretion to protect and lubricate the eye during stress</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. No effect — the lacrimal glands are only under parasympathetic control</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Vasodilation and reflex tearing triggered by NE release</button>
       </div>
-      <div class="q-expl">الإجابة A. الجهاز الودي على الغدد الدمعية (Lacrimal glands): يُقلل إفراز الدموع (↓ tear secretion) + يُضيّق الأوعية الدموية لهذه الغدد (Vasoconstriction). لذلك أثناء الطوارئ لا تدمع عيناك! الشبه الودي هو الذي يُحفّز البكاء وزيادة الدموع. هذه التفاصيل مهمة في جدول ANS للمنطقة القحفية.</div>
+      <div class="q-expl">الإجابة A. الجهاز الودي على الغدد الدمعية: يُقلل إفراز الدموع (↓ tear secretion) + يُضيّق الأوعية (Vasoconstriction). لذلك أثناء الطوارئ لا تدمع عيناك! الشبه الودي هو الذي يُحفّز البكاء وزيادة الدموع.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="ans">
-      <div class="q-header"><div class="q-num">19</div><div class="q-stem">The parasympathetic effect on the HEART via CN X (Vagus) is:<div class="q-tag">MCQ · Thoracic ANS</div></div></div>
+      <div class="q-header"><div class="q-num">16</div><div class="q-stem">The parasympathetic effect on the HEART via CN X (Vagus) is:<div class="q-tag">MCQ · Thoracic ANS · Heart</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
         <button class="opt-btn" onclick="answer(this,false)">A. ↑ heart rate and vasodilation of coronary arteries</button>
         <button class="opt-btn" onclick="answer(this,false)">B. ↑ heart rate and vasoconstriction of coronary arteries</button>
         <button class="opt-btn" onclick="answer(this,true)">C. ↓ heart rate and vasoconstriction of coronary arteries</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. No effect on coronary arteries — only on heart rate</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. No effect on coronary arteries — vagus only affects heart rate</button>
       </div>
-      <div class="q-expl">الإجابة C. الجهاز شبه الودي (العصب المبهم CN X) على القلب: يُبطّئ معدل الضربات (↓ Heart Rate) + يُضيّق الشرايين التاجية (Vasoconstriction of coronaries). أما الجهاز الودي فيُسرّع القلب ويُوسّع الشرايين التاجية. وتيرة القلب أثناء الراحة تخضع لتأثير المبهم القوي (Vagal tone)، لهذا القلب يدق ~70 نبضة/دقيقة وليس بمعدله الذاتي ~100.</div>
+      <div class="q-expl">الإجابة C. الشبه ودي (CN X) على القلب: إبطاء معدل الضربات (↓ HR) + تضييق الشرايين التاجية. الودي يُسرّع القلب ويُوسّع التاجية. الـVagal tone هو السبب في دق القلب ~70 نبضة/دقيقة وليس بمعدله الذاتي ~100.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="ans">
-      <div class="q-header"><div class="q-num">20</div><div class="q-stem">During exercise, the sympathetic NS is activated AND the somatic NS is also active. Which statement correctly describes the DIFFERENCE in their roles?<div class="q-tag">MCQ · Sympathetic vs Somatic During Exercise</div></div></div>
+      <div class="q-header"><div class="q-num">17</div><div class="q-stem">During exercise, both the sympathetic and somatic NS are active. Their roles differ in that:<div class="q-tag">MCQ · Sympathetic vs Somatic During Exercise</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Somatic NS increases heart rate; Sympathetic NS controls leg muscles</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Somatic NS controls voluntary skeletal muscle contraction (running); Sympathetic NS prepares the internal environment (↑HR, bronchodilation, energy mobilization)</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Both systems have identical roles and cannot be distinguished during exercise</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS is suppressed during exercise to save energy for the sympathetic NS</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Somatic NS increases heart rate; Sympathetic NS controls voluntary leg movement</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Somatic NS controls voluntary skeletal muscle contraction; Sympathetic NS prepares the internal environment</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Both systems have identical overlapping roles and cannot be distinguished during exercise</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS is suppressed during exercise to conserve energy for the sympathetic NS</button>
       </div>
-      <div class="q-expl">الإجابة B. أثناء التمرين: الجهاز الجسدي (Somatic) يتحكم في الحركة الإرادية للعضلات الهيكلية (أرجلك ويديك أثناء الجري). الجهاز الودي (Sympathetic) يُهيّئ البيئة الداخلية: يُسرّع القلب، يُوسّع القصبات، يُكسّر الجليكوجين لطاقة، يُوجّه الدم للعضلات النشطة، يُقلّل التدفق للجهاز الهضمي. الجهازان يعملان معاً ولكن بأدوار مختلفة تماماً.</div>
+      <div class="q-expl">الإجابة B. أثناء التمرين: الجهاز الجسدي = يُحرّك العضلات الهيكلية الإرادية (أرجلك وذراعيك). الجهاز الودي = يُهيّئ البيئة الداخلية (يُسرّع القلب، يُوسّع القصبات، يُكسّر الجليكوجين، يُوجّه الدم للعضلات النشطة). أدوار مختلفة تماماً لكنهما يعملان معاً.</div>
       </div>
     </div>
 
+    <!-- NEW ANS Q18 — Parasympathetic bronchoconstriction trap -->
+    <div class="q-item" data-correct="1" data-lecture="ans">
+      <div class="q-header"><div class="q-num">18</div><div class="q-stem">Which correctly describes the PARASYMPATHETIC effect on the respiratory system?<div class="q-tag">MCQ · Parasympathetic vs Sympathetic · Lungs · Trap</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Bronchodilation — relaxation of bronchial smooth muscle to allow more airflow</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Bronchoconstriction — contraction of bronchial smooth muscle reducing airway diameter</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. No effect — the respiratory system only responds to somatic nervous control</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Variable — parasympathetic effect depends on current respiratory rate</button>
+      </div>
+      <div class="q-expl">الإجابة B. الفخّ: الشبه ودي = تضييق القصبات (Bronchoconstriction) + زيادة الإفراز القصبي. الودي = توسيع القصبات (Bronchodilation). هذا عكس ما يظنه كثير من الطلاب! في النوبة الربوية، الشبه ودي يفاقم الأزمة.</div>
+      </div>
+    </div>
+
+    <!-- NEW ANS Q19 — Horner's cause trap -->
+    <div class="q-item" data-correct="3" data-lecture="ans">
+      <div class="q-header"><div class="q-num">19</div><div class="q-stem">Horner's Syndrome results from damage to which specific neural pathway?<div class="q-tag">MCQ · Horner's Neural Pathway · Trap</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Parasympathetic fibers from the oculomotor nerve (CN III)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic fibers from the sacral region (S2–S4)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic and parasympathetic fibers simultaneously at the cavernous sinus</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Cervical sympathetic fibers (originating from T1, passing through the superior cervical ganglion)</button>
+      </div>
+      <div class="q-expl">الإجابة D. الفخّ: بعض الطلاب يظنون أن هورنر من الشبه ودي لأن الأعراض (Miosis, Ptosis) تبدو شبه ودية. لكن السبب هو فقد الودي العنقي → الشبه ودي يعمل دون معارضة. الألياف من T1 تمر عبر العقدة العنقية العلوية (Superior Cervical Ganglion).</div>
+      </div>
+    </div>
+
+    <!-- NEW ANS Q20 — Integration all three -->
+    <div class="q-item" data-correct="0" data-lecture="ans">
+      <div class="q-header"><div class="q-num">20</div><div class="q-stem">Which INTEGRATIVE pairing is CORRECT?<div class="q-tag">MCQ · Integration · ANS + Somatic</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic → bronchodilation + tachycardia; Parasympathetic sacral → micturition + erection</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Sympathetic → bronchoconstriction + bradycardia; Parasympathetic sacral → retention of urine</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic → miosis + salivation; Parasympathetic cranial → mydriasis + dry mouth</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS → control of heart and lungs; Autonomic NS → control of all skeletal muscles</button>
+      </div>
+      <div class="q-expl">الإجابة A. الودي: توسيع القصبات + تسريع القلب. الشبه ودي العجزي (S2,3,4): تيسير التبوّل (Micturition) + الانتصاب (Erection بسبب توسّع الأوعية). B غلطة: الودي يُوسّع القصبات ويُسرّع القلب. C غلطة: الودي يُوسّع الحدقة. D غلطة: القلب والرئتان للاإرادي.</div>
+      </div>
+    </div>
 
   </div><!-- end lec-ans -->
 
-  <!-- ══ FINAL QUIZ ══ -->
+  <!-- ══════════════ FINAL QUIZ ══════════════ -->
   <div class="lec-category" id="lec-final">
     <div style="background:rgba(155,109,255,.08);border:1px solid rgba(155,109,255,.3);border-radius:14px;padding:20px 24px;margin-bottom:24px;direction:rtl;text-align:right;font-family:'Cairo',sans-serif;color:#c9b8ff;line-height:1.9;">
-      <strong style="color:#f0a500;font-size:1.05rem;">⚠️ كويز تجريبي — 10 أسئلة من المحاضرات الثلاثة</strong><br>
+      <strong style="color:#f0a500;font-size:1.05rem;">⚠️ كويز تجريبي — أسئلة من المحاضرات الثلاثة</strong><br>
       هتلاقي أسئلة من كل المحاضرات مع بعض. جاوب كلهم واشوف نتيجتك في الآخر!
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="final">
-      <div class="q-header"><div class="q-num">1</div><div class="q-stem">You place your hand in hot tea. Order the events correctly:<div class="q-tag">Mixed · Hot Tea Scenario</div></div></div>
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">You place your hand in hot tea. Order the events CORRECTLY:<div class="q-tag">Mixed · Hot Tea Scenario · Full Arc</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Sympathetic activation → efferent neurons → hand withdraws → sensory perception</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Sympathetic activation → efferent neurons fire → hand withdraws → pain perceived</button>
         <button class="opt-btn" onclick="answer(this,false)">B. Motor neurons fire first → hand moves → pain detected → CNS responds</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. C/Aδ afferent sensory neurons detect heat → signal reaches CNS → somatic efferent neurons activate skeletal muscles → hand withdraws</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Parasympathetic fibers detect pain → brain interprets → autonomic response</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Afferent sensory neurons detect heat → signal reaches CNS → somatic efferent activates skeletal muscle → hand withdraws</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Parasympathetic fibers detect pain → brain interprets → autonomic reflex response</button>
       </div>
-      <div class="q-expl">الإجابة C. تسلسل الأحداث: (1) الشاي الساخن يُنشّط مستقبلات الحرارة/الألم في اليد. (2) ألياف C أو Aδ الواردة (Afferent) تحمل الإشارة للحبل الشوكي والدماغ. (3) الحبل الشوكي يُرسل أمر انسحاب عبر الخلايا الحركية الجسدية (Somatic Efferent). (4) العضلات الهيكلية تنقبض → سحب اليد. كل ذلك في أجزاء من الثانية!</div>
+      <div class="q-expl">الإجابة C. (1) مستقبلات الحرارة/الألم في اليد تُنشَّط. (2) ألياف C أو Aδ الواردة تحمل الإشارة للحبل الشوكي والدماغ. (3) الحبل الشوكي يُرسل أمر انسحاب عبر الخلايا الحركية الجسدية. (4) العضلات الهيكلية تنقبض → سحب اليد. كل ذلك في أجزاء من الثانية!</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="final">
-      <div class="q-header"><div class="q-num">2</div><div class="q-stem">During a 100m sprint, which combination is CORRECT?<div class="q-tag">Mixed · Exercise Physiology</div></div></div>
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">During a 100m sprint, which combination is CORRECT?<div class="q-tag">Mixed · Exercise Physiology · Integration</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic NS prepares the internal environment (↑ HR, bronchodilation) + Somatic NS controls leg muscle contraction voluntarily</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS increases breathing + Somatic NS increases heart rate</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic ganglia directly activate skeletal muscles for running</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS handles all functions — ANS is suppressed during exercise</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic NS prepares internal environment (↑ HR, bronchodilation) + Somatic NS controls voluntary leg muscle contraction</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS increases breathing + Somatic NS increases heart rate directly</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic ganglia directly activate skeletal muscles for the running motion</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS handles all physiological functions during exercise — ANS is suppressed</button>
       </div>
-      <div class="q-expl">الإجابة A. أثناء السباق: الجهاز الودي = "المحرك الداخلي" (يُسرّع القلب، يُوسّع القصبات، يُحشد الطاقة، يُوجّه الدم للعضلات). الجهاز الجسدي = "المحرك الخارجي" (يُحرّك عضلات الساقين والذراعين بشكل إرادي). كلاهما ضروري ويعملان جنباً إلى جنب.</div>
+      <div class="q-expl">الإجابة A. أثناء السباق: الودي = المحرك الداخلي (يُسرّع القلب، يُوسّع القصبات، يُحشد الطاقة). الجسدي = المحرك الخارجي (يُحرّك عضلات الساقين والذراعين إرادياً). كلاهما يعملان جنباً إلى جنب.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="final">
-      <div class="q-header"><div class="q-num">3</div><div class="q-stem">An Rh–ve mother is having her 3rd pregnancy (2nd with an Rh+ve fetus). She received Rhogam after the 2nd delivery. What do you expect?<div class="q-tag">Mixed · Rh System Advanced</div></div></div>
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">An Rh–ve mother is in her 3rd pregnancy (2nd Rh+ve fetus). Rhogam was given correctly after every previous delivery. What do you expect?<div class="q-tag">Mixed · Rh System Advanced</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Severe hemolytic disease — Rhogam wears off</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. No risk — the mother is naturally immune now</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Risk only if the father is homozygous DD</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. If Rhogam was given correctly after each Rh+ve delivery, sensitization was prevented → this pregnancy should be low-risk</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Severe hemolytic disease — Rhogam immunity wears off after each pregnancy</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. No further risk — the mother is now permanently immune to all D antigen</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Risk only if the father is homozygous DD rather than heterozygous Dd</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Low risk — Rhogam given after each delivery prevented maternal sensitization to Anti-D</button>
       </div>
-      <div class="q-expl">الإجابة D. Rhogam يعمل بمبدأ: تحييد الكريات الجنينية Rh+ قبل أن يتعرف عليها جهاز الأم المناعي. إذا أُعطي بشكل صحيح بعد كل ولادة Rh+، يمنع تكوّن Anti-D الخاصة بالأم → لا تحسّس → الحمل التالي آمن. لهذا يُعطى بعد كل ولادة أو حادثة قد تُسبب اختلاط الدمين.</div>
+      <div class="q-expl">الإجابة D. Rhogam يُحيّد كريات الجنين Rh+ قبل أن تتحسس الأم. إذا أُعطي بشكل صحيح بعد كل ولادة → يمنع تكوّن Anti-D الخاصة بالأم → لا تحسّس → الحمل التالي آمن.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="final">
-      <div class="q-header"><div class="q-num">4</div><div class="q-stem">A nerve fiber has: thick diameter, myelin sheath, ions flow only at Nodes of Ranvier, high conduction velocity. This is:<div class="q-tag">Mixed · Nerve Fiber Classification</div></div></div>
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">A nerve fiber: thick diameter, myelin sheath, saltatory conduction at Nodes of Ranvier, highest velocity. This is:<div class="q-tag">Mixed · Nerve Fiber Classification</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Type C fiber</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Type A fiber</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Type B fiber (it has smaller diameter)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Unmyelinated fiber</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Type C — unmyelinated, slowest, carries chronic pain</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Type A — myelinated, large diameter, highest velocity</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Type B — myelinated but smaller diameter than A, medium velocity</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Unmyelinated — continuous conduction, smallest diameter</button>
       </div>
-      <div class="q-expl">الإجابة B. ألياف A: مغمّدة + أكبر قطر + توصيل قفزي عند عُقد رانفييه + أعلى سرعة. ألياف B: مغمّدة لكن قطر أصغر وسرعة أقل (ما قبل العقدة في الجهاز اللاإرادي). ألياف C: غير مغمّدة + أصغر قطر + أبطأ سرعة (ألم مزمن وحرارة). السؤال وصف A بالضبط.</div>
+      <div class="q-expl">الإجابة B. ألياف A: مغمّدة + أكبر قطر + أعلى سرعة. ألياف B: مغمّدة لكن أصغر قطراً (ما قبل العقدة اللاإرادية). ألياف C: غير مغمّدة + أبطأ (ألم مزمن وحرارة). السؤال وصف A بالضبط.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="final">
-      <div class="q-header"><div class="q-num">5</div><div class="q-stem">At the firing level of –65 mV, what SPECIFIC event triggers the full action potential?<div class="q-tag">Mixed · Action Potential Mechanism</div></div></div>
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">At the firing level of –65 mV, which SPECIFIC event triggers the full action potential?<div class="q-tag">Mixed · Action Potential Mechanism</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. ALL voltage-gated Na⁺ channels become simultaneously activated → massive Na⁺ influx → membrane shoots to +35 mV</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. K⁺ channels open first, then Na⁺ channels follow</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Na⁺/K⁺ pump reverses direction, pumping Na⁺ in</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Ca²⁺ channels open, triggering secondary Na⁺ influx</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. ALL voltage-gated Na⁺ channels activate simultaneously → massive Na⁺ influx → potential shoots to +35 mV</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Voltage-gated K⁺ channels open first, creating conditions for Na⁺ channel activation</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. The Na⁺/K⁺ pump reverses direction, actively pumping Na⁺ inward rapidly</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Ca²⁺ channels open and trigger a secondary cascade activating Na⁺ channels</button>
       </div>
-      <div class="q-expl">الإجابة A. عند -65 mV (مستوى الإطلاق): جميع قنوات Na⁺ الكهربائية تنفتح في آنٍ واحد → تدفق هائل لـNa⁺ للداخل → الجهد يقفز من -65 إلى +35 mV بسرعة فائقة. هذا هو مبدأ "الكل أو لا شيء": إذا وصل المنبّه لـ-65، كل القنوات تفتح → جهد فعل كامل. أقل من -65 → لا شيء.</div>
+      <div class="q-expl">الإجابة A. عند -65 mV (مستوى الإطلاق): جميع قنوات Na⁺ الكهربائية تنفتح في آنٍ واحد → تدفق هائل لـNa⁺ → الجهد يقفز من -65 إلى +35 mV. مبدأ الكل أو لا شيء: إذا وصل المنبّه لـ-65، كل القنوات تفتح → جهد فعل كامل.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="final">
-      <div class="q-header"><div class="q-num">6</div><div class="q-stem">A patient has blood group B. He needs a transfusion urgently and only groups A and AB are available. What happens if he receives group A?<div class="q-tag">Mixed · Blood Transfusion Clinical</div></div></div>
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Patient blood group B urgently needs blood. Only groups A and AB are available. What happens with group A?<div class="q-tag">Mixed · Blood Transfusion Clinical</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Safe transfusion — group A is compatible with B</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Safe if Rh factors match</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Dangerous — patient's Anti-A will attack donor's A antigen → agglutination → hemolysis → potentially fatal</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Mild reaction only — not life-threatening</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Safe transfusion — group A is naturally compatible with group B</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Safe if Rh factors of both donor and recipient are matched</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Dangerous — patient's Anti-A attacks donor A antigen causing hemolysis</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Mild reaction only — not severe enough to be life-threatening</button>
       </div>
-      <div class="q-expl">الإجابة C. المريض فصيلة B → بلازمته تحتوي على Anti-A. دم المتبرع A → يحمل مستضد A. Anti-A في بلازمة المريض ستهاجم المستضد A على كريات المتبرع → تكتّل (Agglutination) → انحلال دم (Hemolysis) → هيموجلوبين في البول (dark urine) → فشل كلوي حاد + صدمة. الحل: أعطه AB (مستقبل شامل لا يهاجمه أحد).</div>
+      <div class="q-expl">الإجابة C. المريض B → بلازمته Anti-A. دم المتبرع A → مستضد A. Anti-A تهاجم مستضد A → تكتّل → انحلال دم → فشل كلوي حاد + صدمة. الحل: أعطه AB (المستقبل الشامل — لا أجسام مضادة في بلازمته).</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="3" data-lecture="final">
-      <div class="q-header"><div class="q-num">7</div><div class="q-stem">A 50-year-old patient has: right-sided ptosis, right pupil smaller than left, dry right face, no sweating on right forehead. The MOST LIKELY diagnosis and the system involved is:<div class="q-tag">Mixed · Clinical ANS</div></div></div>
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Patient has: right ptosis, right pupil smaller than left, dry right face, no sweating on right forehead. MOST LIKELY diagnosis:<div class="q-tag">Mixed · Clinical ANS · Horner's</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. CN III palsy — parasympathetic system damage</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic overactivation — excess ACh</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Exercise response — bilateral sympathetic activation</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Horner's Syndrome — unilateral loss of cervical sympathetic innervation (Ptosis + Miosis + Anhydrosis)</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. CN III palsy — parasympathetic damage causing ptosis and pupil dilation</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic overactivation — excess ACh causing bilateral constriction</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic overactivation — bilateral autonomic discharge during panic attack</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Horner's Syndrome — unilateral loss of cervical sympathetic innervation</button>
       </div>
-      <div class="q-expl">الإجابة D. الثالوث الكلاسيكي لهورنر: تدلي الجفن (Ptosis) + انقباض الحدقة (Miosis) + انعدام التعرق (Anhydrosis) — كل ذلك على جانب واحد. السبب: فقد التعصيب الودي العنقي من جانب واحد. لاحظ: CN III palsy يُعطي Ptosis مع Mydriasis (توسع الحدقة)، لأنه يشلّ العصب الشبه ودي. هورنر يُعطي Ptosis مع Miosis لأنه يشلّ الجهاز الودي.</div>
+      <div class="q-expl">الإجابة D. ثالوث هورنر: Ptosis + Miosis + Anhydrosis (كلها على جانب واحد). السبب: فقد التعصيب الودي العنقي أحادي الجانب. ملاحظة: CN III palsy يُعطي Ptosis مع Mydriasis لأنه يشلّ الشبه الودي — هورنر يُعطي Ptosis مع Miosis لأنه يشلّ الودي.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="1" data-lecture="final">
       <div class="q-header"><div class="q-num">8</div><div class="q-stem">Which combination of RMP cause + percentage contribution is CORRECT?<div class="q-tag">Mixed · Membrane Potential</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Na⁺/K⁺ pump contributes 93%; selective permeability contributes 7%</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Selective permeability contributes ~93% (−66 mV); Na⁺/K⁺ pump contributes ~7% (−4 mV)</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. K⁺ influx causes 50%; Na⁺ efflux causes 50%</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Both mechanisms contribute equally at 50% each</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Na⁺/K⁺ pump → 93% of RMP; selective permeability → only 7%</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Selective permeability → ~93% (−66 mV); Na⁺/K⁺ pump → ~7% (−4 mV)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. K⁺ influx → 50% of RMP; Na⁺ efflux → the remaining 50%</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Both mechanisms contribute equally, each approximately 50%</button>
       </div>
-      <div class="q-expl">الإجابة B. RMP = -70 إلى -90 mV. السبب الأول (93% ≈ -66 mV): النفاذية الانتقائية — K⁺ يخرج أكثر بكثير من دخول Na⁺ + أيونات عضوية سالبة محبوسة. السبب الثاني (7% ≈ -4 mV): مضخة Na⁺/K⁺ التي تضخ 3 Na⁺ خارج مقابل 2 K⁺ داخل. رغم أن المضخة تساهم بنسبة أقل، إلا أنها ضرورية للحفاظ على التدرجات التركيزية على المدى البعيد.</div>
+      <div class="q-expl">الإجابة B. RMP = -70 إلى -90 mV. السبب الأول (93% ≈ -66 mV): النفاذية الانتقائية. السبب الثاني (7% ≈ -4 mV): مضخة Na⁺/K⁺ (3 Na⁺ خارج مقابل 2 K⁺ داخل). رغم أن المضخة تساهم بنسبة أقل، إلا أنها ضرورية للحفاظ على التدرجات التركيزية.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="0" data-lecture="final">
-      <div class="q-header"><div class="q-num">9</div><div class="q-stem">A father is blood group O, mother is blood group AB. What blood groups are POSSIBLE in their children?<div class="q-tag">Mixed · Genetics Integration</div></div></div>
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Father blood group O, Mother blood group AB. What blood groups are POSSIBLE in their children?<div class="q-tag">Mixed · Genetics Integration</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Only A or B (not O, not AB)</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Only AB</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. A, B, AB, or O — all possible</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Only O — O is recessive and always wins</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Only A or B — not O, not AB</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Only AB — both parents contribute dominant alleles</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. All four groups — A, B, AB, and O are all possible</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Only O — O is recessive and dominates when present</button>
       </div>
-      <div class="q-expl">الإجابة A. الأب OO (فصيلة O) × الأم AB. الأب يُعطي O فقط. الأم تُعطي إما A أو B. الأبناء الممكنون: AO (فصيلة A) أو BO (فصيلة B). لا يمكن أن يكون AB (لأن الأب لا يعطي A أو B). لا يمكن أن يكون O (لأن الأم لا تعطي O). هذا مثال ذكي على توراث فصائل الدم.</div>
+      <div class="q-expl">الإجابة A. الأب OO × الأم AB: الأب يُعطي O فقط. الأم تُعطي إما A أو B. الأبناء: AO (فصيلة A) أو BO (فصيلة B). لا AB (لأن الأب لا يعطي A أو B). لا O (لأن الأم لا تعطي O). مثال ذكي على توراث فصائل الدم.</div>
       </div>
     </div>
 
     <div class="q-item" data-correct="2" data-lecture="final">
-      <div class="q-header"><div class="q-num">10</div><div class="q-stem">INTEGRATIVE: Match each scenario to the CORRECT system/neuron type: (i) Reading a book → ciliary muscle adjustment; (ii) Touching hot tea → withdrawal; (iii) Heart slowing after eating<div class="q-tag">Mixed · Integration Question</div></div></div>
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">INTEGRATIVE: Match each scenario to the CORRECT system: (i) Reading → ciliary muscle; (ii) Hot tea → hand withdrawal; (iii) Heart slows after a meal<div class="q-tag">Mixed · Integration Question</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. (i) Sympathetic; (ii) Autonomic; (iii) Somatic</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. (i) Somatic; (ii) Sympathetic; (iii) Parasympathetic</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. (i) Parasympathetic CN III; (ii) Somatic afferent then efferent; (iii) Parasympathetic CN X (Vagus)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. (i) Sympathetic; (ii) Parasympathetic; (iii) Somatic</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. (i) Sympathetic; (ii) Autonomic afferent; (iii) Somatic motor</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. (i) Somatic; (ii) Sympathetic efferent; (iii) Parasympathetic CN III</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. (i) Parasympathetic CN III; (ii) Somatic afferent then somatic efferent; (iii) Parasympathetic CN X (Vagus)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. (i) Sympathetic; (ii) Parasympathetic; (iii) Somatic motor only</button>
       </div>
-      <div class="q-expl">الإجابة C. (i) القراءة → تحتاج رؤية قريبة → انقباض العضلة الهدبية (Ciliary muscle) → تأثير شبه ودي عبر CN III. (ii) الشاي الساخن → ألياف واردة حسية (Afferent C/Aδ) تُبلّغ الدماغ، ثم ألياف صادرة جسدية (Somatic Efferent) تسحب اليد. (iii) إبطاء القلب بعد الأكل → "Rest &amp; Digest" → الجهاز شبه الودي عبر العصب المبهم (CN X).</div>
+      <div class="q-expl">الإجابة C. (i) القراءة → رؤية قريبة → انقباض العضلة الهدبية → تأثير شبه ودي عبر CN III. (ii) الشاي الساخن → ألياف حسية واردة (C/Aδ) → الحبل الشوكي → ألياف حركية جسدية صادرة → سحب اليد. (iii) إبطاء القلب بعد الأكل → "Rest &amp; Digest" → الشبه ودي عبر العصب المبهم (CN X).</div>
+      </div>
+    </div>
+
+    <!-- NEW Final Q11 — K+ channels blocked (from old platform) -->
+    <div class="q-item" data-correct="3" data-lecture="final">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">A researcher blocks all voltage-gated K⁺ channels in a nerve using a specific toxin, then applies a suprathreshold stimulus. What is the MOST LIKELY result?<div class="q-tag">Mixed · AP Pharmacology · Advanced</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. No action potential — K⁺ channels are needed to initiate depolarization</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Normal action potential — K⁺ channels do not participate in the AP waveform</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Increased RMP — blocking K⁺ channels makes the inside more positive at rest</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Depolarization occurs normally, but repolarization fails — membrane remains near +35 mV</button>
+      </div>
+      <div class="q-expl">الإجابة D. K⁺ channels مسدودة: إزالة الاستقطاب تحصل طبيعياً (Na⁺ يدخل). لكن في مرحلة إعادة الاستقطاب، K⁺ ما يقدرش يخرج (قنواته مسدودة) → الغشاء يفضل موجب لفترة طويلة جداً (Plateau طويل) → إعادة الاستقطاب تتأخر جداً أو لا تحدث. هذا يشبه تأثير TEA toxin في التجارب.</div>
+      </div>
+    </div>
+
+    <!-- NEW Final Q12 — Group A gets Group B scenario (from old platform) -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">12</div>
+      <div class="q-stem">
+        <div class="scenario-card"><strong>Case:</strong> A patient (group A) receives blood group B by mistake. 30 minutes later: fever, back pain, dark urine, and hypotension.</div>
+        Explain the mechanism AND identify the SPECIFIC antibody responsible.
+        <div class="q-tag">Mixed · Clinical Blood · Mechanism</div>
+      </div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Donor's Anti-A plasma attacks recipient RBCs; the responsible antibody is Anti-A from the donor</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Patient's Anti-B plasma attacks donor B antigen RBCs → hemolysis; the responsible antibody is Anti-B from the recipient</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Anti-D mismatch causes the reaction; both donor and patient are Rh incompatible</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Blood preservatives in donor bag activate complement causing the dark urine</button>
+      </div>
+      <div class="q-expl">الإجابة B. المريض A → بلازمته Anti-B. المتبرع B → كرياته تحمل مستضد B. Anti-B للمريض تهاجم مستضد B → تكتّل → انحلال دم → هيموجلوبين في البول (بول داكن) → فشل كلوي حاد + صدمة. سيرم المتبرع (Anti-A) يُخفَّف جداً في دم المريض فلا يُشكّل خطراً كبيراً.</div>
       </div>
     </div>
 
   </div><!-- end lec-final -->
 
-
 </section><!-- end qbank -->
 </main>
-
-<footer>
-  <p>Built for Medical Physiology Students · <span>Interactive Learning Platform</span></p>
-  <p style="margin-top:6px;">Lectures: <span>Blood Groups · Nerve Physiology · Action Potential · ANS</span></p>
-  <p style="margin-top:6px;opacity:.4;font-size:.75rem;">All content is for educational purposes only.</p>
-</footer>
-
 <script>
 // ── SCORE ──
 const sc = { blood:{t:0,c:0}, nerve:{t:0,c:0}, ans:{t:0,c:0}, final:{t:0,c:0} };
