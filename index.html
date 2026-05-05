@@ -119,6 +119,15 @@ body{background:var(--bg);color:var(--txt);font-family:'Source Serif 4',Georgia,
 /* DIVIDER */
 hr.div{border:none;border-top:1px solid var(--brd);margin:60px 0}
 
+/* TABLE CELL HIGHLIGHTS */
+.hl{color:var(--teal);font-weight:600}
+.hl-r{color:#ff7070;font-weight:600}
+.hl-b{color:#60c9ff;font-weight:600}
+.kterm{color:var(--teal);font-weight:600}
+.kterm-r{color:#ff7070;font-weight:600}
+.hl-box{background:rgba(0,212,184,.07);border:1px solid rgba(0,212,184,.25);border-radius:10px;padding:14px 18px;margin-top:14px;font-size:.93rem;line-height:1.8;color:var(--txt)}
+.hl-box strong{color:var(--teal)}
+
 /* ═══ QUESTION BANK ═══ */
 .qbank-section{margin-top:80px}
 .qbank-header{text-align:center;margin-bottom:48px}
@@ -126,8 +135,8 @@ hr.div{border:none;border-top:1px solid var(--brd);margin:60px 0}
 .qbank-header p{color:var(--mut);font-size:.95rem;font-family:'Cairo',sans-serif}
 
 /* LECTURE TABS */
-.lec-tabs{display:flex;gap:0;margin-bottom:8px;border-radius:14px;overflow:hidden;border:1px solid var(--brd)}
-.lec-tab{flex:1;padding:14px 10px;background:transparent;color:var(--mut);border:none;cursor:pointer;font-size:.85rem;transition:all .25s;font-family:'Cairo',sans-serif;font-weight:600;border-right:1px solid var(--brd)}
+.lec-tabs{display:flex;gap:0;margin-bottom:8px;border-radius:14px;overflow:hidden;border:1px solid var(--brd);flex-wrap:wrap}
+.lec-tab{flex:1;min-width:120px;padding:12px 8px;background:transparent;color:var(--mut);border:none;cursor:pointer;font-size:.82rem;transition:all .25s;font-family:'Cairo',sans-serif;font-weight:600;border-right:1px solid var(--brd);border-bottom:1px solid var(--brd)}
 .lec-tab:last-child{border-right:none}
 .lec-tab.active{background:var(--teal);color:#000;font-weight:700}
 .lec-tab:hover:not(.active){background:rgba(0,212,184,.08);color:var(--teal)}
@@ -190,11 +199,15 @@ footer span{color:var(--teal)}
   <h1>Physiology Hub</h1>
   <p class="hero-credit">by Omar Walid</p>
   <div class="hero-sub">Your bilingual guide to Medical Physiology</div>
-  <p class="hero-desc">Complete coverage of Blood Groups, Nerve Physiology &amp; the Autonomic Nervous System — with clinical notes, SVG diagrams, videos, and a fully interactive question bank.</p>
+  <p class="hero-desc">Complete coverage of Blood Groups, Blood Plasma &amp; RBCs, Anemia, Hemostasis, Anticoagulants, Nerve Physiology &amp; the Autonomic Nervous System — with clinical notes, SVG diagrams, videos, and a fully interactive question bank.</p>
   <div class="hero-pills">
-    <a href="#lec1" class="hero-pill" data-target="lec1">🩸 Lecture 1 — Blood Groups</a>
-    <a href="#lec2" class="hero-pill" data-target="lec2">⚡ Lecture 2 — Nerve</a>
-    <a href="#lec3" class="hero-pill" data-target="lec3">🧠 Lecture 3 — ANS</a>
+    <a href="#lec1" class="hero-pill" data-target="lec1">🔬 Lec 1 — Blood Plasma</a>
+    <a href="#lec2" class="hero-pill" data-target="lec2">🔻 Lec 2 — Anemia</a>
+    <a href="#lec3" class="hero-pill" data-target="lec3">🛑 Lec 3 — Hemostasis</a>
+    <a href="#lec4" class="hero-pill" data-target="lec4">💊 Lec 4 — Anticoagulants</a>
+    <a href="#lec5" class="hero-pill" data-target="lec5">🩸 Lec 5 — Blood Groups</a>
+    <a href="#lec6" class="hero-pill" data-target="lec6">⚡ Lec 6 — Nerve</a>
+    <a href="#lec7" class="hero-pill" data-target="lec7">🧠 Lec 7 — ANS</a>
     <a href="#qbank" class="hero-pill" data-target="qbank">📝 Question Bank</a>
   </div>
 </section>
@@ -203,24 +216,547 @@ footer span{color:var(--teal)}
 <nav class="top-nav">
   <a href="#top" class="nav-logo">⚕ Physiology Hub</a>
   <div class="nav-links">
-    <a href="#lec1">Blood Groups</a>
+    <a href="#lec1">Blood Plasma</a>
+    <a href="#lec2">Anemia</a>
+    <a href="#lec3">Hemostasis</a>
+    <a href="#lec4">Anticoagulants</a>
+    <a href="#lec5">Blood Groups</a>
     <a href="#rh">Rh System</a>
-    <a href="#lec2">Nerve</a>
+    <a href="#lec6">Nerve</a>
     <a href="#ap">Action Potential</a>
-    <a href="#lec3">ANS</a>
+    <a href="#lec7">ANS</a>
     <a href="#qbank">Q Bank</a>
   </div>
 </nav>
 
 <main class="main">
 
-<!-- ══════ LEC 1 — BLOOD GROUPS ══════ -->
+<!-- ══════ LEC 4 — BLOOD PLASMA & RBCs ══════ -->
 <section class="section" id="lec1">
   <div class="section-header">
     <div class="section-number">01</div>
     <div class="section-title-block">
+      <h2 class="section-title">Blood Plasma &amp; Red Blood Cells</h2>
+      <div class="section-title-ar">Lecture 1 · البلازما والكريات الحمرا</div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Definition &amp; Physical Characters of Blood</h3>
+    <p>Blood is a <span class="kterm">specialized connective tissue</span> circulating through blood vessels by the pumping action of the heart — the body's primary transport medium.</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Property</th><th>Value</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">pH</td><td><strong>7.4</strong></td><td>Slightly alkaline</td></tr>
+        <tr><td class="hl">Volume (male)</td><td>~5 Liters</td><td>Female ~4.5 L | Newborn ~450 mL</td></tr>
+        <tr><td class="hl">Specific Gravity</td><td>Whole blood 1.055</td><td>Cells 1.090 | Plasma 1.032</td></tr>
+        <tr><td class="hl">Viscosity</td><td>5× water</td><td>Due to cells + proteins</td></tr>
+        <tr><td class="hl">Composition</td><td>Plasma 55% + Cells 45%</td><td>RBCs + WBCs + Platelets</td></tr>
+      </tbody>
+    </table></div>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      الدم نسيج ضام متخصص بيتحرك في الأوعية بضخ القلب. pH = 7.4 (قلوي خفيف). الذكر = 5 لتر / الأنثى = 4.5 لتر / المولود = 450 مل. أتقل من الماء بـ 5 مرات. بيتكون من بلازما (55%) وعناصر خلوية (45%).
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>WBC Differential Count</h3>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Cell Type</th><th>Category</th><th>Normal %</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Neutrophils</td><td>Granular</td><td>50–70%</td></tr>
+        <tr><td class="hl">Eosinophils</td><td>Granular</td><td>2–5%</td></tr>
+        <tr><td class="hl">Basophils</td><td>Granular</td><td>0–1%</td></tr>
+        <tr><td class="hl">Lymphocytes</td><td>Non-granular</td><td>25–30%</td></tr>
+        <tr><td class="hl">Monocytes</td><td>Non-granular</td><td>5–8%</td></tr>
+      </tbody>
+    </table></div>
+    <div class="hl-box">Memory trick: <strong>Never Let Monkeys Eat Bananas</strong> = N, L, M, E, B</div>
+  </div>
+
+  <div class="content-card">
+    <h3>Plasma Proteins</h3>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Protein</th><th>Concentration</th><th>MW</th><th>Key Function</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Albumin</td><td>3.5–5.0 g/dL</td><td>69,000</td><td>Oncotic pressure (28 mmHg), transport, buffering</td></tr>
+        <tr><td class="hl">Globulins</td><td>2.5 g/dL</td><td>90,000–156,000</td><td>γ-globulins = antibodies (from plasma cells)</td></tr>
+        <tr><td class="hl">Fibrinogen</td><td>0.4 g/dL</td><td>340,000 (largest)</td><td>Clotting + viscosity</td></tr>
+        <tr><td class="hl">Prothrombin</td><td>0.01 g/dL</td><td>68,700</td><td>Coagulation (Factor II)</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:12px"><strong>Functions of Plasma Proteins:</strong></p>
+    <ol>
+      <li><span class="kterm">Buffering</span> — amphoteric molecules; accept or release H⁺</li>
+      <li><span class="kterm">Osmotic Regulation</span> — Albumin exerts ~28 mmHg colloidal osmotic pressure. <span class="kterm-r">↓ Albumin → Edema</span></li>
+      <li><span class="kterm">Defense</span> — γ-globulins (immunoglobulins / antibodies)</li>
+      <li><span class="kterm">Clotting</span> — Fibrinogen + Prothrombin</li>
+      <li><span class="kterm">Viscosity</span> — Plasma is 1.5× more viscous than water (fibrinogen)</li>
+    </ol>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      أهم بروتين = الألبومين بيمسك المياه جوه الأوعية. لو قل → مياه تعدي للأنسجة → Edema (استسقاء). الجلوبيولينات = الأجسام المضادة. الفيبرينوجين = الجلطة + اللزوجة.
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Red Blood Cells (Erythrocytes) — Structure &amp; Production</h3>
+    <p>RBCs are <span class="kterm">biconcave, non-nucleated discs</span>. The biconcave shape maximizes surface area and allows flexibility in capillaries.</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Stage</th><th>Site of Erythropoiesis</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Fetus</td><td>Liver &amp; Spleen</td></tr>
+        <tr><td class="hl">Infants &amp; Children</td><td>Bone marrow of ALL bones</td></tr>
+        <tr><td class="hl">Adults</td><td>Membranous (flat) bones — ribs, vertebrae, sternum</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:12px"><strong>RBC Count:</strong> Adult male 5.5 M/mm³ | Female 5 M/mm³ | Newborn higher | Old age decreases</p>
+    <p><strong>Life span: 120 days</strong> → destroyed by Macrophages in spleen</p>
+    <div class="hl-box"><strong>Fate of Hb after RBC destruction:</strong><br>
+    Globin → Amino acids | Heme → <strong>Iron</strong> (Transferrin → bone marrow reuse) + Protoporphyrin → <strong>Bilirubin</strong> → bile. Excess = <span class="kterm-r">Hemolytic Jaundice</span></div>
+    <p style="margin-top:14px"><strong>Functions of RBCs:</strong></p>
+    <ol>
+      <li>O₂ transport via oxyhemoglobin</li>
+      <li>CO₂ transport: as carbamino-Hb OR as HCO₃⁻ (via carbonic anhydrase)</li>
+      <li>Buffering: deoxyhemoglobin is a better buffer than oxyhemoglobin</li>
+      <li>RBC membrane contains hemoglobin inside</li>
+    </ol>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      الكرية الحمرا بقرص مقعر من ناحيتين ومفيهاش نواة. بتتكون في الجنين في الكبد والطحال، في الأطفال في كل العظام، في البالغين في العظام الغشائية. تعيش 120 يوم ثم يكسرها الطحال. الهيم → حديد (يتعاد) + بيليروبين (يطلع في العصارة).
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Hemoglobin — Structure, Types &amp; Reactions</h3>
+    <p><strong>Structure:</strong> 4 subunits; each = 1 globin chain + 1 heme (contains <span class="kterm">Fe²⁺</span>)</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Type</th><th>Chains</th><th>% in Adults</th><th>Feature</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">HbA</td><td>2α + 2β</td><td>97.5%</td><td>Normal adult Hb</td></tr>
+        <tr><td class="hl">HbF</td><td>2α + 2γ</td><td>Majority in fetus</td><td>Higher O₂ affinity than HbA</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:12px"><strong>Hb Concentration:</strong> Male 13–17 g/dL | Female 12–15 g/dL | Infant up to 19 g/dL</p>
+    <div class="tbl-wrap" style="margin-top:14px"><table class="styled-table">
+      <thead><tr><th>Combines with</th><th>Product</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">O₂</td><td>Oxyhemoglobin</td><td>1 Hb carries 4 O₂; 1g Hb carries 1.33 mL O₂</td></tr>
+        <tr><td class="hl">CO₂</td><td>Carbamino-hemoglobin</td><td>CO₂ transport from tissues</td></tr>
+        <tr><td class="hl-r">CO ⚠️</td><td class="hl-r">Carboxyhemoglobin</td><td class="hl-r">CO has 200× more affinity than O₂ — toxic!</td></tr>
+        <tr><td class="hl-r">Oxidizing agents</td><td class="hl-r">Methemoglobin</td><td class="hl-r">Fe²⁺→Fe³⁺; cannot carry O₂</td></tr>
+      </tbody>
+    </table></div>
+    <div class="hl-box"><strong>Bohr Effect — Factors ↓ O₂ affinity (release O₂ to tissues):</strong><br>
+    ↑ CO₂ | ↑ H⁺ (↓ pH) | ↑ Temperature | ↑ 2,3-DPG (exercise)</div>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      الهيموجلوبين = تاكسي الأكسجين. 4 وحدات كل وحدة = جلوبين + هيم بيه Fe²⁺. CO أخطر لأنه أقوى 200 مرة من O₂. Methemoglobin = Fe³⁺ → مش قادر يشيل O₂. Bohr Effect: ↑ CO₂ + ↑ حموضة + ↑ حرارة + ↑ 2,3-DPG = أكتر O₂ للأنسجة.
+    </div>
+  </div>
+
+  <div class="baladi-box">
+    <div class="baladi-header"><div class="baladi-badge">شرح بلدي</div><div class="baladi-title">البلازما والكريات بالعامي!</div></div>
+    <div class="baladi-text">
+      تخيّل الدم زي عربة توصيلات:
+      <span class="analogy">
+        🚚 الدم = عربة التوصيلات. البلازما = الكابينة (55%) والكريات = البضاعة (45%).<br>
+        🥛 الألبومين = البيبان — بيمسك المياه جوه الأوعية. لو الألبومين قل، المياه تسيب الأوعية وتورّم الأنسجة (Edema)!<br>
+        🔴 الكرية الحمرا = التاكسي. عمرها 120 يوم بعدين الطحال بياكلها ويعيد تدوير الحديد.<br>
+        🧪 CO أخطر من O₂ بـ 200 مرة — بيملي كل التاكسيات ومش بيسيبلهمش مكان للأكسجين!
+      </span>
+      <strong>قاعدة ذهبية:</strong> ↓ Albumin → Edema. ↑ CO₂ + ↑ Acid + ↑ Temp = Hb بيطلق O₂ للأنسجة (Bohr Effect).
+    </div>
+  </div>
+</section>
+
+
+
+<hr class="div">
+
+<!-- ══════ LEC 5 — ANEMIA ══════ -->
+<section class="section" id="lec2">
+  <div class="section-header">
+    <div class="section-number">02</div>
+    <div class="section-title-block">
+      <h2 class="section-title">Anemia &amp; Polycythemia</h2>
+      <div class="section-title-ar">Lecture 2 · الأنيميا والحمرة</div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Definition &amp; Morphological Classification</h3>
+    <p><span class="kterm">Anemia</span> = decrease in RBC count or Hb content → ↓ O₂ supply to tissues.</p>
+    <p>Classified morphologically by <strong>MCV</strong> (cell size) and <strong>MCH</strong> (Hb content per cell):</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Type</th><th>MCV</th><th>MCH</th><th>Main Causes</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Normocytic Normochromic</td><td>Normal</td><td>Normal</td><td>Acute blood loss | Hemolytic anemia | Aplastic anemia | ↓ Erythropoietin</td></tr>
+        <tr><td class="hl-r">Microcytic Hypochromic</td><td class="hl-r">↓</td><td class="hl-r">↓</td><td>Iron deficiency (main) | Chronic blood loss | Globin disorders | Porphyrin disorders</td></tr>
+        <tr><td class="hl-b">Macrocytic (Megaloblastic)</td><td class="hl-b">↑</td><td class="hl-b">↑</td><td>↓ Vitamin B12 | ↓ Folic acid | Pernicious anemia</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="content-card">
+    <h3>Microcytic Hypochromic Anemia — Iron Deficiency</h3>
+    <p><strong>Causes of iron deficiency:</strong></p>
+    <ul>
+      <li>↓ dietary intake or ↑ demand (e.g., pregnancy)</li>
+      <li>↓ absorption: ↓ HCl (gastrectomy), excess phytates/oxalates, small bowel disease</li>
+      <li>Chronic blood loss: ankylostoma, peptic ulcer, piles, excess menstruation</li>
+    </ul>
+    <div class="hl-box"><strong>Iron Absorption Pathway:</strong><br>
+    Fe³⁺ (diet) → <span class="kterm">HCl + Vitamin C</span> → Fe²⁺ → Enterocyte → stored as <span class="kterm">Ferritin</span> (apoferritin + Fe³⁺) OR released via <span class="kterm">Transferrin</span> → blood → bone marrow</div>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      الحديد في الأكل بشكل Fe³⁺ — لازم HCl وفيتامين C يحوّلوه لـ Fe²⁺ عشان يتمتص. لو المعدة اتاستأصلت → نقص HCl → نقص امتصاص الحديد → Microcytic Hypochromic Anemia.
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Macrocytic Megaloblastic Anemia</h3>
+    <p><strong>Causes:</strong></p>
+    <ul>
+      <li><span class="kterm">Folic acid deficiency</span>: poor diet, ↑ requirements, absorption failure</li>
+      <li><span class="kterm">Vitamin B12 deficiency</span>: after gastrectomy, lack of Intrinsic Factor, small bowel disease</li>
+    </ul>
+    <div class="hl-box"><strong>Pernicious Anemia</strong> — familial autoimmune disease (elderly women):<br>
+    Immune attack → destroys <span class="kterm">gastric parietal cells</span> → deficiency of both <strong>HCl</strong> AND <strong>Intrinsic Factor</strong> → ↓ B12 absorption → Megaloblastic anemia</div>
+    <p style="margin-top:12px"><strong>B12 Absorption Pathway:</strong><br>
+    Dietary B12 + <span class="kterm">Intrinsic Factor</span> (from parietal cells) → complex resists GIT enzymes → absorbed at <span class="kterm">Terminal Ileum</span> by pinocytosis → stored in liver</p>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      Pernicious Anemia: مناعة بتدمر الخلايا الجدارية في المعدة → نقص HCl والـ Intrinsic Factor → B12 مش بيتمتصش في الـ Terminal Ileum → كريات كبيرة غير كاملة.
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Normocytic Normochromic Anemia</h3>
+    <p><strong>Causes:</strong></p>
+    <ul>
+      <li><strong>Acute blood loss</strong></li>
+      <li><strong>Hemolytic anemia:</strong>
+        <ul>
+          <li>Intrinsic: hereditary spherocytosis, G-6-PD deficiency, sickle cell anemia</li>
+          <li>Extrinsic: Rh incompatibility, benzene derivatives, malaria</li>
+        </ul>
+      </li>
+      <li><strong>Aplastic anemia:</strong> bone marrow destruction by X-rays, radiation, drugs, malignancy</li>
+      <li>↓ Erythropoietin</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Effects of Anemia:</strong> Hypoxia (fatigue, dyspnea, poor concentration, poor memory, retarded growth) | ↑ Cardiac work</p>
+  </div>
+
+  <div class="content-card">
+    <h3>Polycythemia</h3>
+    <p>↑ RBC count above normal.</p>
+    <ul>
+      <li><span class="kterm">Primary polycythemia</span>: primary bone marrow disorder</li>
+      <li><span class="kterm">Secondary polycythemia</span>: compensatory due to hypoxia (high altitude, heart disease, lung disease)</li>
+    </ul>
+  </div>
+
+  <div class="baladi-box">
+    <div class="baladi-header"><div class="baladi-badge">شرح بلدي</div><div class="baladi-title">الأنيميا بالعامي — 3 أنواع لازم تحفظهم!</div></div>
+    <div class="baladi-text">
+      <span class="analogy">
+        🟡 Normocytic: الكريات شكلها عادي بس عددها قل — زي لما تنزف فجأة أو الطحال ياكل الكريات (Hemolytic) أو النخاع ينهار (Aplastic).<br>
+        🔴 Microcytic: الكريات صغيرة وشاحبة — السبب الرئيسي <strong>نقص الحديد</strong>. الحديد محتاج HCl وفيتامين C عشان يتمتص.<br>
+        🔵 Macrocytic: الكريات كبيرة بس مش كاملة — بسبب نقص <strong>B12 أو Folic Acid</strong>. Pernicious Anemia = مناعة تهاجم الخلايا الجدارية → نقص HCl + Intrinsic Factor → B12 مش بيتمتصش.
+      </span>
+      <strong>الفرق الجوهري: Chronic blood loss → Microcytic | Acute blood loss → Normocytic</strong>
+    </div>
+  </div>
+
+  <!-- SVG: Anemia Classification -->
+  <div class="diagram-wrap">
+    <h4>🔻 Anemia Classification — Visual Summary</h4>
+    <svg viewBox="0 0 700 220" style="width:100%;max-width:700px;display:block;margin:0 auto;font-family:'Cairo',sans-serif">
+      <rect x="220" y="10" width="260" height="44" rx="10" fill="rgba(0,212,184,.15)" stroke="var(--teal)" stroke-width="1.5"/>
+      <text x="350" y="29" text-anchor="middle" font-size="11" fill="var(--teal)" font-weight="700">ANEMIA</text>
+      <text x="350" y="45" text-anchor="middle" font-size="9" fill="#8a9ab5">↓ RBC count or ↓ Hb → ↓ O₂ to tissues</text>
+      <line x1="175" y1="54" x2="175" y2="80" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+      <line x1="350" y1="54" x2="350" y2="80" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+      <line x1="525" y1="54" x2="525" y2="80" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+      <line x1="175" y1="80" x2="525" y2="80" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+      <!-- Normocytic -->
+      <rect x="20" y="90" width="300" height="120" rx="10" fill="rgba(0,212,184,.07)" stroke="rgba(0,212,184,.3)" stroke-width="1.5"/>
+      <text x="170" y="112" text-anchor="middle" font-size="11" fill="var(--teal)" font-weight="700">Normocytic Normochromic</text>
+      <text x="170" y="128" text-anchor="middle" font-size="9" fill="#8a9ab5">Normal MCV + MCH</text>
+      <text x="30" y="148" font-size="9" fill="#9ec8c0">• Acute blood loss</text>
+      <text x="30" y="163" font-size="9" fill="#9ec8c0">• Hemolytic anemia (spherocytosis, G6PD, sickle)</text>
+      <text x="30" y="178" font-size="9" fill="#9ec8c0">• Aplastic anemia (X-rays, drugs)</text>
+      <text x="30" y="193" font-size="9" fill="#9ec8c0">• ↓ Erythropoietin</text>
+      <!-- Microcytic -->
+      <rect x="195" y="90" width="145" height="120" rx="10" fill="rgba(232,64,64,.07)" stroke="rgba(232,64,64,.3)" stroke-width="1.5"/>
+      <text x="267" y="112" text-anchor="middle" font-size="10" fill="#ff7070" font-weight="700">Microcytic</text>
+      <text x="267" y="126" text-anchor="middle" font-size="9.5" fill="#ff7070" font-weight="700">Hypochromic</text>
+      <text x="267" y="142" text-anchor="middle" font-size="9" fill="#8a9ab5">↓ MCV + ↓ MCH</text>
+      <text x="205" y="160" font-size="9" fill="#ff9090">• Iron deficiency</text>
+      <text x="205" y="175" font-size="9" fill="#ff9090">• Chronic blood loss</text>
+      <text x="205" y="190" font-size="9" fill="#ff9090">• Globin disorders</text>
+      <text x="205" y="205" font-size="9" fill="#ff9090">• Porphyrin disorders</text>
+      <!-- Macrocytic -->
+      <rect x="380" y="90" width="300" height="120" rx="10" fill="rgba(96,201,255,.07)" stroke="rgba(96,201,255,.3)" stroke-width="1.5"/>
+      <text x="530" y="112" text-anchor="middle" font-size="11" fill="#60c9ff" font-weight="700">Macrocytic (Megaloblastic)</text>
+      <text x="530" y="128" text-anchor="middle" font-size="9" fill="#8a9ab5">↑ MCV + ↑ MCH</text>
+      <text x="390" y="148" font-size="9" fill="#a8d8ff">• ↓ Folic acid (diet/absorption)</text>
+      <text x="390" y="163" font-size="9" fill="#a8d8ff">• ↓ Vitamin B12</text>
+      <text x="390" y="178" font-size="9" fill="#a8d8ff">• Pernicious anemia:</text>
+      <text x="400" y="193" font-size="9" fill="#a8d8ff">  Autoimmune → ↓ Parietal cells</text>
+      <text x="400" y="208" font-size="9" fill="#a8d8ff">  → ↓ IF + ↓ HCl → ↓ B12</text>
+    </svg>
+  </div>
+</section>
+
+
+
+<hr class="div">
+
+<!-- ══════ LEC 6 — HEMOSTASIS ══════ -->
+<section class="section" id="lec3">
+  <div class="section-header">
+    <div class="section-number">03</div>
+    <div class="section-title-block">
+      <h2 class="section-title">Hemostasis — Platelets &amp; Coagulation</h2>
+      <div class="section-title-ar">Lecture 3 · الإرقاء والتخثر</div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Platelets (Thrombocytes)</h3>
+    <p>Formed from <span class="kterm">Megakaryocytes</span> in bone marrow. <strong>Normal count: 150,000–400,000/mm³</strong>. Life span: 5–7 days. 60–75% circulating; remainder in spleen.</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Condition</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Thrombocytosis</td><td>↑ platelet count</td></tr>
+        <tr><td class="hl-r">Thrombocytopenia</td><td>↓ platelet count</td></tr>
+        <tr><td class="hl-r">Thrombasthenia</td><td>Normal count but abnormal function</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="content-card">
+    <h3>4 Phases of Hemostasis</h3>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:10px">Phase 1 — Vascular Phase</h3>
+    <p>Vasoconstriction via three mechanisms:</p>
+    <ul>
+      <li>Trauma → <span class="kterm">reflex myogenic spasm</span></li>
+      <li>Pain → stimulates <span class="kterm">sympathetic nervous system</span></li>
+      <li>Platelet granules release <span class="kterm">Serotonin + Thromboxane A2</span> → vasoconstriction</li>
+    </ul>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:18px">Phase 2 — Platelet Plug Formation</h3>
+    <p><strong>A) Adhesion:</strong> exposed collagen → platelets adhere via <span class="kterm">von Willebrand Factor (vWF)</span></p>
+    <p><strong>B) Activation:</strong> platelets swell, extend <span class="kterm">pseudopodia</span>, release <span class="kterm">ADP + Thromboxane A2</span></p>
+    <p><strong>C) Aggregation:</strong> ADP + TxA2 recruit more platelets → <strong>platelet plug</strong> (primary hemostasis)</p>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:18px">Phase 3 — Coagulation (Fibrin-Forming System)</h3>
+    <p>Requires: plasma proteins + phospholipids + Ca²⁺. Clotting factors I–XIII (no VI).</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Feature</th><th>Intrinsic Pathway</th><th>Extrinsic Pathway</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Trigger</td><td>Foreign surface / collagen (XII)</td><td>Tissue Factor (III)</td></tr>
+        <tr><td class="hl">Speed</td><td class="hl-r">1–6 min (slow)</td><td class="hl">15 sec (fast)</td></tr>
+        <tr><td class="hl">Setting</td><td>In vivo + in vitro</td><td>In vivo only</td></tr>
+        <tr><td class="hl">Factors</td><td>XII → XI → IX + VIII → X</td><td>III + VII → X</td></tr>
+      </tbody>
+    </table></div>
+    <div class="hl-box"><strong>Common Pathway (starts at Factor X):</strong><br>
+    Xa + V + Ca²⁺ + PL → Prothrombin (II) → <span class="kterm">Thrombin</span> → Fibrinogen (I) → Fibrin → Factor XIII → <span class="kterm">Stable Fibrin Clot</span></div>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:18px">Phase 4 — Fibrinolysis &amp; Clot Retraction</h3>
+    <p><strong>Clot retraction:</strong> 1–2 weeks via <span class="kterm">Retractozyme</span> from platelets</p>
+    <p><strong>Fibrinolysis:</strong> Plasminogen → (TPA, Urokinase, Streptokinase) → <span class="kterm">Plasmin</span> → dissolves fibrin → FDP</p>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      4 مراحل: 1) تضييق الوعاء (Serotonin + TxA2) 2) سدادة الصفائح (Adhesion → Activation → Aggregation) 3) الجلطة الفيبرينية (cascade من عوامل التخثر — Intrinsic أبطأ 1-6 دقيقة / Extrinsic أسرع 15 ثانية — يلتقيان عند X) 4) إذابة الجلطة (Plasmin).
+    </div>
+  </div>
+
+  <!-- SVG: Coagulation Cascade -->
+  <div class="diagram-wrap">
+    <h4>⚗️ Coagulation Cascade — Simplified</h4>
+    <svg viewBox="0 0 700 280" style="width:100%;max-width:700px;display:block;margin:0 auto;font-family:'Cairo',sans-serif">
+      <!-- Intrinsic -->
+      <rect x="10" y="10" width="290" height="170" rx="10" fill="rgba(0,212,184,.06)" stroke="rgba(0,212,184,.3)" stroke-width="1.5"/>
+      <text x="155" y="32" text-anchor="middle" font-size="11" fill="var(--teal)" font-weight="700">INTRINSIC PATHWAY (1–6 min)</text>
+      <text x="155" y="47" text-anchor="middle" font-size="9" fill="#8a9ab5">Trigger: Foreign surface / Collagen</text>
+      <text x="30" y="70" font-size="10" fill="#9ec8c0">XII (Hageman) → XIIa</text>
+      <text x="30" y="88" font-size="10" fill="#9ec8c0">↓   XI → XIa</text>
+      <text x="30" y="106" font-size="10" fill="#9ec8c0">↓   IX → IXa + VIII + Ca²⁺ + PL</text>
+      <text x="30" y="124" font-size="10" fill="#9ec8c0">↓</text>
+      <text x="30" y="142" font-size="10" fill="var(--teal)" font-weight="700">→ Factor X ←</text>
+      <text x="30" y="165" font-size="9" fill="#8a9ab5">(meets extrinsic at Factor X)</text>
+      <!-- Extrinsic -->
+      <rect x="400" y="10" width="290" height="170" rx="10" fill="rgba(240,165,0,.06)" stroke="rgba(240,165,0,.3)" stroke-width="1.5"/>
+      <text x="545" y="32" text-anchor="middle" font-size="11" fill="var(--gold)" font-weight="700">EXTRINSIC PATHWAY (15 sec)</text>
+      <text x="545" y="47" text-anchor="middle" font-size="9" fill="#8a9ab5">Trigger: Tissue Factor (III)</text>
+      <text x="420" y="80" font-size="10" fill="#ffc870">Tissue Factor (III) + Ca²⁺</text>
+      <text x="420" y="100" font-size="10" fill="#ffc870">↓   VII → VIIa</text>
+      <text x="420" y="120" font-size="10" fill="#ffc870">↓</text>
+      <text x="420" y="142" font-size="10" fill="var(--gold)" font-weight="700">→ Factor X ←</text>
+      <text x="420" y="165" font-size="9" fill="#8a9ab5">(meets intrinsic at Factor X)</text>
+      <!-- Common Pathway -->
+      <rect x="170" y="195" width="360" height="75" rx="10" fill="rgba(232,64,64,.08)" stroke="rgba(232,64,64,.3)" stroke-width="1.5"/>
+      <text x="350" y="215" text-anchor="middle" font-size="11" fill="#ff7070" font-weight="700">COMMON PATHWAY</text>
+      <text x="350" y="232" text-anchor="middle" font-size="10" fill="#ff9090">Xa + V + Ca²⁺ + PL → Prothrombin → Thrombin</text>
+      <text x="350" y="250" text-anchor="middle" font-size="10" fill="#ff9090">Thrombin → Fibrinogen → Fibrin</text>
+      <text x="350" y="268" text-anchor="middle" font-size="10" fill="var(--gold)" font-weight="700">Factor XIII → Stable Fibrin Clot ✓</text>
+      <!-- Arrows -->
+      <line x1="300" y1="142" x2="340" y2="205" stroke="rgba(255,255,255,.2)" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="400" y1="142" x2="360" y2="205" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+      <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,.3)"/></marker></defs>
+    </svg>
+  </div>
+
+  <div class="baladi-box">
+    <div class="baladi-header"><div class="baladi-badge">شرح بلدي</div><div class="baladi-title">الإرقاء بالعامي — 4 خطوات!</div></div>
+    <div class="baladi-text">
+      لما الوعاء يتجرح، الجسم بيتبع 4 خطوات بالترتيب:
+      <span class="analogy">
+        🚰 خطوة 1: الوعاء بيضيق — زي قفل الحنفية — بفضل السيروتونين والثرومبوكسان والجهاز الودي.<br>
+        🩹 خطوة 2: الصفائح بتيجي وتلزق في مكان الجرح (بمساعدة vWF)، بتتنشط وبتطلق ADP وTxA2 عشان تجيب صفائح أكتر → سدادة أولية.<br>
+        🔗 خطوة 3: سلسلة تفاعلات طويلة (Cascade). مسارين: الداخلي (أبطأ 1-6 دقائق) والخارجي (أسرع 15 ثانية). كلاهما يوصل لـ Factor X → Thrombin → Fibrin → جلطة قوية.<br>
+        🧹 خطوة 4: بعد الشفاء، Plasmin يكسر الجلطة وتختفي.
+      </span>
+      <strong>المسار الخارجي = أسرع. المسار الداخلي = أبطأ. كلاهما يصب في المسار المشترك عند Factor X.</strong>
+    </div>
+  </div>
+</section>
+
+
+
+<hr class="div">
+
+<!-- ══════ LEC 7 — ANTICOAGULANTS ══════ -->
+<section class="section" id="lec4">
+  <div class="section-header">
+    <div class="section-number">04</div>
+    <div class="section-title-block">
+      <h2 class="section-title">Anticoagulants &amp; Hemostasis Abnormalities</h2>
+      <div class="section-title-ar">Lecture 4 · مضادات التخثر واضطرابات الإرقاء</div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Anticoagulants — In Vitro (Lab Use)</h3>
+    <ol>
+      <li><span class="kterm">Precipitation of Ca²⁺</span>: sodium oxalate, ammonium oxalate, or sodium citrate</li>
+      <li><span class="kterm">Siliconized non-wettable electropositive container</span> → prevents activation of Factor XII and platelets</li>
+      <li><span class="kterm">Heparin</span></li>
+    </ol>
+  </div>
+
+  <div class="content-card">
+    <h3>Anticoagulants — In Vivo (Clinical Use)</h3>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Feature</th><th>Heparin</th><th>Dicumarol (Warfarin)</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Origin</td><td>Animal (Mast cells + Basophils)</td><td>Plant</td></tr>
+        <tr><td class="hl">Route</td><td class="hl-b">Intravenous (IV)</td><td class="hl">Oral</td></tr>
+        <tr><td class="hl">Onset</td><td class="hl">Immediate</td><td class="hl-r">2–3 days (slow)</td></tr>
+        <tr><td class="hl">Mechanism</td><td>Activates Antithrombin III → inactivates IXa, Xa, XIa, XIIa, XIIIa &amp; thrombin. Also: co-factor for lipoprotein lipase (clears blood lipids)</td><td>Inhibits Vitamin K → prevents hepatic synthesis of Factors <strong>II, VII, IX, X</strong></td></tr>
+        <tr><td class="hl">Antidote</td><td class="hl-r">Protamine sulphate</td><td class="hl-r">Vitamin K</td></tr>
+      </tbody>
+    </table></div>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      الهيبارين: حيواني، وريدي، فوري. بيفعّل Antithrombin III → يوقف سلسلة التخثر. ترياقه Protamine Sulphate.<br>
+      الديكيومارول: نباتي، فموي، بطيء 2-3 أيام. بيمنع فيتامين K → نقص Factors II, VII, IX, X. ترياقه Vitamin K.
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h3>Abnormalities of Hemostasis</h3>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:6px">A) Hemophilia</h3>
+    <p><span class="kterm">Congenital X-linked recessive</span> — transmitted by females, manifested in males.</p>
+    <div class="tbl-wrap"><table class="styled-table">
+      <thead><tr><th>Type</th><th>%</th><th>Missing Factor</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Hemophilia A</td><td>85%</td><td>Factor VIII (Anti-hemophilic factor)</td></tr>
+        <tr><td class="hl">Hemophilia B</td><td>10%</td><td>Factor IX (Christmas factor)</td></tr>
+        <tr><td class="hl">Hemophilia C</td><td>5%</td><td>Factor XI</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Clotting time (CT): PROLONGED</strong> | <strong>Bleeding time (BT): NORMAL</strong></p>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:18px">B) Purpura</h3>
+    <p>Spontaneous petechiae in skin &amp; mucous membranes. <strong>CT: NORMAL</strong> | <strong>BT: PROLONGED</strong></p>
+    <ul>
+      <li><span class="kterm">Thrombocytopenic</span> (1° autoimmune | 2° bone marrow lesions or drugs)</li>
+      <li><span class="kterm">Thromboasthenic</span> — normal count, abnormal function</li>
+    </ul>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:18px">C) Vitamin K Deficiency</h3>
+    <p>Factors <strong>II, VII, IX, X</strong> cannot be synthesized in liver. Causes: liver disease | bile duct obstruction (↓ bile → ↓ fat-soluble vitamin absorption)</p>
+
+    <h3 style="font-size:1rem;color:var(--gold);margin-top:18px">D) Thromboembolism</h3>
+    <p>Blood clot inside vessel — occurs with <span class="kterm">slow blood flow</span> (post-surgery, post-delivery)</p>
+
+    <div class="hl-box" style="border-color:var(--red)"><strong>⚠️ Critical Comparison — Hemophilia vs Purpura:</strong><br>
+    <strong>Hemophilia:</strong> Defect in clotting factors | CT ↑ prolonged | BT normal<br>
+    <strong>Purpura:</strong> Defect in platelets | CT normal | BT ↑ prolonged</div>
+    <div class="arabic-block">
+      <div class="arabic-label">الترجمة</div>
+      الهيموفيليا: مرض وراثي في الذكور — عوامل تخثر ناقصة — CT طويل / BT طبيعي.<br>
+      البرفرا: مشكلة في الصفائح — CT طبيعي / BT طويل. ده الفرق الجوهري في الامتحانات!<br>
+      نقص فيتامين K → نقص II, VII, IX, X (نفس الـ Dicumarol). Thromboembolism ← بطء الدم.
+    </div>
+  </div>
+
+  <!-- SVG: Hemophilia vs Purpura -->
+  <div class="diagram-wrap">
+    <h4>⚠️ Hemophilia vs Purpura — Key Differences</h4>
+    <svg viewBox="0 0 700 200" style="width:100%;max-width:700px;display:block;margin:0 auto;font-family:'Cairo',sans-serif">
+      <rect x="10" y="10" width="320" height="180" rx="12" fill="rgba(155,109,255,.07)" stroke="rgba(155,109,255,.4)" stroke-width="1.5"/>
+      <text x="170" y="36" text-anchor="middle" font-size="14" fill="#9b6dff" font-weight="700">HEMOPHILIA</text>
+      <text x="20" y="60" font-size="10" fill="#c9b8ff">Defect: Clotting Factors (VIII / IX / XI)</text>
+      <text x="20" y="80" font-size="10" fill="#c9b8ff">Cause: Congenital X-linked recessive</text>
+      <text x="20" y="100" font-size="10" fill="#c9b8ff">Transmitted by: Females</text>
+      <text x="20" y="120" font-size="10" fill="#c9b8ff">Manifests in: Males (sons)</text>
+      <text x="20" y="145" font-size="11" fill="#ff7070" font-weight="700">Clotting Time (CT): PROLONGED ↑</text>
+      <text x="20" y="165" font-size="11" fill="#00d4b8" font-weight="700">Bleeding Time (BT): NORMAL ✓</text>
+      <text x="20" y="183" font-size="9" fill="#8a9ab5">A=85% / B=10% / C=5%</text>
+      <rect x="370" y="10" width="320" height="180" rx="12" fill="rgba(232,64,64,.07)" stroke="rgba(232,64,64,.4)" stroke-width="1.5"/>
+      <text x="530" y="36" text-anchor="middle" font-size="14" fill="#e84040" font-weight="700">PURPURA</text>
+      <text x="380" y="60" font-size="10" fill="#ffaaaa">Defect: Platelets (count or function)</text>
+      <text x="380" y="80" font-size="10" fill="#ffaaaa">Thrombocytopenic: ↓ platelet count</text>
+      <text x="380" y="100" font-size="10" fill="#ffaaaa">  1° = Autoimmune | 2° = Bone marrow</text>
+      <text x="380" y="120" font-size="10" fill="#ffaaaa">Thromboasthenic: normal count, ↓ function</text>
+      <text x="380" y="145" font-size="11" fill="#00d4b8" font-weight="700">Clotting Time (CT): NORMAL ✓</text>
+      <text x="380" y="165" font-size="11" fill="#ff7070" font-weight="700">Bleeding Time (BT): PROLONGED ↑</text>
+      <text x="380" y="183" font-size="9" fill="#8a9ab5">Signs: petechiae in skin &amp; mucous membranes</text>
+    </svg>
+  </div>
+
+  <div class="baladi-box">
+    <div class="baladi-header"><div class="baladi-badge">شرح بلدي</div><div class="baladi-title">مضادات التخثر والاضطرابات بالعامي!</div></div>
+    <div class="baladi-text">
+      <span class="analogy">
+        💉 الهيبارين: بيجي من جسم الحيوانات، بيتحقن في الوريد، أثره فوري. بيشغّل Antithrombin III اللي بتوقف سلسلة التخثر. لو زاد → ترياقه Protamine Sulphate.<br>
+        💊 الديكيومارول: نباتي، بياخد بالبلع، أثره بعد 2-3 أيام لأنه بيمنع فيتامين K من تكوين عوامل التخثر. ترياقه Vitamin K نفسه.
+      </span>
+      <strong>الهيموفيليا vs البرفرا:</strong> الهيموفيليا = مشكلة في عوامل التخثر → CT طويل / BT طبيعي. البرفرا = مشكلة في الصفائح → BT طويل / CT طبيعي. ده الفرق اللي بيجي في كل امتحان!
+    </div>
+  </div>
+</section>
+
+
+
+<hr class="div">
+
+<!-- ══════ LEC 1 — BLOOD GROUPS ══════ -->
+<section class="section" id="lec5">
+  <div class="section-header">
+    <div class="section-number">05</div>
+    <div class="section-title-block">
       <h2 class="section-title">Blood Grouping</h2>
-      <div class="section-title-ar">Lecture 1 · فصائل الدم</div>
+      <div class="section-title-ar">Lecture 5 · فصائل الدم</div>
     </div>
   </div>
 
@@ -345,10 +881,10 @@ footer span{color:var(--teal)}
 <!-- RH SYSTEM -->
 <section class="section" id="rh">
   <div class="section-header">
-    <div class="section-number">02</div>
+    <div class="section-number">05</div>
     <div class="section-title-block">
       <h2 class="section-title">Rh System &amp; Erythroblastosis Fetalis</h2>
-      <div class="section-title-ar">Lecture 1 (cont.) · نظام Rh</div>
+      <div class="section-title-ar">Lecture 5 (cont.) · نظام Rh</div>
     </div>
   </div>
 
@@ -399,15 +935,17 @@ footer span{color:var(--teal)}
   </div>
 </section>
 
+
+
 <hr class="div">
 
 <!-- ══════ LEC 2 — NERVE ══════ -->
-<section class="section" id="lec2">
+<section class="section" id="lec6">
   <div class="section-header">
-    <div class="section-number">03</div>
+    <div class="section-number">06</div>
     <div class="section-title-block">
       <h2 class="section-title">Physiology of Nerve</h2>
-      <div class="section-title-ar">Lecture 2 · فسيولوجيا الأعصاب</div>
+      <div class="section-title-ar">Lecture 6 · فسيولوجيا الأعصاب</div>
     </div>
   </div>
 
@@ -470,10 +1008,10 @@ footer span{color:var(--teal)}
 <!-- ACTION POTENTIAL -->
 <section class="section" id="ap">
   <div class="section-header">
-    <div class="section-number">04</div>
+    <div class="section-number">06</div>
     <div class="section-title-block">
       <h2 class="section-title">Membrane Potential &amp; Action Potential</h2>
-      <div class="section-title-ar">Lecture 2 (cont.) · جهد الغشاء وجهد الفعل</div>
+      <div class="section-title-ar">Lecture 6 (cont.) · جهد الغشاء وجهد الفعل</div>
     </div>
   </div>
 
@@ -579,15 +1117,17 @@ footer span{color:var(--teal)}
   <div class="video-wrap"><iframe src="https://www.youtube.com/embed/pBOXHJQt-LI" title="Action Potential" allowfullscreen loading="lazy"></iframe></div>
 </section>
 
+
+
 <hr class="div">
 
 <!-- ══════ LEC 3 — ANS ══════ -->
-<section class="section" id="lec3">
+<section class="section" id="lec7">
   <div class="section-header">
-    <div class="section-number">05</div>
+    <div class="section-number">07</div>
     <div class="section-title-block">
       <h2 class="section-title">Autonomic Nervous System</h2>
-      <div class="section-title-ar">Lecture 3 · الجهاز العصبي اللاإرادي</div>
+      <div class="section-title-ar">Lecture 7 · الجهاز العصبي اللاإرادي</div>
     </div>
   </div>
 
@@ -758,21 +1298,27 @@ footer span{color:var(--teal)}
   <div class="video-wrap"><iframe src="https://www.youtube.com/embed/3a_aLsFvNWs" title="ANS" allowfullscreen loading="lazy"></iframe></div>
 </section>
 
+
+
 <hr class="div">
 
-<!-- ══════ QUESTION BANK ══════ -->
-<!-- ══════ QUESTION BANK ══════ -->
+<hr class="div">
+
 <section class="qbank-section" id="qbank">
   <div class="qbank-header">
     <h2>Interactive Question Bank</h2>
     <p>اختر إجابتك — ستعرف فوراً صح أم غلط · Choose your answer and get instant feedback</p>
   </div>
 
-  <div class="lec-tabs">
-    <button class="lec-tab active" onclick="showLec('blood',this)">🩸 Lec 1 — Blood Groups</button>
-    <button class="lec-tab" onclick="showLec('nerve',this)">⚡ Lec 2 — Nerve</button>
-    <button class="lec-tab" onclick="showLec('ans',this)">🧠 Lec 3 — ANS</button>
-    <button class="lec-tab" onclick="showLec('final',this)">🏆 Final Quiz — كويز النهائي</button>
+  <div class="lec-tabs" style="flex-wrap:wrap">
+    <button class="lec-tab active" onclick="showLec('plasma',this)">🔬 Lec 1 — Blood Plasma</button>
+    <button class="lec-tab" onclick="showLec('anemia',this)">🔻 Lec 2 — Anemia</button>
+    <button class="lec-tab" onclick="showLec('hemo',this)">🛑 Lec 3 — Hemostasis</button>
+    <button class="lec-tab" onclick="showLec('anti',this)">💊 Lec 4 — Anticoagulants</button>
+    <button class="lec-tab" onclick="showLec('blood',this)">🩸 Lec 5 — Blood Groups</button>
+    <button class="lec-tab" onclick="showLec('nerve',this)">⚡ Lec 6 — Nerve</button>
+    <button class="lec-tab" onclick="showLec('ans',this)">🧠 Lec 7 — ANS</button>
+    <button class="lec-tab" onclick="showLec('final',this)">🏆 Final Quiz</button>
   </div>
 
   <div class="score-bar">
@@ -782,7 +1328,7 @@ footer span{color:var(--teal)}
   </div>
 
   <!-- ══════════════ BLOOD ══════════════ -->
-  <div class="lec-category active" id="lec-blood">
+  <div class="lec-category" id="lec-blood">
 
     <div class="q-item" data-correct="1" data-lecture="blood">
       <div class="q-header"><div class="q-num">1</div><div class="q-stem">Which immunoglobulin type forms the naturally-occurring ABO antibodies (Anti-A, Anti-B)?<div class="q-tag">MCQ · Immunoglobulins</div></div></div>
@@ -1625,161 +2171,1052 @@ footer span{color:var(--teal)}
 
   </div><!-- end lec-ans -->
 
+  <!-- ══════════════ LEC 4 — BLOOD PLASMA ══════════════ -->
+  <div class="lec-category active" id="lec-plasma">
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">The normal pH of human blood is:<div class="q-tag">MCQ · Physical Characters</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 7.0 — Neutral</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. 7.2 — Slightly Acidic</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. 7.4 — Slightly Alkaline</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 7.8 — Highly Alkaline</button>
+      </div>
+      <div class="q-expl">الإجابة C. pH = 7.4 قلوي خفيف. لو انحرف كتير للحموضة (Acidosis) أو القاعدية (Alkalosis) = خطر على الحياة. الدم بيحافظ على 7.4 بفضل البروتينات والـ HCO₃⁻ ونظام الكلى والرئتين.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Specific gravity of whole blood vs plasma respectively:<div class="q-tag">MCQ · Physical Characters</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 1.032 / 1.055</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 1.055 / 1.032</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 1.090 / 1.060</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 1.000 / 1.055</button>
+      </div>
+      <div class="q-expl">الإجابة B. الدم الكامل = 1.055. البلازما = 1.032 (أخف لأنها ماء + بروتينات). الكريات = 1.090 (أتقل لأنها محتوية على هيموجلوبين وبروتين). الكريات دايماً أتقل من البلازما.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Blood viscosity compared to water is:<div class="q-tag">MCQ · Physical Characters</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 1.5× more viscous</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. 3× more viscous</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. 5× more viscous</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 10× more viscous</button>
+      </div>
+      <div class="q-expl">الإجابة C. الدم ألزج من المياه بـ 5 مرات — بسبب الكريات والبروتينات خصوصاً الفيبرينوجين. البلازما وحدها = 1.5× الماء. اللزوجة مهمة للحفاظ على ضغط الدم ومقاومة الأوعية.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">Plasma constitutes about …% of total blood volume:<div class="q-tag">MCQ · Composition</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 45%</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 55%</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 90%</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 10%</button>
+      </div>
+      <div class="q-expl">الإجابة B. البلازما = 55% والعناصر الخلوية = 45%. في السنتريفيوج: فوق = البلازما الصفرا (55%) + طبقة رفيعة للكريات البيضاء والصفائح + تحت = الكريات الحمرا (45%).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">Total blood volume in an average adult male is approximately:<div class="q-tag">MCQ · Blood Volume</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 3 Liters</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. 4.5 Liters</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. 5 Liters</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 6.5 Liters</button>
+      </div>
+      <div class="q-expl">الإجابة C. الذكر البالغ = 5 لتر. الأنثى = 4.5 لتر. المولود الجديد = 450 مل. الذكر أعلى بسبب الأندروجين (تستوستيرون) اللي بيحفز إنتاج الكريات الحمرا (Erythropoiesis)، والإناث بيفقدوا دم في الحيض.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Which plasma protein has the HIGHEST concentration (3.5–5.0 g/dL)?<div class="q-tag">MCQ · Plasma Proteins</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Fibrinogen</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Globulins</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Albumin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Prothrombin</button>
+      </div>
+      <div class="q-expl">الإجابة C. الألبومين = 60% من بروتينات البلازما وأعلاها تركيزاً. المسؤول الأول عن الضغط الأسموزي الكولويدي (28 mmHg) اللي بيمنع الاستسقاء. الجلوبيولينات أقل (35%) والفيبرينوجين أقل منهم (4%).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">The plasma protein PRIMARILY responsible for Colloidal Osmotic (Oncotic) Pressure is:<div class="q-tag">MCQ · Plasma Protein Functions</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Fibrinogen</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Albumin</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Globulin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Prothrombin</button>
+      </div>
+      <div class="q-expl">الإجابة B. الألبومين مسؤول عن 80% من الضغط الكولويدي (28 mmHg). ↓ Albumin → ↓ Oncotic pressure → مياه تخرج للأنسجة → Edema (استسقاء). الفيبرينوجين أكبر مولارياً لكن أقل تركيزاً فتأثيره على الضغط الأسموزي أقل.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Which plasma protein has the LARGEST molecular weight and is mainly responsible for blood viscosity?<div class="q-tag">MCQ · Plasma Proteins</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Albumin (MW 69,000)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Globulin (MW 90,000–156,000)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Fibrinogen (MW 340,000)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Prothrombin (MW 68,700)</button>
+      </div>
+      <div class="q-expl">الإجابة C. الفيبرينوجين أكبر بروتين في البلازما (MW 340,000) وهو المسؤول عن لزوجة البلازما. يتحول للفيبرين في التخثر. نقصه يقلل لزوجة الدم ويمنع التخثر.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Gamma (γ) Globulins are produced by:<div class="q-tag">MCQ · Plasma Proteins</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. The Liver</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Red Bone Marrow</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Plasma cells (Lymphoid tissue)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. The Spleen</button>
+      </div>
+      <div class="q-expl">الإجابة C. الـ γ-Globulins (Immunoglobulins/Antibodies) بتيجي من Plasma cells في الأنسجة الليمفاوية. الـ α وβ Globulins بتيجي من الكبد. الكبد هو المصنع الرئيسي لمعظم بروتينات البلازما ماعدا الأجسام المضادة.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">In ADULTS, Erythropoiesis (RBC formation) occurs mainly in:<div class="q-tag">MCQ · Erythropoiesis</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Liver and Spleen</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. All bones of the body</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Membranous bones (Ribs, Vertebrae, Sternum)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Kidneys</button>
+      </div>
+      <div class="q-expl">الإجابة C. في البالغين: العظام الغشائية (Flat bones) زي الضلوع والفقرات والقص والجمجمة. في الرضع: كل عظام الجسم. في الجنين: الكبد والطحال. تذكر: Liver → Infant → All bones → Adult → Flat bones.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Average life span of a circulating RBC is:<div class="q-tag">MCQ · RBC Life Span</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 60 days</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. 90 days</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. 120 days</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 150 days</button>
+      </div>
+      <div class="q-expl">الإجابة C. الكرية الحمرا تعيش 120 يوم ثم يتم تكسيرها في الطحال بواسطة الـ Macrophages. بعد الكسر: الهيم → حديد (يتعاد) + بيليروبين (يخرج في العصارة الصفراوية). الجلوبين → أحماض أمينية.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">12</div><div class="q-stem">The Iron in normal Hemoglobin is in the … state:<div class="q-tag">MCQ · Hemoglobin</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Ferric (Fe³⁺)</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Ferrous (Fe²⁺)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Metallic</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Oxidized</button>
+      </div>
+      <div class="q-expl">الإجابة B. الحديد في الهيموجلوبين الطبيعي = Fe²⁺ (Ferrous). لو اتأكسد لـ Fe³⁺ → يتكون Methemoglobin اللي مش قادر يشيل أكسجين. يتعالج بـ NADH-Methemoglobin Reductase.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">13</div><div class="q-stem">Each Hemoglobin molecule consists of:<div class="q-tag">MCQ · Hemoglobin Structure</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 1 Heme + 1 Globin chain</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. 2 Heme + 2 Globin chains</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. 4 Heme + 4 Globin chains (4 subunits)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 4 Heme only, no globin</button>
+      </div>
+      <div class="q-expl">الإجابة C. الهيموجلوبين = 4 وحدات (Subunits). كل وحدة = سلسلة جلوبين + مجموعة Heme تحتوي على Fe²⁺. جزيئة واحدة تشيل 4 جزيئات O₂ (وحدة لكل جزيئة O₂).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">14</div><div class="q-stem">Fetal Hemoglobin (HbF) differs from Adult (HbA) in that HbF contains:<div class="q-tag">MCQ · Hemoglobin Types</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 2α + 2β chains (same as HbA)</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 2α + 2γ chains (gamma instead of beta)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 2β + 2γ chains</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 4α chains only</button>
+      </div>
+      <div class="q-expl">الإجابة B. HbA = 2α + 2β (97.5% في البالغين). HbF = 2α + 2γ (أكثر شيوعاً في الجنين). HbF عنده Affinity أعلى للأكسجين من HbA — ده بيخليه يسرق O₂ من دم الأم عبر المشيمة للجنين.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">15</div><div class="q-stem">One gram of Hemoglobin can carry approximately … of Oxygen:<div class="q-tag">MCQ · Hemoglobin Oxygen Capacity</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 1.00 mL O₂</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 1.33 mL O₂</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 5.00 mL O₂</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 20 mL O₂</button>
+      </div>
+      <div class="q-expl">الإجابة B. 1g Hb يحمل 1.33 mL O₂. رقم مهم للحفظ! وجزيئة واحدة من Hb تحمل 4 جزيئات O₂. هذا هو Oxygenation وليس Oxidation — Fe²⁺ بيربط O₂ بدون ما يتأكسد.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">16</div><div class="q-stem">Carboxyhemoglobin refers to the combination of Hemoglobin with:<div class="q-tag">MCQ · Hemoglobin Reactions</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Carbon Dioxide (CO₂)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Bicarbonate (HCO₃⁻)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Carbon Monoxide (CO)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Oxygen (O₂)</button>
+      </div>
+      <div class="q-expl">الإجابة C. Hb + CO = Carboxyhemoglobin. CO بيرتبط بالهيموجلوبين بـ 200 مرة أقوى من O₂ — بيملي التاكسيات ومش بيسيبش مكان لـ O₂. ده سبب التسمم بـ CO في الأماكن المغلقة. Carbamino-Hb = Hb + CO₂ (مختلف!).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">17</div><div class="q-stem">Which condition DECREASES Hemoglobin–O₂ affinity (helps release O₂ to tissues)? — Bohr Effect<div class="q-tag">MCQ · Bohr Effect</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. High pH (Alkalosis) + Low CO₂</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Low temperature + Low 2,3-DPG</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. High CO₂ + High H⁺ (↓ pH) + High temperature + High 2,3-DPG</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. High O₂ partial pressure</button>
+      </div>
+      <div class="q-expl">الإجابة C. Bohr Effect: ↑ CO₂ + ↑ H⁺ (↓ pH) + ↑ Temp + ↑ 2,3-DPG = ↓ Hb–O₂ Affinity = O₂ ينزل للأنسجة أكتر. ده بيحصل في العضلات النشطة المحتاجة لـ O₂. العكس (↑ pH + ↓ CO₂) = ↑ Affinity = Hb بيمسك O₂ أكتر (في الرئتين).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">18</div><div class="q-stem">The chief cation in plasma is …, while the chief anion is …:<div class="q-tag">MCQ · Plasma Electrolytes</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. K⁺ ; Cl⁻</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Na⁺ ; Cl⁻ and HCO₃⁻</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Ca²⁺ ; PO₄³⁻</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Mg²⁺ ; SO₄²⁻</button>
+      </div>
+      <div class="q-expl">الإجابة B. Na⁺ = الكاتيون الرئيسي في البلازما. Cl⁻ وHCO₃⁻ = الأنيونات الرئيسية. مهمين لأنهم بيتحكموا في الـ Osmolality والـ pH وتوزيع المياه في الجسم. K⁺ = الكاتيون الرئيسي داخل الخلية (Intracellular).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">19</div><div class="q-stem">Methemoglobin CANNOT carry Oxygen because:<div class="q-tag">MCQ · Hemoglobin Reactions</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. It is too large to fit in the capillaries</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Iron is oxidized to Fe³⁺ which cannot bind O₂</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. It lacks the globin chains</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. It only combines with CO₂</button>
+      </div>
+      <div class="q-expl">الإجابة B. Methemoglobin: Fe²⁺ → Fe³⁺ بفعل عوامل مؤكسدة. Fe³⁺ مش قادر يربط O₂. يتعالج بـ NADH-Methemoglobin Reductase. الطبيعي: Fe²⁺ يربط O₂ بدون ما يتأكسد (Oxygenation وليس Oxidation).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="plasma">
+      <div class="q-header"><div class="q-num">20</div><div class="q-stem">Bilirubin is a breakdown product of the … part of Hemoglobin:<div class="q-tag">MCQ · RBC Fate</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Heme (protoporphyrin ring)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Globin (protein part)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Iron (Fe²⁺)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Transferrin</button>
+      </div>
+      <div class="q-expl">الإجابة A. الهيم بيتكسر: الحديد → Transferrin (يتعاد استخدامه). البروتوبورفيرين → Bilirubin → يطلع في العصارة الصفراوية. الجلوبين → أحماض أمينية (تتعاد). لو البيليروبين زاد في الدم → Hemolytic Jaundice (يرقان انحلالي).</div>
+      </div>
+    </div>
+
+  </div><!-- end lec-plasma -->
+
+  <!-- ══════════════ LEC 5 — ANEMIA ══════════════ -->
+  <div class="lec-category" id="lec-anemia">
+
+    <div class="q-item" data-correct="2" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">Iron deficiency anemia cells are morphologically classified as:<div class="q-tag">MCQ · Anemia Classification</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Normocytic normochromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Macrocytic hyperchromic</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Microcytic hypochromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Spherocytic</button>
+      </div>
+      <div class="q-expl">الإجابة C. نقص الحديد → مش في حديد كافي لصنع الـ Hb → الكريات تبقى صغيرة (Microcytic ↓ MCV) وشاحبة (Hypochromic ↓ MCH). ده أشيع نوع أنيميا في العالم خصوصاً عند النساء والأطفال.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Megaloblastic (Macrocytic) anemia is caused by all EXCEPT:<div class="q-tag">MCQ · "Except" Type · Anemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Folic acid deficiency</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Destruction of bone marrow (Aplastic)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Vitamin B12 deficiency</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Defective absorption after gastrectomy</button>
+      </div>
+      <div class="q-expl">الإجابة B. تدمير النخاع يعمل Aplastic Anemia (Normocytic normochromic) مش Macrocytic. الـ Macrocytic سببها نقص B12 أو Folic Acid — دول ضروريين لتكوين DNA وانقسام الخلايا. نقصهم → كريات كبيرة بس غير كاملة.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Dietary iron (Fe³⁺) is reduced to the absorbable form (Fe²⁺) in the stomach by:<div class="q-tag">MCQ · Iron Absorption</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Pepsin</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Intrinsic factor</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. HCl &amp; Vitamin C</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Mucus</button>
+      </div>
+      <div class="q-expl">الإجابة C. HCl بتحوّل Fe³⁺ → Fe²⁺ (الشكل اللي يتمتص). فيتامين C (Ascorbic acid) بيساعد نفس العملية. عشان كده: (1) استئصال المعدة يعمل نقص حديد لنقص HCl. (2) أكل فيتامين C مع حديد يزيد امتصاصه.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">Vitamin B12 absorption requires:<div class="q-tag">MCQ · B12 Absorption</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Transferrin</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Intrinsic factor</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Erythropoietin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Folic acid</button>
+      </div>
+      <div class="q-expl">الإجابة B. B12 لازم يرتبط بـ Intrinsic Factor (من الخلايا الجدارية في المعدة) عشان يتمتص في الـ Terminal Ileum. بدون IF → B12 مش بيتمتصش → Pernicious Anemia (Megaloblastic).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">Severe bone marrow destruction by X-rays or drugs results in:<div class="q-tag">MCQ · Aplastic Anemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Microcytic hypochromic anemia</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Macrocytic anemia</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Aplastic anemia (Normocytic normochromic)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Polycythemia</button>
+      </div>
+      <div class="q-expl">الإجابة C. Aplastic Anemia = تدمير النخاع → قلة في كل الخلايا (Pancytopenia). الكريات طبيعية الشكل والحجم لكن عددها قل → Normocytic Normochromic. أسباب: أشعة X، إشعاع ذري، بعض الأدوية، الأورام.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Pernicious anemia is characterized by destruction of gastric parietal cells, causing:<div class="q-tag">MCQ · Pernicious Anemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Iron deficiency and microcytic cells</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Autoimmune destruction of RBCs directly</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Deficiency of both HCl and Intrinsic Factor → ↓ B12 absorption → Megaloblastic anemia</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Destruction of bone marrow → aplastic anemia</button>
+      </div>
+      <div class="q-expl">الإجابة C. Pernicious Anemia: مرض مناعي ذاتي — المناعة تدمر الخلايا الجدارية (Parietal cells) في المعدة → نقص HCl و Intrinsic Factor → B12 مش بيتمتصش → Megaloblastic Anemia. أشيع في النساء المسنات.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Vitamin B12-Intrinsic Factor complex is absorbed at:<div class="q-tag">MCQ · B12 Absorption Site</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Stomach</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Duodenum</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Jejunum</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Terminal Ileum</button>
+      </div>
+      <div class="q-expl">الإجابة D. الـ Complex B12-IF بيتمتص في الـ Terminal Ileum بعملية Pinocytosis. أمراض الـ Ileum (زي Crohn's disease) أو استئصاله بيعمل نقص B12 رغم وجود IF. B12 بعد الامتصاص بيتخزن في الكبد.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Intrinsic Factor (essential for B12 absorption) is produced by:<div class="q-tag">MCQ · Pernicious Anemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Chief cells of the stomach</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Gastric parietal cells</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Goblet cells of the intestine</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Hepatocytes</button>
+      </div>
+      <div class="q-expl">الإجابة B. Intrinsic Factor بيُنتج من Parietal cells في المعدة. نفس الخلايا اللي بتنتج HCl. في Pernicious Anemia المناعة بتدمر الخلايا دي → نقص IF وHCl مع بعض.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Acute blood loss typically leads to which type of anemia?<div class="q-tag">MCQ · Anemia Types</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Microcytic hypochromic</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Normocytic normochromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Macrocytic hyperchromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Megaloblastic</button>
+      </div>
+      <div class="q-expl">الإجابة B. فقدان دم حاد (Acute blood loss) → فقدان كريات طبيعية الشكل والحجم → Normocytic Normochromic. أما الفقدان المزمن (Chronic) → يستنزف الحديد تدريجياً → نقص حديد → Microcytic Hypochromic.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">G-6-PD deficiency is an example of … cause of hemolytic anemia:<div class="q-tag">MCQ · Hemolytic Anemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Intrinsic (defect inside the RBC)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Extrinsic (factor outside the RBC)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Nutritional deficiency</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Aplastic</button>
+      </div>
+      <div class="q-expl">الإجابة A. G-6-PD deficiency = عيب جيني جوه الكرية (Intrinsic). Extrinsic causes: الملاريا، Rh incompatibility، البنزين، بعض الأدوية — دي كلها عوامل برا الكرية بتكسرها. Intrinsic: spherocytosis، G6PD، Sickle cell.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Secondary polycythemia occurs primarily due to:<div class="q-tag">MCQ · Polycythemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Autoimmune disease</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Bone marrow aplasia</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Iron deficiency</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Hypoxia (high altitude, heart/lung diseases)</button>
+      </div>
+      <div class="q-expl">الإجابة D. Secondary Polycythemia = تعويضية. الجسم يرد على نقص O₂ بزيادة إفراز Erythropoietin من الكلى → ↑ إنتاج RBCs. بيحصل في المناطق العالية وأمراض القلب والرئة. Primary Polycythemia = اضطراب في النخاع مباشرة.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="anemia">
+      <div class="q-header"><div class="q-num">12</div><div class="q-stem">Effects of anemia include ALL EXCEPT:<div class="q-tag">MCQ · "Except" · Anemia Effects</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Easy fatigue and dyspnea</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Increased cardiac work</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Retarded growth in children</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Decreased respiratory rate</button>
+      </div>
+      <div class="q-expl">الإجابة D. الأنيميا تسبب: تعب (Easy fatigue) + ضيق تنفس (Dyspnea) + نقص تركيز + ضعف نمو الأطفال + ↑ عمل القلب (Compensatory tachycardia). معدل التنفس بيزيد (Tachypnea) مش يقل — الجسم بيحاول يعوّض نقص O₂.</div>
+      </div>
+    </div>
+
+  </div><!-- end lec-anemia -->
+
+  <!-- ══════════════ LEC 6 — HEMOSTASIS ══════════════ -->
+  <div class="lec-category" id="lec-hemo">
+
+    <div class="q-item" data-correct="1" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">Normal Platelet count is:<div class="q-tag">MCQ · Platelet Count</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 4,000–11,000/mm³</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 150,000–400,000/mm³</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 4.5–5.5 million/mm³</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 50,000–100,000/mm³</button>
+      </div>
+      <div class="q-expl">الإجابة B. الصفائح الطبيعية = 150,000–400,000/mm³. أقل = Thrombocytopenia. أكثر = Thrombocytosis. وظيفة غلط مع عدد طبيعي = Thrombasthenia. 4,000–11,000 هو عدد الكريات البيضاء.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Platelets are fragments of large cells called … located in the …:<div class="q-tag">MCQ · Platelet Formation</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Macrophages; Spleen</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Megakaryocytes; Bone marrow</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Lymphocytes; Lymph nodes</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Reticulocytes; Liver</button>
+      </div>
+      <div class="q-expl">الإجابة B. الصفائح = قطع سيتوبلازم من Megakaryocytes في النخاع العظمي. الـ Megakaryocyte بيكون كبير جداً ثم يقسم سيتوبلازمه لآلاف الصفائح. عمر الصفيحة 5-7 أيام.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Which is NOT one of the four main phases of hemostasis?<div class="q-tag">MCQ · Hemostasis Phases</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Vascular Phase</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Platelet Phase</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Erythropoietic Phase</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Coagulation Phase</button>
+      </div>
+      <div class="q-expl">الإجابة C. الـ 4 مراحل: 1) Vascular (تضيق الوعاء) 2) Platelet (سدادة الصفائح) 3) Coagulation (جلطة الفيبرين) 4) Fibrinolysis (إذابة الجلطة بعد الشفاء). مش في Erythropoietic Phase في الإرقاء.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">Vasoconstriction in hemostasis — which is NOT a cause?<div class="q-tag">MCQ · Vascular Phase</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Reflex myogenic spasm from trauma</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Sympathetic NS stimulation from pain</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Release of histamine from basophils</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Release of serotonin and thromboxane A2 from platelets</button>
+      </div>
+      <div class="q-expl">الإجابة C. الهستامين من البازوفيل موسّع وعائي (Vasodilator) مش مضيّق! أسباب التضيق: 1) تشنج عضلي انعكاسي 2) الجهاز الودي (من الألم) 3) Serotonin وThromboxane A2 من الصفائح. الهستامين ده فخ شائع في الامتحانات.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">Correct sequence of platelet plug formation:<div class="q-tag">MCQ · Platelet Phase</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Aggregation → Activation → Adhesion</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Adhesion → Activation → Aggregation</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Activation → Adhesion → Aggregation</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Adhesion → Aggregation → Activation</button>
+      </div>
+      <div class="q-expl">الإجابة B. الترتيب الصح: 1) Adhesion (التصاق بالكولاجين بمساعدة vWF) 2) Activation (تنشيط وإطلاق ADP وTxA2 وتكوين Pseudopodia) 3) Aggregation (تجمع صفائح أكتر لتكوين السدادة الأولية).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">For platelet adhesion to exposed collagen, platelets require which factor as a bridge?<div class="q-tag">MCQ · Platelet Adhesion</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Fibrinogen</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Thrombin</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Von Willebrand Factor (vWF)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Calcium</button>
+      </div>
+      <div class="q-expl">الإجابة C. Von Willebrand Factor (vWF) هو الجسر اللي بيربط glycoprotein الصفيحة بألياف الكولاجين المكشوفة. نقصه بيعمل Von Willebrand Disease — bleeding tendency مع BT طويل.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Two substances released from activated platelets crucial for aggregation:<div class="q-tag">MCQ · Platelet Activation</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Histamine and heparin</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. ADP and Thromboxane A2</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Fibrinogen and prothrombin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Plasmin and plasminogen</button>
+      </div>
+      <div class="q-expl">الإجابة B. ADP و Thromboxane A2 من الصفائح المنشطة بيجذبوا ويفعّلوا صفائح أكتر (Positive feedback loop). الأسبرين بيكبّت إنتاج TxA2 عشان كده بيستخدم كمضاد للتخثر في أمراض القلب.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Which is NOT required for blood coagulation cascade?<div class="q-tag">MCQ · Coagulation Requirements</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Plasma proteins (clotting factors)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Phospholipids</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Calcium (Factor IV)</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Albumin</button>
+      </div>
+      <div class="q-expl">الإجابة D. التخثر يحتاج: بروتينات البلازما (عوامل التخثر) + Phospholipids + Calcium (Factor IV). الألبومين مش ليه دور في التخثر — وظيفته الضغط الأسموزي والنقل. ده فخ شائع!</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Key difference between Extrinsic and Intrinsic pathways:<div class="q-tag">MCQ · Coagulation Pathways</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Extrinsic occurs in veins; intrinsic in arteries</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Extrinsic requires Tissue Factor (III) — faster (15 sec); Intrinsic needs foreign surface — slower (1–6 min)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Extrinsic produces fibrin; intrinsic produces platelet plug</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Extrinsic uses calcium; intrinsic does not</button>
+      </div>
+      <div class="q-expl">الإجابة B. الفرق الجوهري: الخارجي (Extrinsic) = Tissue Factor (III) → أسرع (15 ثانية). الداخلي (Intrinsic) = سطح غريب/كولاجين → أبطأ (1-6 دقائق). كلاهما يلتقيان عند Factor X في المسار المشترك.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">The Extrinsic pathway occurs:<div class="q-tag">MCQ · Coagulation Settings</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. In vivo and in vitro (both)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. In vitro only (test tube)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Neither in vivo nor in vitro</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. In vivo only (inside the body)</button>
+      </div>
+      <div class="q-expl">الإجابة D. المسار الخارجي بيحتاج Tissue Factor (III) اللي بييجي من الأنسجة المتضررة → بيحصل in vivo بس. المسار الداخلي بيحتاج سطح غريب → بيحصل in vivo وin vitro (الدم في أنبوبة يتخثر). ده فارق مهم!</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">In the Common Pathway, Prothrombin (Factor II) is converted to … by activated Factor X:<div class="q-tag">MCQ · Common Pathway</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Fibrin</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Plasmin</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Thrombin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Fibrinogen</button>
+      </div>
+      <div class="q-expl">الإجابة C. المسار المشترك: Xa + V + Ca²⁺ + PL = Prothrombinase → يحوّل Prothrombin (II) → Thrombin. ثم Thrombin يحوّل Fibrinogen (I) → Fibrin. ثم Factor XIII → Stable Fibrin Clot.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">12</div><div class="q-stem">Factor responsible for STABILIZING fibrin gel into a solid stable clot:<div class="q-tag">MCQ · Clotting Factors</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Factor VIII (Anti-hemophilic factor)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Factor X (Stuart power factor)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Factor XIII (Fibrin stabilizing factor)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Factor IV (Calcium)</button>
+      </div>
+      <div class="q-expl">الإجابة C. Factor XIII (Fibrin Stabilizing Factor) بيربط خيوط الفيبرين ببعض (Cross-linking) ليكوّن جلطة متماسكة وقوية. بيتفعّل بواسطة Thrombin. بدونه الجلطة هشة وتنحل بسرعة.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">13</div><div class="q-stem">The key enzyme that dissolves fibrin in fibrinolysis is:<div class="q-tag">MCQ · Fibrinolysis</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Thrombin</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Plasmin (fibrinolysin)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Retractozyme</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. ADP</button>
+      </div>
+      <div class="q-expl">الإجابة B. Plasmin = إنزيم الإذابة. يتكوّن من Plasminogen بفضل TPA (Tissue Plasminogen Activator)، Urokinase، Streptokinase. بيكسر خيوط الفيبرين → FDP (Fibrin Degradation Products). Retractozyme مسؤول عن انقباض الجلطة (Clot Retraction).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">14</div><div class="q-stem">Normal platelet count but platelets fail to aggregate = :<div class="q-tag">MCQ · Platelet Disorders</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Thrombocytosis</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Thrombocytopenia</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Thrombasthenia (Thromboasthenic Purpura)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Hemophilia</button>
+      </div>
+      <div class="q-expl">الإجابة C. Thrombasthenia: عدد الصفائح طبيعي لكن وظيفتها مختلة — مش قادرة تتجمع. Bleeding time طويل. مختلف عن Thrombocytopenia (عدد قل) وHemophilia (عوامل تخثر ناقصة).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="hemo">
+      <div class="q-header"><div class="q-num">15</div><div class="q-stem">Correct chronological order of hemostasis phases:<div class="q-tag">MCQ · Hemostasis Order</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Coagulation → Platelet → Vascular → Fibrinolytic</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Platelet → Coagulation → Fibrinolytic → Vascular</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Vascular → Coagulation → Platelet → Fibrinolytic</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Vascular → Platelet → Coagulation → Fibrinolytic</button>
+      </div>
+      <div class="q-expl">الإجابة D. الترتيب الصح: 1) Vascular (تضيق الوعاء — أول استجابة) 2) Platelet (سدادة أولية سريعة) 3) Coagulation (جلطة فيبرينية نهائية) 4) Fibrinolysis (إذابة الجلطة بعد الشفاء). لازم تحفظ الترتيب ده!</div>
+      </div>
+    </div>
+
+  </div><!-- end lec-hemo -->
+
+  <!-- ══════════════ LEC 7 — ANTICOAGULANTS ══════════════ -->
+  <div class="lec-category" id="lec-anti">
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">Dicumarol is classified as:<div class="q-tag">MCQ · Anticoagulants</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. An in vitro anticoagulant only</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. A vitamin K antagonist (in vivo oral anticoagulant)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. An activator of antithrombin III</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. A direct inhibitor of thrombin only</button>
+      </div>
+      <div class="q-expl">الإجابة B. الديكيومارول من أصل نباتي، بياخد أوراللي، بيمنع فيتامين K من تكوين Factors II, VII, IX, X في الكبد. بطيء الأثر (2-3 أيام). ترياقه = Vitamin K. مش مضاد للثرومبين مباشرة (ده الهيبارين).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="anti">
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Primary mechanism of heparin preventing coagulation:<div class="q-tag">MCQ · Heparin Mechanism</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Activates Antithrombin III → inactivates thrombin and multiple clotting factors</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Inhibits Vitamin K in the liver</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Precipitates Calcium ions from plasma</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Destroys platelet surface receptors</button>
+      </div>
+      <div class="q-expl">الإجابة A. الهيبارين بيفعّل Antithrombin III الذي يثبّط Thrombin وعوامل IXa, Xa, XIa, XIIa, XIIIa. فوري الأثر. يُعطى وريدياً IV. ترياقه = Protamine Sulphate. كمان بيفعّل Lipoprotein Lipase (يصفي الدهون بعد الأكل).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="3" data-lecture="anti">
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Which is TRUE about Heparin?<div class="q-tag">MCQ · Heparin Properties</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. It is of plant origin</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. It is given orally</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. It has a slow onset of action (2-3 days)</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Its antidote is protamine sulphate</button>
+      </div>
+      <div class="q-expl">الإجابة D. الهيبارين: أصله حيواني (Mast cells + Basophils) → يُعطى وريدياً (IV) → أثره فوري → ترياقه Protamine Sulphate. الديكيومارول هو النباتي الفموي البطيء (ترياقه Vitamin K).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="anti">
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">Which is TRUE about Dicumarol?<div class="q-tag">MCQ · Dicumarol Properties</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Produced by Mast cells in the body</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Has rapid (immediate) onset of action</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Can be given orally and acts after 2–3 days</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Its antidote is protamine sulphate</button>
+      </div>
+      <div class="q-expl">الإجابة C. الديكيومارول: نباتي (مش من خلايا الجسم) → فموي (Oral) → بطيء الأثر (2-3 أيام لأن لازم ينضب المخزون القائم من Factors II, VII, IX, X) → ترياقه Vitamin K (مش Protamine).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">In vitro anticoagulant by PRECIPITATING Calcium ions:<div class="q-tag">MCQ · In Vitro Anticoagulants</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Heparin</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Sodium citrate or sodium oxalate</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Dicumarol</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Protamine sulphate</button>
+      </div>
+      <div class="q-expl">الإجابة B. Sodium Citrate وSodium Oxalate بيرسّبوا Ca²⁺ (Factor IV) → بدون Ca²⁺ التخثر يتوقف. بيستخدم في أنابيب جمع الدم في المعمل. الهيبارين in vitro بيعمل بطريقة تانية (Antithrombin III).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Siliconized non-wettable container prevents coagulation by preventing activation of:<div class="q-tag">MCQ · In Vitro Anticoagulants</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Factor X and Thrombin</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Factor XII and Platelets</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Factor VIII and IX</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Antithrombin III</button>
+      </div>
+      <div class="q-expl">الإجابة B. الإناء المسيلكاني الغير قابل للبلل يمنع تنشيط Factor XII (Hageman factor) والصفائح — وبكده المسار الداخلي (Intrinsic) مش يبدأ. Factor XII هو أول Factor في المسار الداخلي.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Heparin acts as co-factor for … helping clear blood from lipids after meals:<div class="q-tag">MCQ · Heparin Additional Actions</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Acid phosphatase</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Lipoprotein lipase</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Plasminogen</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Thrombin</button>
+      </div>
+      <div class="q-expl">الإجابة B. الهيبارين بيفعّل Lipoprotein Lipase → بيكسر الدهون (Lipoproteins) في الدم بعد الأكل. ده استخدام إضافي للهيبارين غير وظيفة منع التخثر. لذلك الهيبارين بيصفي الدم من الدهون بعد الوجبات.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="anti">
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Bleeding time (BT) primarily evaluates:<div class="q-tag">MCQ · Hemostasis Tests</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Platelet function and vascular response</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Clotting factors (coagulation cascade)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Fibrinolysis activity</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Red blood cell count</button>
+      </div>
+      <div class="q-expl">الإجابة A. Bleeding Time (BT) يقيس وظيفة الصفائح والأوعية الدموية (Primary Hemostasis). يطول في Purpura (خلل صفائح). يكون طبيعي في Hemophilia (عوامل التخثر بتتأثر مش الصفائح).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="anti">
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Clotting time (CT) is PROLONGED in all EXCEPT:<div class="q-tag">MCQ · "Except" · Hemostasis Tests</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Purpura</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Hemophilia A</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Hemophilia B</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Vitamin K deficiency</button>
+      </div>
+      <div class="q-expl">الإجابة A. في Purpura المشكلة في الصفائح → BT يطول لكن CT طبيعي! CT يطول في الهيموفيليا ونقص فيتامين K (خلل في عوامل التخثر). ده الفرق الجوهري بين Hemophilia وPurpura.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="anti">
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">Regarding Hemophilia, which statement is WRONG?<div class="q-tag">MCQ · Hemophilia · "Incorrect" Type</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. It is due to a defect in clotting factors</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. It is characterized by bleeding tendency</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Clotting Time (CT) is NORMAL</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Bleeding Time (BT) is normal</button>
+      </div>
+      <div class="q-expl">الإجابة C. الجملة الغلط: CT في الهيموفيليا مطوّل (مش طبيعي!) لأن عوامل تخثر ناقصة. BT طبيعي لأن الصفائح بخير. A وB وD صح. لو جت في الامتحان: Hemophilia = CT طويل + BT طبيعي.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="0" data-lecture="anti">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Hemophilia A (85% of cases) is due to lack of:<div class="q-tag">MCQ · Hemophilia Types</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Factor VIII (Anti-hemophilic factor)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Factor IX (Christmas factor)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Factor XI</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Factor X (Stuart power factor)</button>
+      </div>
+      <div class="q-expl">الإجابة A. الهيموفيليا A (الأشيع 85%) = نقص Factor VIII. B (10%) = نقص Factor IX (Christmas factor). C (5%) = نقص Factor XI. كلهم في المسار الداخلي (Intrinsic Pathway).</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">12</div><div class="q-stem">Vitamin K is essential for formation of which clotting factors in the liver?<div class="q-tag">MCQ · Vitamin K</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Factors VIII, IX, XI, XII</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Factors II, VII, IX, and X</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Factors I, II, III, IV</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Factors V, VII, VIII, X</button>
+      </div>
+      <div class="q-expl">الإجابة B. فيتامين K ضروري لتكوين: II (Prothrombin), VII (Stable factor), IX (Christmas), X (Stuart) في الكبد. الديكيومارول بيمنع فيتامين K → نفس العوامل دي تنقص. حفظ سهل: 2-7-9-10.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">13</div><div class="q-stem">Vitamin K deficiency is commonly caused by:<div class="q-tag">MCQ · Vitamin K Deficiency</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Autoimmune platelet destruction</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Liver disease and obstruction of the bile duct</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Renal failure</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Exposure to X-rays</button>
+      </div>
+      <div class="q-expl">الإجابة B. فيتامين K دهني الذوبان (Fat-soluble) — يحتاج عصارة صفراوية للامتصاص. انسداد القناة الصفراوية → مفيش عصارة → مش بيتمتصش → نقص K → نقص عوامل II, VII, IX, X → نزيف. أمراض الكبد تمنع تصنيعه مباشرة.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="1" data-lecture="anti">
+      <div class="q-header"><div class="q-num">14</div><div class="q-stem">Thromboembolism occurs especially when:<div class="q-tag">MCQ · Thromboembolism</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Blood flow is unusually fast</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Blood flow is SLOW (e.g., after surgery or delivery)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Patient takes too much Dicumarol</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Platelet count is above 400,000</button>
+      </div>
+      <div class="q-expl">الإجابة B. الجلطة الوريدية (DVT/Thromboembolism) بتتكوّن لما الدم يبطأ — بعد العمليات، الولادة، السفر الطويل، الراحة التامة في السرير. بطء الدم = فرصة لتجمع عوامل التخثر → Thrombosis داخل الوعاء.</div>
+      </div>
+    </div>
+
+    <div class="q-item" data-correct="2" data-lecture="anti">
+      <div class="q-header"><div class="q-num">15</div><div class="q-stem">Thromboasthenic purpura is characterized by:<div class="q-tag">MCQ · Purpura Types</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Autoimmune destruction of platelets (↓ count)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Bone marrow lesions (↓ platelet production)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Normal platelet number but abnormal function</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Congenital X-linked recessive disease</button>
+      </div>
+      <div class="q-expl">الإجابة C. Thromboasthenic Purpura: عدد الصفائح طبيعي لكن وظيفتها مختلة. مختلف عن Thrombocytopenic purpura اللي عدد الصفائح فيه قل. كلاهما بيعمل BT طويل و CT طبيعي — المشكلة في الصفائح مش في عوامل التخثر.</div>
+      </div>
+    </div>
+
+  </div><!-- end lec-anti -->
+
   <!-- ══════════════ FINAL QUIZ ══════════════ -->
   <div class="lec-category" id="lec-final">
     <div style="background:rgba(155,109,255,.08);border:1px solid rgba(155,109,255,.3);border-radius:14px;padding:20px 24px;margin-bottom:24px;direction:rtl;text-align:right;font-family:'Cairo',sans-serif;color:#c9b8ff;line-height:1.9;">
-      <strong style="color:#f0a500;font-size:1.05rem;">⚠️ كويز تجريبي — أسئلة من المحاضرات الثلاثة</strong><br>
-      هتلاقي أسئلة من كل المحاضرات مع بعض. جاوب كلهم واشوف نتيجتك في الآخر!
+      <strong style="color:#f0a500;font-size:1.05rem;">🏆 الكويز النهائي — أسئلة من المحاضرات السبعة</strong><br>
+      21 سؤال من المحاضرات 1-7 (3 أسئلة من كل محاضرة). جاوب كلهم واشوف نتيجتك في الآخر!
     </div>
 
-    <div class="q-item" data-correct="2" data-lecture="final">
-      <div class="q-header"><div class="q-num">1</div><div class="q-stem">You place your hand in hot tea. Order the events CORRECTLY:<div class="q-tag">Mixed · Hot Tea Scenario · Full Arc</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Sympathetic activation → efferent neurons fire → hand withdraws → pain perceived</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Motor neurons fire first → hand moves → pain detected → CNS responds</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Afferent sensory neurons detect heat → signal reaches CNS → somatic efferent activates skeletal muscle → hand withdraws</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Parasympathetic fibers detect pain → brain interprets → autonomic reflex response</button>
-      </div>
-      <div class="q-expl">الإجابة C. (1) مستقبلات الحرارة/الألم في اليد تُنشَّط. (2) ألياف C أو Aδ الواردة تحمل الإشارة للحبل الشوكي والدماغ. (3) الحبل الشوكي يُرسل أمر انسحاب عبر الخلايا الحركية الجسدية. (4) العضلات الهيكلية تنقبض → سحب اليد. كل ذلك في أجزاء من الثانية!</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="0" data-lecture="final">
-      <div class="q-header"><div class="q-num">2</div><div class="q-stem">During a 100m sprint, which combination is CORRECT?<div class="q-tag">Mixed · Exercise Physiology · Integration</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic NS prepares internal environment (↑ HR, bronchodilation) + Somatic NS controls voluntary leg muscle contraction</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic NS increases breathing + Somatic NS increases heart rate directly</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic ganglia directly activate skeletal muscles for the running motion</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS handles all physiological functions during exercise — ANS is suppressed</button>
-      </div>
-      <div class="q-expl">الإجابة A. أثناء السباق: الودي = المحرك الداخلي (يُسرّع القلب، يُوسّع القصبات، يُحشد الطاقة). الجسدي = المحرك الخارجي (يُحرّك عضلات الساقين والذراعين إرادياً). كلاهما يعملان جنباً إلى جنب.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="3" data-lecture="final">
-      <div class="q-header"><div class="q-num">3</div><div class="q-stem">An Rh–ve mother is in her 3rd pregnancy (2nd Rh+ve fetus). Rhogam was given correctly after every previous delivery. What do you expect?<div class="q-tag">Mixed · Rh System Advanced</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Severe hemolytic disease — Rhogam immunity wears off after each pregnancy</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. No further risk — the mother is now permanently immune to all D antigen</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Risk only if the father is homozygous DD rather than heterozygous Dd</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Low risk — Rhogam given after each delivery prevented maternal sensitization to Anti-D</button>
-      </div>
-      <div class="q-expl">الإجابة D. Rhogam يُحيّد كريات الجنين Rh+ قبل أن تتحسس الأم. إذا أُعطي بشكل صحيح بعد كل ولادة → يمنع تكوّن Anti-D الخاصة بالأم → لا تحسّس → الحمل التالي آمن.</div>
-      </div>
-    </div>
-
+    <!-- Q1 -->
     <div class="q-item" data-correct="1" data-lecture="final">
-      <div class="q-header"><div class="q-num">4</div><div class="q-stem">A nerve fiber: thick diameter, myelin sheath, saltatory conduction at Nodes of Ranvier, highest velocity. This is:<div class="q-tag">Mixed · Nerve Fiber Classification</div></div></div>
+      <div class="q-header"><div class="q-num">1</div><div class="q-stem">Specific gravity of whole blood vs plasma respectively:<div class="q-tag" style="color:var(--gold)">Lec 1 · Blood Plasma — MCQ · Physical Characters</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Type C — unmyelinated, slowest, carries chronic pain</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Type A — myelinated, large diameter, highest velocity</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Type B — myelinated but smaller diameter than A, medium velocity</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Unmyelinated — continuous conduction, smallest diameter</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. 1.090 / 1.032</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 1.055 / 1.032</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 1.032 / 1.055</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 1.055 / 1.090</button>
       </div>
-      <div class="q-expl">الإجابة B. ألياف A: مغمّدة + أكبر قطر + أعلى سرعة. ألياف B: مغمّدة لكن أصغر قطراً (ما قبل العقدة اللاإرادية). ألياف C: غير مغمّدة + أبطأ (ألم مزمن وحرارة). السؤال وصف A بالضبط.</div>
+      <div class="q-expl">الإجابة B. الكثافة النوعية للدم الكامل = 1.055 وللبلازما = 1.032 وللخلايا = 1.090. الخلايا أتقل لأنها فيها بروتينات وهيموجلوبين. البلازما أخف لأنها في معظمها ماء.</div>
       </div>
     </div>
 
-    <div class="q-item" data-correct="0" data-lecture="final">
-      <div class="q-header"><div class="q-num">5</div><div class="q-stem">At the firing level of –65 mV, which SPECIFIC event triggers the full action potential?<div class="q-tag">Mixed · Action Potential Mechanism</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. ALL voltage-gated Na⁺ channels activate simultaneously → massive Na⁺ influx → potential shoots to +35 mV</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Voltage-gated K⁺ channels open first, creating conditions for Na⁺ channel activation</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. The Na⁺/K⁺ pump reverses direction, actively pumping Na⁺ inward rapidly</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Ca²⁺ channels open and trigger a secondary cascade activating Na⁺ channels</button>
-      </div>
-      <div class="q-expl">الإجابة A. عند -65 mV (مستوى الإطلاق): جميع قنوات Na⁺ الكهربائية تنفتح في آنٍ واحد → تدفق هائل لـNa⁺ → الجهد يقفز من -65 إلى +35 mV. مبدأ الكل أو لا شيء: إذا وصل المنبّه لـ-65، كل القنوات تفتح → جهد فعل كامل.</div>
-      </div>
-    </div>
-
+    <!-- Q2 -->
     <div class="q-item" data-correct="2" data-lecture="final">
-      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Patient blood group B urgently needs blood. Only groups A and AB are available. What happens with group A?<div class="q-tag">Mixed · Blood Transfusion Clinical</div></div></div>
+      <div class="q-header"><div class="q-num">2</div><div class="q-stem">Which plasma protein has the LARGEST molecular weight and is mainly responsible for blood viscosity?<div class="q-tag" style="color:var(--gold)">Lec 1 · Blood Plasma — MCQ · Plasma Proteins</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Safe transfusion — group A is naturally compatible with group B</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Safe if Rh factors of both donor and recipient are matched</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. Dangerous — patient's Anti-A attacks donor A antigen causing hemolysis</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Mild reaction only — not severe enough to be life-threatening</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Albumin (MW 69,000)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Prothrombin (MW 68,700)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Fibrinogen (MW 340,000)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. γ-Globulin (MW 156,000)</button>
       </div>
-      <div class="q-expl">الإجابة C. المريض B → بلازمته Anti-A. دم المتبرع A → مستضد A. Anti-A تهاجم مستضد A → تكتّل → انحلال دم → فشل كلوي حاد + صدمة. الحل: أعطه AB (المستقبل الشامل — لا أجسام مضادة في بلازمته).</div>
+      <div class="q-expl">الإجابة C. الفيبرينوجين = أكبر بروتين في البلازما (MW 340,000). هو المسؤول الرئيسي عن لزوجة الدم وبيشارك في عملية التخثر. الألبومين أصغر منه بكتير لكنه الأكثر تركيزاً (3.5–5 g/dL).</div>
       </div>
     </div>
 
-    <div class="q-item" data-correct="3" data-lecture="final">
-      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Patient has: right ptosis, right pupil smaller than left, dry right face, no sweating on right forehead. MOST LIKELY diagnosis:<div class="q-tag">Mixed · Clinical ANS · Horner's</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. CN III palsy — parasympathetic damage causing ptosis and pupil dilation</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic overactivation — excess ACh causing bilateral constriction</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic overactivation — bilateral autonomic discharge during panic attack</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Horner's Syndrome — unilateral loss of cervical sympathetic innervation</button>
-      </div>
-      <div class="q-expl">الإجابة D. ثالوث هورنر: Ptosis + Miosis + Anhydrosis (كلها على جانب واحد). السبب: فقد التعصيب الودي العنقي أحادي الجانب. ملاحظة: CN III palsy يُعطي Ptosis مع Mydriasis لأنه يشلّ الشبه الودي — هورنر يُعطي Ptosis مع Miosis لأنه يشلّ الودي.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="1" data-lecture="final">
-      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Which combination of RMP cause + percentage contribution is CORRECT?<div class="q-tag">Mixed · Membrane Potential</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Na⁺/K⁺ pump → 93% of RMP; selective permeability → only 7%</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Selective permeability → ~93% (−66 mV); Na⁺/K⁺ pump → ~7% (−4 mV)</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. K⁺ influx → 50% of RMP; Na⁺ efflux → the remaining 50%</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Both mechanisms contribute equally, each approximately 50%</button>
-      </div>
-      <div class="q-expl">الإجابة B. RMP = -70 إلى -90 mV. السبب الأول (93% ≈ -66 mV): النفاذية الانتقائية. السبب الثاني (7% ≈ -4 mV): مضخة Na⁺/K⁺ (3 Na⁺ خارج مقابل 2 K⁺ داخل). رغم أن المضخة تساهم بنسبة أقل، إلا أنها ضرورية للحفاظ على التدرجات التركيزية.</div>
-      </div>
-    </div>
-
-    <div class="q-item" data-correct="0" data-lecture="final">
-      <div class="q-header"><div class="q-num">9</div><div class="q-stem">Father blood group O, Mother blood group AB. What blood groups are POSSIBLE in their children?<div class="q-tag">Mixed · Genetics Integration</div></div></div>
-      <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,true)">A. Only A or B — not O, not AB</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Only AB — both parents contribute dominant alleles</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. All four groups — A, B, AB, and O are all possible</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Only O — O is recessive and dominates when present</button>
-      </div>
-      <div class="q-expl">الإجابة A. الأب OO × الأم AB: الأب يُعطي O فقط. الأم تُعطي إما A أو B. الأبناء: AO (فصيلة A) أو BO (فصيلة B). لا AB (لأن الأب لا يعطي A أو B). لا O (لأن الأم لا تعطي O). مثال ذكي على توراث فصائل الدم.</div>
-      </div>
-    </div>
-
+    <!-- Q3 -->
     <div class="q-item" data-correct="2" data-lecture="final">
-      <div class="q-header"><div class="q-num">10</div><div class="q-stem">INTEGRATIVE: Match each scenario to the CORRECT system: (i) Reading → ciliary muscle; (ii) Hot tea → hand withdrawal; (iii) Heart slows after a meal<div class="q-tag">Mixed · Integration Question</div></div></div>
+      <div class="q-header"><div class="q-num">3</div><div class="q-stem">Carboxyhemoglobin refers to the combination of Hemoglobin with:<div class="q-tag" style="color:var(--gold)">Lec 1 · Blood Plasma — MCQ · Hemoglobin Reactions</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. (i) Sympathetic; (ii) Autonomic afferent; (iii) Somatic motor</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. (i) Somatic; (ii) Sympathetic efferent; (iii) Parasympathetic CN III</button>
-        <button class="opt-btn" onclick="answer(this,true)">C. (i) Parasympathetic CN III; (ii) Somatic afferent then somatic efferent; (iii) Parasympathetic CN X (Vagus)</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. (i) Sympathetic; (ii) Parasympathetic; (iii) Somatic motor only</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Carbon Dioxide (CO₂)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Bicarbonate (HCO₃⁻)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Carbon Monoxide (CO)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Oxygen (O₂)</button>
       </div>
-      <div class="q-expl">الإجابة C. (i) القراءة → رؤية قريبة → انقباض العضلة الهدبية → تأثير شبه ودي عبر CN III. (ii) الشاي الساخن → ألياف حسية واردة (C/Aδ) → الحبل الشوكي → ألياف حركية جسدية صادرة → سحب اليد. (iii) إبطاء القلب بعد الأكل → "Rest &amp; Digest" → الشبه ودي عبر العصب المبهم (CN X).</div>
+      <div class="q-expl">الإجابة C. Hb + CO = Carboxyhemoglobin. CO بيرتبط بالهيموجلوبين بـ 200 مرة أقوى من O₂ — بيملي كل التاكسيات ومش بيسيبش مكان للأكسجين. ده سبب التسمم في الأماكن المغلقة. Carbamino-Hb = Hb + CO₂ (مختلف تماماً!)</div>
       </div>
     </div>
 
-    <!-- NEW Final Q11 — K+ channels blocked (from old platform) -->
-    <div class="q-item" data-correct="3" data-lecture="final">
-      <div class="q-header"><div class="q-num">11</div><div class="q-stem">A researcher blocks all voltage-gated K⁺ channels in a nerve using a specific toxin, then applies a suprathreshold stimulus. What is the MOST LIKELY result?<div class="q-tag">Mixed · AP Pharmacology · Advanced</div></div></div>
+    <!-- Q4 -->
+    <div class="q-item" data-correct="2" data-lecture="final">
+      <div class="q-header"><div class="q-num">4</div><div class="q-stem">Iron deficiency anemia cells are morphologically classified as:<div class="q-tag" style="color:var(--gold)">Lec 2 · Anemia — MCQ · Anemia Classification</div></div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. No action potential — K⁺ channels are needed to initiate depolarization</button>
-        <button class="opt-btn" onclick="answer(this,false)">B. Normal action potential — K⁺ channels do not participate in the AP waveform</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Increased RMP — blocking K⁺ channels makes the inside more positive at rest</button>
-        <button class="opt-btn" onclick="answer(this,true)">D. Depolarization occurs normally, but repolarization fails — membrane remains near +35 mV</button>
+        <button class="opt-btn" onclick="answer(this,false)">A. Macrocytic hyperchromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Normocytic normochromic</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Microcytic hypochromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Megaloblastic</button>
       </div>
-      <div class="q-expl">الإجابة D. K⁺ channels مسدودة: إزالة الاستقطاب تحصل طبيعياً (Na⁺ يدخل). لكن في مرحلة إعادة الاستقطاب، K⁺ ما يقدرش يخرج (قنواته مسدودة) → الغشاء يفضل موجب لفترة طويلة جداً (Plateau طويل) → إعادة الاستقطاب تتأخر جداً أو لا تحدث. هذا يشبه تأثير TEA toxin في التجارب.</div>
+      <div class="q-expl">الإجابة C. نقص الحديد → نقص تصنيع الهيموجلوبين → كريات صغيرة (Microcytic ↓ MCV) وشاحبة (Hypochromic ↓ MCH). السبب الرئيسي = نقص الحديد أو نزيف مزمن. Macrocytic = نقص B12 أو Folic acid.</div>
       </div>
     </div>
 
-    <!-- NEW Final Q12 — Group A gets Group B scenario (from old platform) -->
+    <!-- Q5 -->
+    <div class="q-item" data-correct="2" data-lecture="final">
+      <div class="q-header"><div class="q-num">5</div><div class="q-stem">Severe bone marrow destruction by X-rays or drugs results in:<div class="q-tag" style="color:var(--gold)">Lec 2 · Anemia — MCQ · Aplastic Anemia</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Pernicious anemia</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Hemolytic anemia</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Aplastic anemia</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Iron deficiency anemia</button>
+      </div>
+      <div class="q-expl">الإجابة C. Aplastic Anemia = تدمير النخاع العظمي (بالأشعة أو الكيماويات أو أمراض المناعة) → توقف إنتاج كل خلايا الدم (RBCs + WBCs + Platelets) = Pancytopenia. خطيرة جداً وبتحتاج زرع نخاع.</div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
     <div class="q-item" data-correct="1" data-lecture="final">
-      <div class="q-header"><div class="q-num">12</div>
+      <div class="q-header"><div class="q-num">6</div><div class="q-stem">Acute blood loss typically leads to which type of anemia?<div class="q-tag" style="color:var(--gold)">Lec 2 · Anemia — MCQ · Anemia Types</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Microcytic hypochromic</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Normocytic normochromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Macrocytic hyperchromic</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Megaloblastic</button>
+      </div>
+      <div class="q-expl">الإجابة B. فقدان دم حاد (Acute) → فقدان كريات طبيعية الشكل والحجم → Normocytic Normochromic. أما الفقدان المزمن (Chronic) → يستنزف الحديد تدريجياً → نقص حديد → Microcytic Hypochromic. الفرق في الوقت!</div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">7</div><div class="q-stem">Normal Platelet count is:<div class="q-tag" style="color:var(--gold)">Lec 3 · Hemostasis — MCQ · Platelet Count</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 4,000–11,000/mm³</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. 150,000–400,000/mm³</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 4.5–5.5 million/mm³</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 50,000–100,000/mm³</button>
+      </div>
+      <div class="q-expl">الإجابة B. الصفائح الطبيعية = 150,000–400,000/mm³. أقل = Thrombocytopenia (نزيف). أكثر = Thrombocytosis. 4,000–11,000 = الكريات البيضاء. 4.5–5.5 مليون = الكريات الحمرا.</div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">8</div><div class="q-stem">Correct sequence of platelet plug formation:<div class="q-tag" style="color:var(--gold)">Lec 3 · Hemostasis — MCQ · Platelet Phase</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Aggregation → Adhesion → Release Reaction</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Adhesion → Release Reaction → Aggregation</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Release Reaction → Adhesion → Aggregation</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Aggregation → Release Reaction → Adhesion</button>
+      </div>
+      <div class="q-expl">الإجابة B. الترتيب الصحيح: (1) Adhesion = الصفائح تلتصق بالكولاجين المكشوف. (2) Release Reaction = تطلق ADP وThromboxane A2. (3) Aggregation = صفائح تانية تتجمع حوليها وتشكّل الفرفير (Plug). اتذكر: الالتصاق أولاً ثم الإفراز ثم التجمع.</div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-item" data-correct="2" data-lecture="final">
+      <div class="q-header"><div class="q-num">9</div><div class="q-stem">In the Common Pathway, Prothrombin (Factor II) is converted to … by activated Factor X:<div class="q-tag" style="color:var(--gold)">Lec 3 · Hemostasis — MCQ · Common Pathway</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Fibrinogen</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Fibrin</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Thrombin</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Plasmin</button>
+      </div>
+      <div class="q-expl">الإجابة C. المسار المشترك: Factor Xa + Va + Ca²⁺ + Phospholipid = Prothrombinase Complex → يحول Prothrombin (II) → Thrombin (IIa). بعدين Thrombin يحول Fibrinogen → Fibrin. سلسلة: Prothrombin → Thrombin → Fibrinogen → Fibrin.</div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-item" data-correct="3" data-lecture="final">
+      <div class="q-header"><div class="q-num">10</div><div class="q-stem">Which is TRUE about Heparin?<div class="q-tag" style="color:var(--gold)">Lec 4 · Anticoagulants — MCQ · Heparin Properties</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. It is given orally and takes days to act</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. It requires Vitamin K for its synthesis</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. It directly destroys existing clots (fibrinolysis)</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. It acts immediately, given by injection, and is antagonized by Protamine Sulfate</button>
+      </div>
+      <div class="q-expl">الإجابة D. الهيبارين: يعمل فوراً (في الدم مباشرة) + يُعطى بالحقن (IV/SC) + مضاده = Protamine Sulfate. هو يُنشّط Antithrombin III اللي بيعطّل Thrombin وعوامل أخرى. Dicumarol هو اللي بيحتاج أيام ويُعطى فموياً ومضاده = Vitamin K.</div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="q-item" data-correct="0" data-lecture="final">
+      <div class="q-header"><div class="q-num">11</div><div class="q-stem">Bleeding time (BT) primarily evaluates:<div class="q-tag" style="color:var(--gold)">Lec 4 · Anticoagulants — MCQ · Hemostasis Tests</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Platelet function and vascular phase (primary hemostasis)</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Intrinsic coagulation pathway factors</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Fibrinolysis efficiency</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Extrinsic pathway (tissue factor) only</button>
+      </div>
+      <div class="q-expl">الإجابة A. وقت النزيف (BT) يقيس المرحلتين الأولى والثانية من الإرقاء: الأوعية الدموية + الصفائح. طوله = خلل في الصفائح أو الأوعية. وقت التخثر (CT) هو اللي يقيس عوامل التخثر (المسار الداخلي). BT طبيعي = 2–5 دقائق. CT طبيعي = 5–11 دقيقة.</div>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">12</div><div class="q-stem">Vitamin K is essential for formation of which clotting factors in the liver?<div class="q-tag" style="color:var(--gold)">Lec 4 · Anticoagulants — MCQ · Vitamin K</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Factors I, V, VIII, XIII</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Factors II, VII, IX, X</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Factors XI, XII only</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. All clotting factors without exception</button>
+      </div>
+      <div class="q-expl">الإجابة B. فيتامين K ضروري لتصنيع العوامل II, VII, IX, X في الكبد. طريقة تذكر: 2 × 7 = 14 = 1+4 → 1+0 = الأرقام 2,7,9,10! نقص K أو أمراض الكبد → نقص هذه العوامل → نزيف. Dicumarol يعمل مضاداً لـ K فيمنع تصنيعها.</div>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">13</div><div class="q-stem">Which immunoglobulin type forms the naturally-occurring ABO antibodies (Anti-A, Anti-B)?<div class="q-tag" style="color:var(--gold)">Lec 5 · Blood Groups — MCQ · Immunoglobulins</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. IgA</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. IgM</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. IgE</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. IgG</button>
+      </div>
+      <div class="q-expl">الإجابة B. الأجسام المضادة الطبيعية في نظام ABO (Anti-A وAnti-B) = IgM. مهم جداً: IgM كبير الحجم ومش بيعدي المشيمة. أما Anti-D في نظام Rh = IgG (صغير ويعدي المشيمة ويسبب Erythroblastosis Fetalis). ده الفرق المهم!</div>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">14</div><div class="q-stem">In Erythroblastosis Fetalis, "Kernicterus" specifically refers to:<div class="q-tag" style="color:var(--gold)">Lec 5 · Blood Groups — MCQ · Complications</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Liver failure from excess bilirubin accumulation</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Brain damage from deposition of unconjugated bilirubin in the basal ganglia</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Aplastic anemia in the newborn due to RBC destruction</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Clotting disorder caused by anti-Rh antibodies</button>
+      </div>
+      <div class="q-expl">الإجابة B. Kernicterus = ترسّب البيليروبين غير المترافق (Unconjugated) في العقد القاعدية للمخ → تلف عصبي دائم (Cerebral Palsy, ضعف سمع, صفراء شديدة). البيليروبين الزائد من كسر كريات الجنين بواسطة أجسام مضادة الأم. يُعالج بـ Phototherapy أو نقل دم كامل.</div>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="q-item" data-correct="3" data-lecture="final">
+      <div class="q-header"><div class="q-num">15</div><div class="q-stem">Looking at a blood donation database, the MOST common blood group to find is:<div class="q-tag" style="color:var(--gold)">Lec 5 · Blood Groups — MCQ · Blood Group Frequency</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Blood Group A</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Blood Group B</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Blood Group AB</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. Blood Group O</button>
+      </div>
+      <div class="q-expl">الإجابة D. فصيلة O هي الأكثر شيوعاً في العالم (~44%). ترتيب التكرار: O > A > B > AB. وفصيلة O سالبة هي المانح العالمي (Universal Donor) لأن خلاياها ما عليهاش A ولا B ولا D. AB موجب = المتلقي العالمي (Universal Recipient).</div>
+      </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="q-item" data-correct="2" data-lecture="final">
+      <div class="q-header"><div class="q-num">16</div><div class="q-stem">Which part of the neuron RECEIVES incoming impulses from other neurons?<div class="q-tag" style="color:var(--gold)">Lec 6 · Nerve — MCQ · Neuron Structure</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Axon</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Axon terminals (boutons)</button>
+        <button class="opt-btn" onclick="answer(this,true)">C. Dendrites</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Myelin sheath</button>
+      </div>
+      <div class="q-expl">الإجابة C. Dendrites = الأشجيرات = بتستقبل الإشارات الواردة من الخلايا التانية. الـ Axon = بيوصّل الإشارة للخارج. Axon terminals (boutons) = تطلق الناقلات العصبية في الشق التشابكي. الميالين = عازل كهربائي يسرّع التوصيل.</div>
+      </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">17</div><div class="q-stem">The Na⁺/K⁺ ATPase pump contributes approximately what percentage to the Resting Membrane Potential?<div class="q-tag" style="color:var(--gold)">Lec 6 · Nerve — MCQ · RMP Causes</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. 50% (−35 mV of −70 mV)</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. ~14% (−10 mV of −70 mV)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. 100% (entire RMP)</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. 0% — the pump has no electrical contribution</button>
+      </div>
+      <div class="q-expl">الإجابة B. الـ Na⁺/K⁺ ATPase pump يضخ 3 Na⁺ للخارج مقابل 2 K⁺ للداخل → يولّد شحنة سالبة إضافية ≈ −10 mV (حوالي 14% من الـ −70 mV الإجمالي). الـ 86% الباقية سببها انتشار K⁺ للخارج بسبب نفاذية الغشاء له في الراحة (Diffusion Potential).</div>
+      </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="q-item" data-correct="0" data-lecture="final">
+      <div class="q-header"><div class="q-num">18</div>
       <div class="q-stem">
-        <div class="scenario-card"><strong>Case:</strong> A patient (group A) receives blood group B by mistake. 30 minutes later: fever, back pain, dark urine, and hypotension.</div>
-        Explain the mechanism AND identify the SPECIFIC antibody responsible.
-        <div class="q-tag">Mixed · Clinical Blood · Mechanism</div>
+        <div class="scenario-card"><strong>Case:</strong> A patient with multiple sclerosis (MS) has muscle weakness, blurred vision, and loss of coordination. MS involves immune destruction of myelin in the CNS.</div>
+        Which feature of myelinated fibers best explains these widespread symptoms?
+        <div class="q-tag" style="color:var(--gold)">Lec 6 · Nerve — Clinical Scenario · Myelin Disease</div>
       </div></div>
       <div class="q-opts-wrap"><div class="q-opts">
-        <button class="opt-btn" onclick="answer(this,false)">A. Donor's Anti-A plasma attacks recipient RBCs; the responsible antibody is Anti-A from the donor</button>
-        <button class="opt-btn" onclick="answer(this,true)">B. Patient's Anti-B plasma attacks donor B antigen RBCs → hemolysis; the responsible antibody is Anti-B from the recipient</button>
-        <button class="opt-btn" onclick="answer(this,false)">C. Anti-D mismatch causes the reaction; both donor and patient are Rh incompatible</button>
-        <button class="opt-btn" onclick="answer(this,false)">D. Blood preservatives in donor bag activate complement causing the dark urine</button>
+        <button class="opt-btn" onclick="answer(this,true)">A. Saltatory conduction enables rapid signal transmission; its loss dramatically slows or blocks signals across many pathways</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Myelinated fibers are exclusively found in peripheral nerves, so CNS lesions affect only motor pathways</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Myelin increases membrane capacitance, which raises action potential threshold</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Loss of myelin primarily reduces neurotransmitter release at the synapse</button>
       </div>
-      <div class="q-expl">الإجابة B. المريض A → بلازمته Anti-B. المتبرع B → كرياته تحمل مستضد B. Anti-B للمريض تهاجم مستضد B → تكتّل → انحلال دم → هيموجلوبين في البول (بول داكن) → فشل كلوي حاد + صدمة. سيرم المتبرع (Anti-A) يُخفَّف جداً في دم المريض فلا يُشكّل خطراً كبيراً.</div>
+      <div class="q-expl">الإجابة A. التوصيل القافز (Saltatory conduction) في الألياف الميالينية = الإشارة تقفز من Nodes of Ranvier لأخرى بسرعة عالية وكفاءة طاقة أعلى. تدمير الميالين → الإشارة تتباطأ أو تنقطع → أعراض واسعة الانتشار (ضعف + رؤية + تنسيق) لأن مسارات كثيرة بالـ CNS تعتمد على التوصيل السريع.</div>
+      </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="q-item" data-correct="1" data-lecture="final">
+      <div class="q-header"><div class="q-num">19</div><div class="q-stem">What is the key STRUCTURAL difference between Somatic and Autonomic nervous systems?<div class="q-tag" style="color:var(--gold)">Lec 7 · ANS — MCQ · Somatic vs Autonomic</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. Somatic NS has two neurons; Autonomic has one neuron from CNS to effector</button>
+        <button class="opt-btn" onclick="answer(this,true)">B. Somatic has ONE neuron from CNS to effector; Autonomic has TWO neurons (preganglionic + postganglionic)</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Autonomic NS uses acetylcholine exclusively at all synapses</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Somatic NS innervates smooth muscle and glands only</button>
+      </div>
+      <div class="q-expl">الإجابة B. الفرق الهيكلي الأساسي: الجهاز الجسدي (Somatic) = خلية واحدة من النخاع مباشرة للعضلة الهيكلية. الجهاز اللاإرادي (Autonomic) = خليتان: Preganglionic (قصيرة أو طويلة) + Postganglionic. الـ Ganglia = محطة التحويل بينهم. الجسدي يحرك العضلات الإرادية، والنباتي يحرك القلب والأمعاء والغدد.</div>
+      </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="q-item" data-correct="3" data-lecture="final">
+      <div class="q-header"><div class="q-num">20</div><div class="q-stem">The Enteric Nervous System (ENS) is best described as:<div class="q-tag" style="color:var(--gold)">Lec 7 · ANS — MCQ · ENS</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,false)">A. A division of the sympathetic nervous system that controls digestion</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. A subdivision of the somatic nervous system in the gut</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. A system entirely controlled by vagal parasympathetic input</button>
+        <button class="opt-btn" onclick="answer(this,true)">D. An independent neural network in the gut wall capable of local reflex activity without CNS input</button>
+      </div>
+      <div class="q-expl">الإجابة D. الجهاز العصبي المعوي (ENS) = "مخ الأمعاء" — شبكة مستقلة في جدار الجهاز الهضمي (Myenteric + Submucosal plexuses) قادرة على التحكم في الحركة والإفراز بدون أوامر من المخ. يتأثر بالجهاز السمبتاوي (يزيد النشاط) والسمبثاوي (يقلله) لكنه مش تابع لهم بالكامل.</div>
+      </div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="q-item" data-correct="0" data-lecture="final">
+      <div class="q-header"><div class="q-num">21</div><div class="q-stem">Which correctly pairs a function with the RIGHT ANS division?<div class="q-tag" style="color:var(--gold)">Lec 7 · ANS — MCQ · ANS Functions Matching</div></div></div>
+      <div class="q-opts-wrap"><div class="q-opts">
+        <button class="opt-btn" onclick="answer(this,true)">A. Sympathetic → Tachycardia + ↑ BP + Bronchodilation during stress ("Fight or Flight")</button>
+        <button class="opt-btn" onclick="answer(this,false)">B. Parasympathetic → Pupil dilation (Mydriasis) + ↑ Heart rate</button>
+        <button class="opt-btn" onclick="answer(this,false)">C. Sympathetic → ↑ GI peristalsis + ↑ Secretions + Bladder contraction</button>
+        <button class="opt-btn" onclick="answer(this,false)">D. Parasympathetic → Bronchodilation + ↑ Blood glucose + Sweating</button>
+      </div>
+      <div class="q-expl">الإجابة A. الجهاز السمبثاوي (Fight or Flight): ↑ معدل القلب + ↑ ضغط الدم + توسع القصبات + توسع حدقة العين + ↑ سكر الدم. الجهاز السمبتاوي (Rest and Digest): ↓ معدل القلب + تضيق حدقة العين + ↑ الهضم + تضيق القصبات. الإجابات B وC وD فيها خلط بين الاثنين.</div>
       </div>
     </div>
 
@@ -1789,8 +3226,8 @@ footer span{color:var(--teal)}
 </main>
 <script>
 // ── SCORE ──
-const sc = { blood:{t:0,c:0}, nerve:{t:0,c:0}, ans:{t:0,c:0}, final:{t:0,c:0} };
-let curLec = 'blood';
+const sc = { blood:{t:0,c:0}, nerve:{t:0,c:0}, ans:{t:0,c:0}, plasma:{t:0,c:0}, anemia:{t:0,c:0}, hemo:{t:0,c:0}, anti:{t:0,c:0}, final:{t:0,c:0} };
+let curLec = 'plasma';
 
 function answer(btn, isCorrect) {
   const qi = btn.closest('.q-item');
@@ -1847,8 +3284,17 @@ function resetAll() {
 }
 
 // ── SCROLL SPY — Hero Pills & Nav Links ──
-const sections = ['lec1','rh','lec2','ap','lec3','qbank'];
-const pillMap = { 'lec1':'lec1','rh':'lec1','lec2':'lec2','ap':'lec2','lec3':'lec3','qbank':'qbank' };
+const sections = ['lec1','lec2','lec3','lec4','lec5','rh','lec6','ap','lec7','qbank'];
+const pillMap = {
+  'lec1':'lec1',
+  'lec2':'lec2',
+  'lec3':'lec3',
+  'lec4':'lec4',
+  'lec5':'lec5','rh':'lec5',
+  'lec6':'lec6','ap':'lec6',
+  'lec7':'lec7',
+  'qbank':'qbank'
+};
 
 function onScroll() {
   let cur = '';
@@ -1886,7 +3332,7 @@ document.querySelectorAll('.section').forEach(s => {
   obs.observe(s);
 });
 
-updateScore('blood');
+updateScore('plasma');
 </script>
 </body>
 </html>
